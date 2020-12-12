@@ -102,10 +102,10 @@ public class hotTostFunc {
 		}  else if (add.equals("Submit Order") || add.equals("submit order")) {
 			 extension_drink = 0;
 			 breaker=1;			
-		} else{			
-	System.err.println(" \"Only one drink should be selected from the list \"Cola\", \"Orange Juice");
-	System.out.println("What do you want to drink? Cola or Orange Juice?");
-			  add = scan.nextLine();			
+		} else{
+			System.err.println(" \"Only one drink should be selected from the list \"Cola\", \"Orange Juice");
+			System.out.println("What do you want to drink? Cola or Orange Juice?");
+			add = scan.nextLine();			
 		}		
 	}			
 	return extension_drink;
