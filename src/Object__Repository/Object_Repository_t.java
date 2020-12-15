@@ -11,7 +11,7 @@ public class Object_Repository_t {
 	static Object_Repository_cunfig or;
 	static WebElement query;
 	static WebElement submit;
-	static String[] browser= {"chrome,ie,firefox"};
+	
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,13 +28,10 @@ public class Object_Repository_t {
 
 	@Test
 	public void test01()  {
-		for (int i = 0; i < browser.length; i++) {
-			driver=or.browser(driver, "browser"+i+"").get("");
-			driver.get("https://www.d.co.il/");
-			
-			
-		}	
 		
+		or.browser(driver, "chrome");
+		driver.get("https://www.d.co.il/");
+	
 		
 		}
 		

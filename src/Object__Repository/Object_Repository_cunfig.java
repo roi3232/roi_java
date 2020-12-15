@@ -23,7 +23,7 @@ public class Object_Repository_cunfig {
     	this.driver=driver;
     	}
 	
-	public String getData ( String nodeName) throws ParserConfigurationException, SAXException, IOException 
+	public static String getData (String nodeName) throws ParserConfigurationException, SAXException, IOException 
 	{
 	File fXmlFile = new File("C:\\Users\\royko\\Documents\\אוטומציה\\configurtion.xml");
 	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -32,25 +32,20 @@ public class Object_Repository_cunfig {
 	doc.getDocumentElement().normalize();
 	return doc.getElementsByTagName(nodeName).item(0).getTextContent();
 	}
-	public WebDriver browser(WebDriver driver,String browser) {
+	public  WebDriver browser(WebDriver driver,String string) {
 		
-		if (browser.equals("chrome")) {
+		if (string.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\temp\\chromedriver.exe");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 		    driver=new ChromeDriver();
-		    driver.manage().window().maximize();
 
-		}if (browser.equals("ie")) {
+		}if (string.equals("ie")) {
 			System.setProperty("webdriver.ie.driver","C:\\temp\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
-		    driver.manage().window().maximize();
-
 		}
-		if (browser.equals("firefox")) {
+		if (string.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:\\temp\\geckodriver.exe");
 			driver = new FirefoxDriver();
-		    driver.manage().window().maximize();  
-
 		}
 		
 		return driver;
