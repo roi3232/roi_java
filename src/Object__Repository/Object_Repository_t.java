@@ -29,7 +29,9 @@ public class Object_Repository_t {
 	@Test
 	public void test01()  {
 		for (int i = 0; i < browser.length; i++) {
-			driver=or.browser(driver, "browser"+i+"").get("https://www.d.co.il/");
+			driver=or.browser(driver, "browser"+i+"").get("");
+			driver.get("https://www.d.co.il/");
+			
 			
 		}	
 		
