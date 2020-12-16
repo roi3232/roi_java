@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -23,28 +24,30 @@ public class Object_Repository_cunfig {
     	this.driver=driver;
     	}
 	
-	public static String getData (String nodeName) throws ParserConfigurationException, SAXException, IOException 
+	public String getData (String nodeName) throws ParserConfigurationException, SAXException, IOException 
 	{
-	File fXmlFile = new File("C:\\Users\\royko\\Documents\\אוטומציה\\configurtion.xml");
+	File fXmlFile = new File("configurtion.xml");
 	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 	Document doc = dBuilder.parse(fXmlFile);
 	doc.getDocumentElement().normalize();
 	return doc.getElementsByTagName(nodeName).item(0).getTextContent();
 	}
-	public  WebDriver browser(WebDriver driver,String string) {
+	public  WebDriver browser(WebDriver driver,String browser) {
 		
-		if (string.equals("chrome")) {
+		if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\temp\\chromedriver.exe");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 		    driver=new ChromeDriver();
 
-		}if (string.equals("ie")) {
+		}if (browser.equals("ie")) {
+			InternetExplorerDriverService.Builder ieDriverService = new InternetExplorerDriverService.Builder().withSilent(true); 
 			System.setProperty("webdriver.ie.driver","C:\\temp\\IEDriverServer.exe");
-			driver = new InternetExplorerDriver();
+			driver = new InternetExplorerDriver(ieDriverService.build());
 		}
-		if (string.equals("firefox")) {
+		if (browser.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:\\temp\\geckodriver.exe");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"null");
 			driver = new FirefoxDriver();
 		}
 		

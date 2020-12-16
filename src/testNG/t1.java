@@ -5,9 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 public class t1 {
-  @Test
-  public void f() {
-  }
+
   @BeforeClass
   public void beforeClass() {
   }
@@ -15,5 +13,7 @@ public class t1 {
   @AfterClass
   public void afterClass() {
   }
-
+  @Test
+  public void rest1() {
+  }
 }
