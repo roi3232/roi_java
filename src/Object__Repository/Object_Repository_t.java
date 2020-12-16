@@ -21,12 +21,9 @@ public class Object_Repository_t {
 			while (or.getData("category"+bowserNum) != null) {
 				driver.get("https://www.d.co.il/");
 				driver.findElement(By.id("query")).sendKeys(or.getData("category"+bowserNum));
-				Thread.sleep(3000);
 				driver.findElement(By.className("search_submit")).click();
 				driver.close();
 			}
-			
-			
 			bowserNum++;
 		}
 
