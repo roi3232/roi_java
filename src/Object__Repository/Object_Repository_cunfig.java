@@ -12,13 +12,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 
 public class Object_Repository_cunfig {
-	@SuppressWarnings("unused")
-	private  WebDriver driver;
+	public  WebDriver driver;
 	
 	public Object_Repository_cunfig(WebDriver driver){
     	this.driver=driver;
@@ -42,8 +42,11 @@ public class Object_Repository_cunfig {
 
 		}if (browser.equals("ie")) {
 			InternetExplorerDriverService.Builder ieDriverService = new InternetExplorerDriverService.Builder().withSilent(true); 
+			DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
+	        cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			System.setProperty("webdriver.ie.driver","C:\\temp\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver(ieDriverService.build());
+			
 		}
 		if (browser.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:\\temp\\geckodriver.exe");

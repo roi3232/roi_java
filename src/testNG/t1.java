@@ -14,6 +14,6 @@ public class t1 {
   public void afterClass() {
   }
   @Test
-  public void rest1() {
+  public void test1() {
   }
 }

@@ -1,13 +1,23 @@
-1608146037839	geckodriver	INFO	Listening on 127.0.0.1:32024
-1608146038321	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\royko\\AppData\\Local\\Temp\\rust_mozprofile9KlpX8"
+1608233777695	geckodriver	INFO	Listening on 127.0.0.1:23716
+1608233778181	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\royko\\AppData\\Local\\Temp\\rust_mozprofilewrdnfm"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1608146039870	Marionette	INFO	Listening on port 53479
-1608146040364	Marionette	WARN	TLS certificate errors will be ignored for this session
-1608146040669	Marionette	INFO	Stopped listening on port 53479
-console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
-console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 376))
+1608233779627	Marionette	INFO	Listening on port 55925
+1608233779708	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.d.co.il/Scripts/bundles/homepage-min.js?_gpiav_=318, line 5: unreachable code after return statement
+JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=318, line 6: unreachable code after return statement
+JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=318, line 62: unreachable code after return statement
+JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=318, line 62: unreachable code after return statement
+JavaScript warning: https://www.d.co.il/Scripts/bundles/homepage-min.js?_gpiav_=318, line 5: unreachable code after return statement
+JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=318, line 6: unreachable code after return statement
+JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=318, line 62: unreachable code after return statement
+JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=318, line 62: unreachable code after return statement
+JavaScript warning: https://www.d.co.il/Scripts/bundles/homepage-min.js?_gpiav_=318, line 5: unreachable code after return statement
+1608233796195	Marionette	INFO	Stopped listening on port 55925
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A00BE,name=PContent::Msg_StartVisitedQueries) Channel closing: too late to send/recv, messages will be lost
+
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
