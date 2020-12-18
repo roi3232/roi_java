@@ -22,7 +22,6 @@ public class pofModle {
 	WebElement add;
 	@FindBy(how = How.ID,using = "quantity")
 	WebElement quantity;
-
 	@FindBy(how = How.XPATH,using = "//table/tbody/tr[1]/td//tbody/tr[3]/td//form/div[6]//div[2]/div[4]//tbody/tr[2]/td[10]/a")
 	WebElement remove;
 	@FindBy(how = How.XPATH,using = "//table/tbody/tr[1]/td//tbody/tr[3]/td//form/div[6]//div[2]/div[4]//tbody/tr/td[7]")
