@@ -1,4 +1,4 @@
-package selenium;
+package pof_pom_er;
 
 import java.util.concurrent.TimeUnit;
 

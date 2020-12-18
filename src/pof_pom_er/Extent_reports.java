@@ -1,4 +1,4 @@
-package selenium;
+package pof_pom_er;
 
 import java.awt.AWTException;
 import java.awt.Rectangle;
