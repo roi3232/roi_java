@@ -155,4 +155,5 @@ public class t1 {
 	  fileWrite(browserName +"The avg of salarey: "+avgSalaery);
 
 }
-	  }}
+	  }
+  }
