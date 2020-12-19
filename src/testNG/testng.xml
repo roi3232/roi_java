@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Parallel test suite" parallel="tests">
+<suite  name="Parallel test suite" parallel="tests">
 
 <test name="Chrome test">
 <parameter name="browser" value="chrome"/>
@@ -8,10 +8,10 @@
 </classes>
 </test>
 
-<test name="firefox Test">
+<test name="firefox test">
 <parameter name="browser" value="FF"/>
 <classes>
-   <class name="testNG.t1"/>
+  <class name="testNG.t1"/>
 </classes>
 </test>
 
