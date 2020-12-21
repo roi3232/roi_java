@@ -13,6 +13,7 @@ import org.xml.sax.SAXException;
 public class Object_Repository_t {
 	public static WebDriver driver;
 	static String browserName;
+	static Capabilities cap;
 
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, InterruptedException  {
@@ -32,13 +33,13 @@ public class Object_Repository_t {
 					Thread.sleep(2000);
 					driver.findElement(By.className("skip")).click();
 					System.out.println(driver.getTitle());
-					Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
+					cap = ((RemoteWebDriver) driver).getCapabilities();
 					browserName = cap.getBrowserName().toLowerCase();
 					System.out.println(browserName);
 				}else {
 					Thread.sleep(2000);
 					System.out.println(driver.getTitle());
-					Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
+					cap = ((RemoteWebDriver) driver).getCapabilities();
 					browserName = cap.getBrowserName().toLowerCase();
 					System.out.println(browserName);
 				}				

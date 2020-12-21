@@ -3,9 +3,6 @@ package java;
 
 import java.util.Scanner;
 
-import javax.security.auth.x500.X500Principal;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class t3 {
 	
