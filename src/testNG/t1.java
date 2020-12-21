@@ -2,6 +2,8 @@ package testNG;
 
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -9,8 +11,6 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -35,9 +35,9 @@ public class t1 {
 
   @Parameters({"browser"})
   @BeforeTest 
-  public void BeforeTest(String browser) {
+  public void BeforeTest(String browser) throws InterruptedException {
 	  if (browser.equalsIgnoreCase ("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\temp\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			driver=new ChromeDriver();
 		  driver.get("https://www.nisha.co.il/%D7%98%D7%91%D7%9C%D7%90%D7%95%D7%AA-%D7%A9%D7%9B%D7%A8");
@@ -45,7 +45,7 @@ public class t1 {
 		  browserName = cap.getBrowserName().toLowerCase();
 		  }
 	  else if ( browser.equalsIgnoreCase ("FF")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\temp\\geckodriver.exe");
+		  WebDriverManager.firefoxdriver().setup();
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"null");
 			driver = new FirefoxDriver();
 		  driver.get("https://www.nisha.co.il/%D7%98%D7%91%D7%9C%D7%90%D7%95%D7%AA-%D7%A9%D7%9B%D7%A8");
@@ -61,13 +61,11 @@ public class t1 {
   @Test(groups = "list")
   public void test1() throws InterruptedException {
 	  if (browserName.equals("chrome")) {
-		  Thread.sleep(2000);
 		  List<WebElement> jobsElements=driver.findElements(By.xpath("//div[3]/section[1]/section/section[2]/div/div/div[7]/div/h3"));
 		  for (WebElement webElement : jobsElements) {
 		  System.out.println(browserName +":"+ webElement.getText());
 	}
 		  }if (browserName.equals("firefox")) {
-			  Thread.sleep(2000);
 			  List<WebElement> jobsElements=driver.findElements(By.xpath("//div[3]/section[1]/section/section[2]/div/div/div[7]/div/h3"));
 			  for (WebElement webElement : jobsElements) {
 				  fileWrite(browserName +":"+ webElement.getText());
@@ -86,7 +84,6 @@ public class t1 {
 	  System.out.println(browserName +":"+ webElement.getText());	
 	  }
 	  } if (browserName.equals("firefox")) {
-		  Thread.sleep(3000);
 		  List<WebElement> jobsElements=driver.findElements(By.xpath("//div[3]/section[1]/section/section[2]/div/table/tbody/tr/td/span/a/span"));
 	  for (WebElement webElement : jobsElements) {
 		  fileWrite(browserName +":"+ webElement.getText());
