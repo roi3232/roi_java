@@ -229,7 +229,7 @@ public class t7_1 {
 			int count =0;
 		for (int i = 0; i < pof.pages.size(); i++) {
 		//	JavascriptExecutor js = (JavascriptExecutor) driver;
-			//js.executeScript("window.scrollBy(0,250)", "");
+		//  js.executeScript("window.scrollBy(0,250)", "");
 			for (int j = 1; j < pof.jobs.size(); j++) {
 				count++;
 			}
