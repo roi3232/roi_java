@@ -70,11 +70,8 @@ public class t1 {
 			  for (WebElement webElement : jobsElements) {
 				  fileWrite(browserName +":"+ webElement.getText());
 		}
-		
-		
-	}
-	
-	  }
+			  }
+		  }
   
   @Test(groups = "list",enabled = false)
   public void test2() throws InterruptedException {
@@ -87,11 +84,9 @@ public class t1 {
 		  List<WebElement> jobsElements=driver.findElements(By.xpath("//div[3]/section[1]/section/section[2]/div/table/tbody/tr/td/span/a/span"));
 	  for (WebElement webElement : jobsElements) {
 		  fileWrite(browserName +":"+ webElement.getText());
-	}
-	
-	
-}
-  }
+		  }
+	  }
+	  }
  
   @Test(groups = "average",enabled = false)
   public void test3() {
@@ -159,7 +154,6 @@ public class t1 {
 			  avgSalaery=saleyNum/salaryList.size(); 
 		}
 	  fileWrite(browserName +"The avg of salarey: "+avgSalaery);
-
-}
 	  }
+  }
   }
