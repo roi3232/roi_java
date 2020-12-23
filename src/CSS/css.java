@@ -34,12 +34,14 @@ public class css {
 
   @Test
   public void test1() {
-	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div/div/div[1]/div[6]/div[2]/span/div/div/div[2]/div[2]/div/div/div/div/div[1]/a/span"));
+	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span//div/div[2]/div[2]/div//div//div[1]/a/span"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  for (int i = 0; i < headline.size(); i++) {
 		if (headline.get(i).getCssValue("font-size").equals("14px")) {
+			System.out.println("----------- news link: "+i+" -----------");
 			System.out.println("size is :"+headline.get(i).getCssValue("font-size"));
 		}else {
+			System.out.println("----------- news link: "+i+" -----------");
 			System.err.println("size is not equals to 14px"+headline.get(i).getCssValue("font-size"));
 		}
 	}
@@ -47,10 +49,11 @@ public class css {
   }
   @Test 
   public void test2() {
-	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div/div/div[1]/div[6]/div[2]/span/div/div/div[2]/div[2]/div/div/div/div/div[1]/a/span"));
+	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span//div/div[2]/div[2]/div//div//div[1]/a/span"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  for (int i = 0; i < headline.size(); i++) {
 		if (headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)")) {
+			System.out.println("----------- news link: "+i+" -----------");
 			System.out.println("color is :"+headline.get(i).getCssValue("color"));
 		}else {System.err.println("color is not equals to black"+headline.get(i).getCssValue("color"));
 		}
@@ -60,9 +63,10 @@ public class css {
   }
   @Test 
   public void test3() {
-	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div/div/div[1]/div[6]/div[2]/span/div/div/div[2]/div[2]/div/div/div/div/div[1]/a/span"));
+	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span//div/div[2]/div[2]/div//div//div[1]/a/span"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  for (int i = 0; i < headline.size(); i++) {
+			System.out.println("----------- news link: "+i+" -----------");
 		if (headline.get(i).getCssValue("font-weight").equals("700")) {
 			System.out.println("the text is :"+headline.get(i).getCssValue("font-weight"));
 		}else {System.err.println("the text is bold"+headline.get(i).getCssValue("font-weight"));
@@ -71,9 +75,10 @@ public class css {
   }
   @Test 
   public void test4() {
-	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div/div/div[1]/div[6]/div[2]/span/div/div/div[2]/div[2]/div/div/div/div/div[2]/span"));
+	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[2]/div//div//div[2]/span[1]"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  for (int i = 0; i < credit.size(); i++) {
+			System.out.println("----------- credits of articles: "+i+" -----------");
 		if (credit.get(i).getCssValue("font-size").equals("12px")) {
 			System.out.println("the size is :"+credit.get(i).getCssValue("font-size"));
 		}else {System.err.println("the size is no equals to 12px"+credit.get(i).getCssValue("font-size"));
@@ -82,9 +87,10 @@ public class css {
   }
   @Test 
   public void test5() {
-	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div/div/div[1]/div[6]/div[2]/span/div/div/div[2]/div[2]/div/div/div/div/div[2]/span"));
+	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[2]/div//div//div[2]/span[1]"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  for (int i = 0; i < credit.size(); i++) {
+			System.out.println("----------- credits of articles: "+i+" -----------");
 		if (credit.get(i).getCssValue("color").equals("rgba(153, 153, 153, 1)")) {
 			System.out.println("the color is :"+credit.get(i).getCssValue("color"));
 		}else {System.err.println("the size is no gray "+credit.get(i).getCssValue("color"));
@@ -93,9 +99,10 @@ public class css {
   }
   @Test 
   public void test6() {
-	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div/div/div[1]/div[6]/div[2]/span/div/div/div[2]/div[2]/div/div/div/div/div[2]/span"));
+	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[2]/div//div//div[2]/span[1]"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  for (int i = 0; i < credit.size(); i++) {
+			System.out.println("----------- credits of articles: "+i+" -----------");
 		if (credit.get(i).getCssValue("font-family").equals("arial")) {
 			System.out.println("the font-family is :"+credit.get(i).getCssValue("font-family"));
 		}else {System.err.println("the font-family is no arial "+credit.get(i).getCssValue("font-family"));
@@ -104,7 +111,7 @@ public class css {
   }
   @Test 
   public void test7() {
-	  WebElement img=driver.findElement(By.xpath("/html/body/div[8]/div/div/div[1]/div[6]/div[2]/span/div/div/div[2]/div[1]/div/div/div/div/div[3]/div/div/span/a/img"));
+	  WebElement img=driver.findElement(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[1]/div//div//div[3]/div//span/a/img"));
 	  int w =img.getSize().getWidth();
 	  int h =img.getSize().getHeight();
 	  if (h==84 && w==150) {
@@ -119,7 +126,7 @@ public class css {
   }
   @Test 
   public void test8() {
-	  WebElement logo=driver.findElement(By.xpath("//div[8]/div/div/div[1]/div[2]/div/span/div/div/div[2]/div/a/img"));
+	  WebElement logo=driver.findElement(By.xpath("//div[8]/div//div[1]/div[2]/div/span/div//div[2]/div/a/img"));
 	  Point point = logo.getLocation();
 	  int x =point.getX();
 	  int y =point.getX();

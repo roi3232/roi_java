@@ -28,7 +28,6 @@ public class JframeRunner {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
 				label1.setText("test1");
 				JUnitCore junit = new JUnitCore();
 				junit.addListener(new TextListener (System. out));
@@ -40,7 +39,7 @@ public class JframeRunner {
 		
 
 
-
+//
 	}
-
+//
 }
