@@ -22,6 +22,7 @@ public class css {
 	  WebDriverManager.chromedriver().setup();
 	  System.setProperty("webdriver.chrome.silentOutput", "true");
 	  driver=new ChromeDriver();
+	  driver.manage().window().maximize();
 	  driver.get("https://www.ynet.co.il/home/0,7340,L-8,00.html");
   }
 
@@ -79,12 +80,12 @@ public class css {
 	  Point point = logo.getLocation();
 	  int x =point.getX();
 	  int y =point.getX();
-	  if (x==1047 && y==1047) {
+	  if (x==1702 && y==1702) {
 		  System.out.println("----------- Location of logo -----------");
 		  System.out.println("the x point of logo ok");
 		  System.out.println("the y point of logo ok");
 	}else {
-		Assert.assertFalse(x==1047 && y==1047);
+		Assert.assertFalse(x==1702 && y==1702);
 		}
 	  }
   }
