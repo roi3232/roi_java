@@ -40,7 +40,8 @@ public class css {
 			System.out.println("font size ok");
 			System.out.println("font color ok");
 			System.out.println("the font is bold");
-		}else {Assert.assertFalse(headline.get(i).getCssValue("font-size").equals("14px") && headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)") && headline.get(i).getCssValue("font-weight").equals("700"));
+		}else {
+			Assert.assertFalse(headline.get(i).getCssValue("font-size").equals("14px") && headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)") && headline.get(i).getCssValue("font-weight").equals("700"));
 		}
 		}
 	  }
