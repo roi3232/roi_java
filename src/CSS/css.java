@@ -35,13 +35,12 @@ public class css {
   @Test(groups = "headline")
   public void test1() {
 	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span//div/div[2]/div[2]/div//div//div[1]/a/span"));
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  for (int i = 0; i < headline.size(); i++) {
 		if (headline.get(i).getCssValue("font-size").equals("14px") && headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)") && headline.get(i).getCssValue("font-weight").equals("700")) {
 			System.out.println("----------- news link: "+i+" -----------");
-			System.out.println("size is :"+headline.get(i).getCssValue("font-size"));
-			System.out.println("color is :"+headline.get(i).getCssValue("color"));
-			System.out.println("the text is :"+headline.get(i).getCssValue("font-weight"));
+			System.out.println("font size ok");
+			System.out.println("font color ok");
+			System.out.println("the font is bold");
 		}else {Assert.assertFalse(headline.get(i).getCssValue("font-size").equals("14px") && headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)") && headline.get(i).getCssValue("font-weight").equals("700"));
 		}
 		}
@@ -51,13 +50,12 @@ public class css {
   @Test (groups = "credit")
   public void test2() {
 	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[2]/div//div//div[2]/span[1]"));
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	  for (int i = 0; i < credit.size(); i++) {
 			System.out.println("----------- Credits of articles: "+i+" -----------");
 		if (credit.get(i).getCssValue("color").equals("rgba(153, 153, 153, 1)") && credit.get(i).getCssValue("font-family").equals("arial") && credit.get(i).getCssValue("font-size").equals("12px")) {
-			System.out.println("the color is :"+credit.get(i).getCssValue("color"));
-			System.out.println("the font-family is :"+credit.get(i).getCssValue("font-family"));
-			System.out.println("the size is :"+credit.get(i).getCssValue("font-size"));
+			System.out.println("the font is gray");
+			System.out.println("the font is arial");
+			System.out.println("font size ok");
 		}else {
 			Assert.assertFalse(credit.get(i).getCssValue("color").equals("rgba(153, 153, 153, 1)") && credit.get(i).getCssValue("font-family").equals("arial") && credit.get(i).getCssValue("font-size").equals("12px"));
 			}
