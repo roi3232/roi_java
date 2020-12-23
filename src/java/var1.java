@@ -1,9 +1,9 @@
 package java;
 
-//public class var1 {
+public class var1 {
 
-	//public static void main(String[] args) {
-/*
+	public static void main(String[] args) {
+
 		int x,y,z;
 		x = 3;
 		y = 4;
@@ -37,10 +37,10 @@ package java;
 	    if(f.equals(u)) {
 	    	System.out.println("true");
 	    }
-*/    
+   
 	    
 	    
-//	}
+	}
 
 
-//}
+}

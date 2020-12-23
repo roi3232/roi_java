@@ -1,59 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="8" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-23T19:41:25 IST" name="Parallel test suite" finished-at="2020-12-23T19:41:33 IST" duration-ms="7443">
+  <suite started-at="2020-12-23T19:46:27 IST" name="css test" finished-at="2020-12-23T19:46:39 IST" duration-ms="11862">
     <groups>
-      <group name="list">
-        <method signature="t1.test1()[pri:0, instance:testNG.t1@34f5090e]" name="test1" class="testNG.t1"/>
-        <method signature="t1.test1()[pri:0, instance:testNG.t1@4bb33f74]" name="test1" class="testNG.t1"/>
-      </group> <!-- list -->
+      <group name="img">
+        <method signature="css.test7()[pri:0, instance:CSS.css@31e5415e]" name="test7" class="CSS.css"/>
+      </group> <!-- img -->
+      <group name="logo">
+        <method signature="css.test8()[pri:0, instance:CSS.css@31e5415e]" name="test8" class="CSS.css"/>
+      </group> <!-- logo -->
+      <group name="credit">
+        <method signature="css.test4()[pri:0, instance:CSS.css@31e5415e]" name="test4" class="CSS.css"/>
+        <method signature="css.test5()[pri:0, instance:CSS.css@31e5415e]" name="test5" class="CSS.css"/>
+        <method signature="css.test6()[pri:0, instance:CSS.css@31e5415e]" name="test6" class="CSS.css"/>
+      </group> <!-- credit -->
+      <group name="headline">
+        <method signature="css.test1()[pri:0, instance:CSS.css@31e5415e]" name="test1" class="CSS.css"/>
+        <method signature="css.test2()[pri:0, instance:CSS.css@31e5415e]" name="test2" class="CSS.css"/>
+        <method signature="css.test3()[pri:0, instance:CSS.css@31e5415e]" name="test3" class="CSS.css"/>
+      </group> <!-- headline -->
     </groups>
-    <test started-at="2020-12-23T19:41:25 IST" name="Chrome test" finished-at="2020-12-23T19:41:33 IST" duration-ms="7443">
-      <class name="testNG.t1">
-        <test-method is-config="true" signature="BeforeTest(java.lang.String)[pri:0, instance:testNG.t1@34f5090e]" started-at="2020-12-23T19:41:25 IST" name="BeforeTest" finished-at="2020-12-23T19:41:32 IST" duration-ms="6788" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2020-12-23T19:46:27 IST" name="Ynet test" finished-at="2020-12-23T19:46:39 IST" duration-ms="11862">
+      <class name="CSS.css">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:27 IST" name="beforeClass" finished-at="2020-12-23T19:46:38 IST" duration-ms="10218" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeTest -->
-        <test-method signature="test1()[pri:0, instance:testNG.t1@34f5090e]" started-at="2020-12-23T19:41:32 IST" name="test1" finished-at="2020-12-23T19:41:32 IST" duration-ms="81" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method signature="test1()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:38 IST" name="test1" finished-at="2020-12-23T19:46:38 IST" duration-ms="138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:testNG.t1@34f5090e]" started-at="2020-12-23T19:41:32 IST" name="AfterClass" finished-at="2020-12-23T19:41:33 IST" duration-ms="568" status="PASS">
+        <test-method signature="test2()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:38 IST" name="test2" finished-at="2020-12-23T19:46:38 IST" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- testNG.t1 -->
-    </test> <!-- Chrome test -->
-    <test started-at="2020-12-23T19:41:25 IST" name="firefox test" finished-at="2020-12-23T19:41:33 IST" duration-ms="7443">
-      <class name="testNG.t1">
-        <test-method is-config="true" signature="BeforeTest(java.lang.String)[pri:0, instance:testNG.t1@4bb33f74]" started-at="2020-12-23T19:41:25 IST" name="BeforeTest" finished-at="2020-12-23T19:41:31 IST" duration-ms="5765" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[FF]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- test2 -->
+        <test-method signature="test3()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:38 IST" name="test3" finished-at="2020-12-23T19:46:38 IST" duration-ms="144" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeTest -->
-        <test-method signature="test1()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2020-12-23T19:41:31 IST" name="test1" finished-at="2020-12-23T19:41:32 IST" duration-ms="1090" status="PASS">
+        </test-method> <!-- test3 -->
+        <test-method signature="test4()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:38 IST" name="test4" finished-at="2020-12-23T19:46:38 IST" duration-ms="129" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2020-12-23T19:41:32 IST" name="AfterClass" finished-at="2020-12-23T19:41:33 IST" duration-ms="571" status="PASS">
+        </test-method> <!-- test4 -->
+        <test-method signature="test5()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:38 IST" name="test5" finished-at="2020-12-23T19:46:38 IST" duration-ms="142" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- testNG.t1 -->
-    </test> <!-- firefox test -->
-  </suite> <!-- Parallel test suite -->
+        </test-method> <!-- test5 -->
+        <test-method signature="test6()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:38 IST" name="test6" finished-at="2020-12-23T19:46:38 IST" duration-ms="127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test6 -->
+        <test-method signature="test7()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:38 IST" name="test7" finished-at="2020-12-23T19:46:39 IST" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test7 -->
+        <test-method signature="test8()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:39 IST" name="test8" finished-at="2020-12-23T19:46:39 IST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test8 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:CSS.css@31e5415e]" started-at="2020-12-23T19:46:39 IST" name="afterClass" finished-at="2020-12-23T19:46:39 IST" duration-ms="684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- CSS.css -->
+    </test> <!-- Ynet test -->
+  </suite> <!-- css test -->
 </testng-results>
