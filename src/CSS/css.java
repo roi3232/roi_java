@@ -32,7 +32,7 @@ public class css {
 	  driver.quit();
   }
 
-  @Test
+  @Test(groups = "headline")
   public void test1() {
 	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span//div/div[2]/div[2]/div//div//div[1]/a/span"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -47,7 +47,7 @@ public class css {
 	}
 	  
   }
-  @Test 
+  @Test (groups = "headline")
   public void test2() {
 	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span//div/div[2]/div[2]/div//div//div[1]/a/span"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -61,7 +61,7 @@ public class css {
 	  
 	  
   }
-  @Test 
+  @Test (groups = "headline")
   public void test3() {
 	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span//div/div[2]/div[2]/div//div//div[1]/a/span"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -73,7 +73,7 @@ public class css {
 		}
 	}  
   }
-  @Test 
+  @Test (groups = "credit")
   public void test4() {
 	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[2]/div//div//div[2]/span[1]"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -85,7 +85,7 @@ public class css {
 		}
 	}  
   }
-  @Test 
+  @Test (groups = "credit")
   public void test5() {
 	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[2]/div//div//div[2]/span[1]"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -97,7 +97,7 @@ public class css {
 		}
 	}  
   }
-  @Test 
+  @Test (groups = "credit")
   public void test6() {
 	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[2]/div//div//div[2]/span[1]"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -109,7 +109,7 @@ public class css {
 		}
 	}  
   }
-  @Test 
+  @Test (groups = "img")
   public void test7() {
 	  WebElement img=driver.findElement(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[1]/div//div//div[3]/div//span/a/img"));
 	  int w =img.getSize().getWidth();
@@ -124,7 +124,7 @@ public class css {
 	
 	
   }
-  @Test 
+  @Test (groups = "logo")
   public void test8() {
 	  WebElement logo=driver.findElement(By.xpath("//div[8]/div//div[1]/div[2]/div/span/div//div[2]/div/a/img"));
 	  Point point = logo.getLocation();
