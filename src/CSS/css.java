@@ -5,6 +5,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeClass;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
@@ -15,6 +18,12 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class css {
+	static void fileWrite(String text) {
+		 try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("CSS.txt", true)))) {
+			    out.println(text);
+		 }catch (Exception e) {
+		 }
+	}
 	  static WebDriver driver;
 
   @BeforeClass
@@ -36,10 +45,10 @@ public class css {
 	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]//div[@class='hContainer ynet grid1280']/div[1]/div[6]/div[@class='layoutItem multi-article']/span/div//div[@class='slotsContent']/div[@class='slotList']/div//div//div[1]/a/span"));
 	  for (int i = 0; i < headline.size(); i++) {
 		if (headline.get(i).getCssValue("font-size").equals("14px") && headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)") && headline.get(i).getCssValue("font-weight").equals("700")) {
-			System.out.println("----------- news link: "+i+" -----------");
-			System.out.println("font size ok");
-			System.out.println("font color ok");
-			System.out.println("the font is bold");
+			fileWrite("----------- news link: "+i+" -----------");
+			fileWrite("font size ok");
+			fileWrite("font color ok");
+			fileWrite("the font is bold");
 		}else {
 			Assert.assertFalse(headline.get(i).getCssValue("font-size").equals("14px") && headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)") && headline.get(i).getCssValue("font-weight").equals("700"));
 		}
@@ -51,11 +60,11 @@ public class css {
   public void test2() {
 	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[@class='RelativeElementsContainer site_page_root']/div[6]/div[@class='layoutItem multi-article']/span/div/div/div[@class='slotsContent']/div[@class='slotList']/div//div//div[@class='moreDetails']/span[@class='authorInfo']"));
 	  for (int i = 0; i < credit.size(); i++) {
-			System.out.println("----------- Credits of articles: "+i+" -----------");
+		  fileWrite("----------- Credits of articles: "+i+" -----------");
 		if (credit.get(i).getCssValue("color").equals("rgba(153, 153, 153, 1)") && credit.get(i).getCssValue("font-family").equals("arial") && credit.get(i).getCssValue("font-size").equals("12px")) {
-			System.out.println("the font is gray");
-			System.out.println("the font is arial");
-			System.out.println("font size ok");
+			fileWrite("the font is gray");
+			fileWrite("the font is arial");
+			fileWrite("font size ok");
 		}else {
 			Assert.assertFalse(credit.get(i).getCssValue("color").equals("rgba(153, 153, 153, 1)") && credit.get(i).getCssValue("font-family").equals("arial") && credit.get(i).getCssValue("font-size").equals("12px"));
 			}
@@ -67,12 +76,12 @@ public class css {
 	  WebElement img=driver.findElement(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[@class='withImagePreview']/div//div//div[@class='mediaArea']/div//span/a/img"));
 	  int w =img.getSize().getWidth();
 	  int h =img.getSize().getHeight();
-	  System.out.println("----------- Size of img -----------");
-	  if (h==90 && w==150) {
-		  System.out.println("the width of big img ok");
-		  System.out.println("the Height of big img ok");
+	  if (h==84 && w==150) {
+		  fileWrite("----------- Size of img -----------");
+		  fileWrite("the width of big img ok");
+		  fileWrite("the Height of big img ok");
 	}else {
-		Assert.assertFalse(h==90 && w==150);
+		Assert.assertFalse(h==84.38 && w==150);
 		}
 	  }
   @Test (groups = "logo")
@@ -82,9 +91,9 @@ public class css {
 	  int x =point.getX();
 	  int y =point.getX();
 	  if (x==1702 && y==1702) {
-		  System.out.println("----------- Location of logo -----------");
-		  System.out.println("the x point of logo ok");
-		  System.out.println("the y point of logo ok");
+		  fileWrite("----------- Location of logo -----------");
+		  fileWrite("the x point of logo ok");
+		  fileWrite("the y point of logo ok");
 	}else {
 		Assert.assertFalse(x==1702 && y==1702);
 		}
