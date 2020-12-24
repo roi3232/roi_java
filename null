@@ -1,9 +1,9 @@
-1608746716303	geckodriver	INFO	Listening on 127.0.0.1:34337
-1608746716798	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\royko\\AppData\\Local\\Temp\\rust_mozprofileaZauDe"
+1608833345221	geckodriver	INFO	Listening on 127.0.0.1:13274
+1608833345718	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\royko\\AppData\\Local\\Temp\\rust_mozprofileKdnuwL"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1608746718308	Marionette	INFO	Listening on port 58463
-1608746718815	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608833347170	Marionette	INFO	Listening on port 54194
+1608833347264	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://www.nisha.co.il/Areas/Admin/js/jquery.form.js, line 1: SyntaxError: nothing to repeat
 JavaScript error: https://www.nisha.co.il/%D7%98%D7%91%D7%9C%D7%90%D7%95%D7%AA-%D7%A9%D7%9B%D7%A8, line 367: TypeError: $(...).ajaxForm is not a function

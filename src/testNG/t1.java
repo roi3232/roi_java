@@ -68,7 +68,7 @@ public class t1 {
 		  }if (browserName.equals("firefox")) {
 			  List<WebElement> jobsElements=driver.findElements(By.xpath("//div[3]/section[1]/section/section[2]/div/div/div[7]/div/h3"));
 			  for (WebElement webElement : jobsElements) {
-				  fileWrite(browserName +":"+ webElement.getText());
+				  fileWrite(browserName +" firefox:"+ webElement.getText());
 		}
 			  }
 		  }

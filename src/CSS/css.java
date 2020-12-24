@@ -81,7 +81,7 @@ public class css {
 		  fileWrite("the width of big img ok");
 		  fileWrite("the Height of big img ok");
 	}else {
-		Assert.assertFalse(h==84.38 && w==150);
+		Assert.assertFalse(h==84 && w==150);
 		}
 	  }
   @Test (groups = "logo")
