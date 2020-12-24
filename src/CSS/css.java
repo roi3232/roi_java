@@ -20,7 +20,7 @@ public class css {
   @BeforeClass
   public void beforeClass() {
 	  WebDriverManager.chromedriver().setup();
-	 // System.setProperty("webdriver.chrome.silentOutput", "true");
+	  System.setProperty("webdriver.chrome.silentOutput", "true");
 	  driver=new ChromeDriver();
 	  driver.manage().window().maximize();
 	  driver.get("https://www.ynet.co.il/home/0,7340,L-8,00.html");
