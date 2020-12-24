@@ -20,7 +20,7 @@ public class css {
   @BeforeClass
   public void beforeClass() {
 	  WebDriverManager.chromedriver().setup();
-	  System.setProperty("webdriver.chrome.silentOutput", "true");
+	 // System.setProperty("webdriver.chrome.silentOutput", "true");
 	  driver=new ChromeDriver();
 	  driver.manage().window().maximize();
 	  driver.get("https://www.ynet.co.il/home/0,7340,L-8,00.html");
@@ -33,7 +33,7 @@ public class css {
 
   @Test(groups = "headline")
   public void test1() {
-	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span//div/div[2]/div[2]/div//div//div[1]/a/span"));
+	  List<WebElement> headline=driver.findElements(By.xpath("//div[8]//div[@class='hContainer ynet grid1280']/div[1]/div[6]/div[@class='layoutItem multi-article']/span/div//div[@class='slotsContent']/div[@class='slotList']/div//div//div[1]/a/span"));
 	  for (int i = 0; i < headline.size(); i++) {
 		if (headline.get(i).getCssValue("font-size").equals("14px") && headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)") && headline.get(i).getCssValue("font-weight").equals("700")) {
 			System.out.println("----------- news link: "+i+" -----------");
@@ -49,7 +49,7 @@ public class css {
 
   @Test (groups = "credit")
   public void test2() {
-	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[2]/div//div//div[2]/span[1]"));
+	  List<WebElement> credit=driver.findElements(By.xpath("//div[8]/div//div[@class='RelativeElementsContainer site_page_root']/div[6]/div[@class='layoutItem multi-article']/span/div/div/div[@class='slotsContent']/div[@class='slotList']/div//div//div[@class='moreDetails']/span[@class='authorInfo']"));
 	  for (int i = 0; i < credit.size(); i++) {
 			System.out.println("----------- Credits of articles: "+i+" -----------");
 		if (credit.get(i).getCssValue("color").equals("rgba(153, 153, 153, 1)") && credit.get(i).getCssValue("font-family").equals("arial") && credit.get(i).getCssValue("font-size").equals("12px")) {
@@ -64,7 +64,7 @@ public class css {
 
   @Test (groups = "img")
   public void test3() {
-	  WebElement img=driver.findElement(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[1]/div//div//div[3]/div//span/a/img"));
+	  WebElement img=driver.findElement(By.xpath("//div[8]/div//div[1]/div[6]/div[2]/span/div//div[2]/div[@class='withImagePreview']/div//div//div[@class='mediaArea']/div//span/a/img"));
 	  int w =img.getSize().getWidth();
 	  int h =img.getSize().getHeight();
 	  System.out.println("----------- Size of img -----------");
@@ -77,7 +77,7 @@ public class css {
 	  }
   @Test (groups = "logo")
   public void test4() {
-	  WebElement logo=driver.findElement(By.xpath("//div[8]/div//div[1]/div[2]/div/span/div//div[2]/div/a/img"));
+	  WebElement logo=driver.findElement(By.xpath("//div[8]/div//div[1]/div[2]/div/span/div//div[@class='rightWrapper']/div[@class='logo']/a/img"));
 	  Point point = logo.getLocation();
 	  int x =point.getX();
 	  int y =point.getX();

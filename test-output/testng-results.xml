@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-23T22:02:11 IST" name="css test" finished-at="2020-12-23T22:02:21 IST" duration-ms="10004">
+  <suite started-at="2020-12-24T18:25:36 IST" name="css test" finished-at="2020-12-24T18:25:49 IST" duration-ms="13555">
     <groups>
       <group name="img">
         <method signature="css.test3()[pri:0, instance:CSS.css@6631f5ca]" name="test3" class="CSS.css"/>
@@ -17,29 +17,29 @@
         <method signature="css.test1()[pri:0, instance:CSS.css@6631f5ca]" name="test1" class="CSS.css"/>
       </group> <!-- headline -->
     </groups>
-    <test started-at="2020-12-23T22:02:11 IST" name="Ynet test" finished-at="2020-12-23T22:02:21 IST" duration-ms="10004">
+    <test started-at="2020-12-24T18:25:36 IST" name="Ynet test" finished-at="2020-12-24T18:25:49 IST" duration-ms="13555">
       <class name="CSS.css">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-23T22:02:11 IST" name="beforeClass" finished-at="2020-12-23T22:02:20 IST" duration-ms="8615" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-24T18:25:36 IST" name="beforeClass" finished-at="2020-12-24T18:25:48 IST" duration-ms="12349" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="test1()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-23T22:02:20 IST" name="test1" finished-at="2020-12-23T22:02:20 IST" duration-ms="228" status="PASS">
+        <test-method signature="test1()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-24T18:25:48 IST" name="test1" finished-at="2020-12-24T18:25:48 IST" duration-ms="255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-23T22:02:20 IST" name="test2" finished-at="2020-12-23T22:02:20 IST" duration-ms="431" status="PASS">
+        <test-method signature="test2()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-24T18:25:48 IST" name="test2" finished-at="2020-12-24T18:25:49 IST" duration-ms="222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method signature="test3()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-23T22:02:20 IST" name="test3" finished-at="2020-12-23T22:02:20 IST" duration-ms="48" status="PASS">
+        <test-method signature="test3()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-24T18:25:49 IST" name="test3" finished-at="2020-12-24T18:25:49 IST" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method signature="test4()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-23T22:02:20 IST" name="test4" finished-at="2020-12-23T22:02:20 IST" duration-ms="35" status="PASS">
+        <test-method signature="test4()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-24T18:25:49 IST" name="test4" finished-at="2020-12-24T18:25:49 IST" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test4 -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-23T22:02:20 IST" name="afterClass" finished-at="2020-12-23T22:02:21 IST" duration-ms="627" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:CSS.css@6631f5ca]" started-at="2020-12-24T18:25:49 IST" name="afterClass" finished-at="2020-12-24T18:25:49 IST" duration-ms="625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
