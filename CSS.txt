@@ -1,0 +1,54 @@
+----------- news link: 0 -----------
+font size ok
+font color ok
+the font is bold
+----------- news link: 1 -----------
+font size ok
+font color ok
+the font is bold
+----------- news link: 2 -----------
+font size ok
+font color ok
+the font is bold
+----------- news link: 3 -----------
+font size ok
+font color ok
+the font is bold
+----------- news link: 4 -----------
+font size ok
+font color ok
+the font is bold
+----------- news link: 5 -----------
+font size ok
+font color ok
+the font is bold
+----------- Credits of articles: 0 -----------
+the font is gray
+the font is arial
+font size ok
+----------- Credits of articles: 1 -----------
+the font is gray
+the font is arial
+font size ok
+----------- Credits of articles: 2 -----------
+the font is gray
+the font is arial
+font size ok
+----------- Credits of articles: 3 -----------
+the font is gray
+the font is arial
+font size ok
+----------- Credits of articles: 4 -----------
+the font is gray
+the font is arial
+font size ok
+----------- Credits of articles: 5 -----------
+the font is gray
+the font is arial
+font size ok
+----------- Size of img -----------
+the width of big img ok
+the Height of big img ok
+----------- Location of logo -----------
+the x point of logo ok
+the y point of logo ok
