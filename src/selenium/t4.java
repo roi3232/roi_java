@@ -19,13 +19,13 @@ public class t4 {
         Robot robot = new Robot();
         try {
 			driver.get("https://www.google.co.il/");
-			driver.findElement(By.xpath("//div[@class='a4bIc']/input")).sendKeys("hackeru ");
+			driver.findElement(By.xpath("//div[@class='a4bIc']/input")).sendKeys("hackeru");
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
-			driver.findElement(By.cssSelector("a[class='q']")).click();
+			driver.findElement(By.xpath("//div[7]/div[2]/div[4]/div/div/div[1]/div/div/div[1]/div/div[2]/a")).click();
 			robot.mouseMove(800, 600);
-			robot.mousePress(InputEvent.BUTTON3_MASK);
-			robot.mouseRelease(InputEvent.BUTTON3_MASK);
+			robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
+			robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
 			robot.delay(1000);
 			robot.keyPress(KeyEvent.VK_DOWN);
 			robot.keyRelease(KeyEvent.VK_DOWN);
