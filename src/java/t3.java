@@ -55,13 +55,14 @@ public static  void string_number (String some_string) {
 }
 
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		
-		Scanner cons = new Scanner(System.in);
+		Scanner cons1 = new Scanner(System.in);
 		int x=-1;
 		while (x!=0) {
 			System.out.print("enter number");
-			x=cons.nextInt();
+			x=cons1.nextInt();
 		}
 		
 		/* תרגיל 1
