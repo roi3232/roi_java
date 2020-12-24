@@ -5,7 +5,7 @@
     <classes>
       <class name="CSS.css">
         <methods>
-          <include name="test4"/>
+          <include name="test3"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
         </methods>
