@@ -5,7 +5,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -30,8 +29,8 @@ public class label1 {
 	public void test() {
 		driver.findElement(By.id("alert1")).click();
 		driver.switchTo().alert().accept();
-		WebElement alret=driver.findElement(By.id("alert"));
-		String alretString=alret.getText();
+		JframeRunner.label1.setText(driver.findElement(By.id("alert")).getText());
+		
 		
 		
 	}

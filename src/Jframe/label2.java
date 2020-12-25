@@ -1,10 +1,9 @@
 package Jframe;
 
-import static org.junit.Assert.*;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -24,11 +23,14 @@ public class label2 {
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
+		driver.quit();
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
+	public void test1() {
+		driver.findElement(By.id("alert2")).click();
+		driver.switchTo().alert().dismiss();
+		JframeRunner.label2.setText(driver.findElement(By.id("demo")).getText());
+		}
 
 }
