@@ -42,7 +42,7 @@ public class Gmail {
 		 }
 	}
 	static WebDriver driver;
-	static String[]multi_addressee ={"daniel.levy@shaysns.com"};
+	static String[]multi_addressee ={"roy.koro51@gmail.com"};
 	static String toCc = "roy.koro51@gmail.com";
 	//המייל שיוצא ששולח וניתן לרשום מייל לא אמיתי
 	static String mailFrom = "roi32.qa@gmail.com";
@@ -130,7 +130,7 @@ public class Gmail {
 		}else {
 			fileWrite("In fieldes Username and Password not writen '333'");	
 		}
-		WebElement login=driver.findElement(By.xpath("//div[@class='content']/div[@class='content-outer']/div[@class='fauxborder-left content-fauxborder-left']/div[@class='content-inner']/div[@class='main-outer']/div[@class='fauxborder-left main-fauxborder-left']/div[@class='region-inner main-inner']/div/div[@class='columns-inner']/div[@class='column-center-outer']/div//div[7]/div[@class='widget-content']/form/input[@value='Login']"));
+		WebElement login=driver.findElement(By.xpath("//form[@name='login']/input[@value='Login']"));
 		login.click();
 		Alert alert = driver.switchTo().alert();
 		String alartString= alert.getText();
@@ -141,7 +141,7 @@ public class Gmail {
 			fileWrite("Alet no apered");
 		}
 		
-		WebElement Cancel=driver.findElement(By.xpath("//div[@class='content']/div[@class='content-outer']/div[@class='fauxborder-left content-fauxborder-left']/div[@class='content-inner']/div[@class='main-outer']/div[@class='fauxborder-left main-fauxborder-left']/div[@class='region-inner main-inner']/div/div[@class='columns-inner']/div[@class='column-center-outer']/div//div[7]/div[@class='widget-content']/form/input[@value='Cancel']"));
+		WebElement Cancel=driver.findElement(By.xpath("//form[@name='login']/input[@value='Cancel']"));
 		Cancel.click();
 		if (Username.getAttribute("value").isEmpty() && Password.getAttribute("value").isEmpty()) {
 			fileWrite("Click cancel deleted  values in text fields ");			
@@ -156,7 +156,7 @@ public class Gmail {
 		WebElement Password= driver.findElement(By.name("pswrd"));
 		Username.sendKeys("SeleniumByArun");
 		Password.sendKeys("Test143$");
-		WebElement login=driver.findElement(By.xpath("//div[@class='content']/div[@class='content-outer']/div[@class='fauxborder-left content-fauxborder-left']/div[@class='content-inner']/div[@class='main-outer']/div[@class='fauxborder-left main-fauxborder-left']/div[@class='region-inner main-inner']/div/div[@class='columns-inner']/div[@class='column-center-outer']/div//div[7]/div[@class='widget-content']/form/input[@value='Login']"));
+		WebElement login=driver.findElement(By.xpath("//form[@name='login']/input[@value='Login']"));
 		login.click();
 		ArrayList<String> tabs2= new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs2.get(1));

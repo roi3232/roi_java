@@ -46,9 +46,6 @@ font size ok
 the font is gray
 the font is arial
 font size ok
------------ Size of img -----------
-the width of big img ok
-the Height of big img ok
 ----------- Location of logo -----------
 the x point of logo ok
 the y point of logo ok

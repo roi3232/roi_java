@@ -42,7 +42,7 @@ public class css {
 
   @Test(groups = "headline")
   public void test1() {
-	  List<WebElement> headline=driver.findElements(By.xpath("//div[7]/div/div/div[@class='RelativeElementsContainer site_page_root']/div[6]/div[@class='layoutItem multi-article']/span/div/div[@class='MultiArticleComponenta Standart']/div[@class='slotsContent']/div[2]/div/div/div/div/div[@class='slotTitle']/a/span"));
+	  List<WebElement> headline=driver.findElements(By.xpath("//div[@class='RelativeElementsContainer site_page_root']/div[6]/div[@class='layoutItem multi-article']/span//div[@class='MultiArticleComponenta Standart']/div[@class='slotsContent']/div[2]/div//div[@class='slotTitle']/a/span"));
 	  for (int i = 0; i < headline.size(); i++) {
 		if (headline.get(i).getCssValue("font-size").equals("14px") && headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)") && headline.get(i).getCssValue("font-weight").equals("700")) {
 			fileWrite("----------- news link: "+i+" -----------");
@@ -58,7 +58,7 @@ public class css {
 
   @Test (groups = "credit")
   public void test2() {
-	  List<WebElement> credit=driver.findElements(By.xpath("//div[7]/div/div/div[1]/div[6]/div[2]/span/div/div[@class='MultiArticleComponenta Standart']/div[2]/div[2]/div/div/div/div/div[@class='moreDetails']/span[@class='authorInfo']"));
+	  List<WebElement> credit=driver.findElements(By.xpath("//div[@class='RelativeElementsContainer site_page_root']/div[6]/div[2]/span//div[@class='MultiArticleComponenta Standart']/div[2]/div[2]//div[@class='moreDetails']/span[@class='authorInfo']"));
 	  for (int i = 0; i < credit.size(); i++) {
 		  fileWrite("----------- Credits of articles: "+i+" -----------");
 		if (credit.get(i).getCssValue("color").equals("rgba(153, 153, 153, 1)") && credit.get(i).getCssValue("font-family").equals("arial") && credit.get(i).getCssValue("font-size").equals("12px")) {
@@ -73,7 +73,7 @@ public class css {
 
   @Test (groups = "img")
   public void test3() {
-	  WebElement img=driver.findElement(By.xpath("/div[7]/div/div/div[1]/div[8]/div[1]/span/div/div/div[2]/div[1]/div/div/div/div/div[@class='mediaArea']/div/div/span/a/img[@class='SiteImageMedia']"));
+	  WebElement img=driver.findElement(By.xpath("//div[@class='RelativeElementsContainer site_page_root']/div[6]/div[2]/span//div[@class='slotsContent']/div[1]//div[@class='slotView']/div[3]/div/div/span/a/img"));
 	  int w =img.getSize().getWidth();
 	  int h =img.getSize().getHeight();
 	  if (h==84 && w==150) {
@@ -86,7 +86,7 @@ public class css {
 	  }
   @Test (groups = "logo")
   public void test4() {
-	  WebElement logo=driver.findElement(By.xpath("//div[7]/div/div/div[1]/div[2]/div/span/div/div/div[2]/div/a/img"));
+	  WebElement logo=driver.findElement(By.xpath("//div[@class='rightWrapper']/div/a/img"));
 	  Point point = logo.getLocation();
 	  int x =point.getX();
 	  int y =point.getX();
