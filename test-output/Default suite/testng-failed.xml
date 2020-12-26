@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG.t1">
+      <class name="CSS.css">
         <methods>
+          <include name="test2"/>
           <include name="test1"/>
-          <include name="BeforeTest"/>
-          <include name="AfterClass"/>
+          <include name="test4"/>
+          <include name="test3"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- testNG.t1 -->
+      </class> <!-- CSS.css -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
