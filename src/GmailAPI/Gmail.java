@@ -42,7 +42,7 @@ public class Gmail {
 		 }
 	}
 	static WebDriver driver;
-	static String[]multi_addressee ={"roy.koro51@gmail.com"};
+	static String[]multi_addressee ={"daniel.levy@shaysns.com"};
 	static String toCc = "roy.koro51@gmail.com";
 	//המייל שיוצא ששולח וניתן לרשום מייל לא אמיתי
 	static String mailFrom = "roi32.qa@gmail.com";
@@ -53,12 +53,8 @@ public class Gmail {
 	static String password = "1A2S3e5t6y";
 	static Session session;
 	
-	
-
 	@BeforeClass
 	public static void setUpBeforeClass() {
-		
-		
 		 WebDriverManager.chromedriver().setup();
 		 System.setProperty("webdriver.chrome.silentOutput", "true");
 		 driver=new ChromeDriver();
@@ -69,6 +65,7 @@ public class Gmail {
 	@AfterClass
 	public static void tearDownAfterClass() throws AddressException, MessagingException {
 		driver.quit();
+		
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "smtp.gmail.com");
 		props.put("mail.smtp.socketFactory.port", "465");

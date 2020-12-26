@@ -1,20 +1,3 @@
-Testing username 333 and password 333 received message Z
-In fieldes Username and Password writen 333
-Click cancel deleted  values in text fields 
-Testing username SeleniumByArun and password Test143$ received message Z
-Testing username 333 and password 333 received message Z
-In fieldes Username and Password writen 333
-Click cancel deleted  values in text fields 
-Testing username SeleniumByArun and password Test143$ received message Z
-The id of img isHeader1_headerimg
-Testing username 333 and password 333 received message Z
-In fieldes Username and Password writen 333
-Click cancel deleted  values in text fields 
-Testing username SeleniumByArun and password Test143$ received message Z
-The id of img isHeader1_headerimg
-Testing username '333' and password '333' received message 'Error Password or Username'
-In fieldes Username and Password writen '333'
-Testing username SeleniumByArun and password Test143$ . received message: 'selenium143'
 Testing username '333' and password '333' received message 'Error Password or Username'
 In fieldes Username and Password writen '333'
 Error Password or Username
