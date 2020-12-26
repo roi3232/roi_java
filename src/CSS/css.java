@@ -76,12 +76,12 @@ public class css {
 	  WebElement img=driver.findElement(By.xpath("//div[@class='RelativeElementsContainer site_page_root']/div[6]/div[2]/span//div[@class='slotsContent']/div[1]//div[@class='slotView']/div[3]/div/div/span/a/img"));
 	  int w =img.getSize().getWidth();
 	  int h =img.getSize().getHeight();
-	  if (h==84 && w==150) {
+	  if (h==90 && w==150) {
 		  fileWrite("----------- Size of img -----------");
 		  fileWrite("the width of big img ok");
 		  fileWrite("the Height of big img ok");
 	}else {
-		Assert.assertFalse(h==84 && w==150);
+		Assert.assertFalse(h==90 && w==150);
 		}
 	  }
   @Test (groups = "logo")
