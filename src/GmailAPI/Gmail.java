@@ -35,7 +35,7 @@ import javax.mail.internet.MimeMultipart;
 
 
 public class Gmail {
-	static void fileWrite(String text) {
+	public static void fileWrite(String text) {
 		 try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("gmail.txt", true)))) {
 			    out.println(text);
 		 }catch (Exception e) {
@@ -51,7 +51,7 @@ public class Gmail {
 	static String BodyText = "Added file with test result";
 	static String userName = "roi32.qa@gmail.com";
 	static String password = "1A2S3e5t6y";
-	static Session session;
+	
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -65,7 +65,7 @@ public class Gmail {
 	@AfterClass
 	public static void tearDownAfterClass() throws AddressException, MessagingException {
 		driver.quit();
-		
+		//מאפיינים ליצירת קשר עם השרת
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "smtp.gmail.com");
 		props.put("mail.smtp.socketFactory.port", "465");
@@ -74,45 +74,49 @@ public class Gmail {
 		props.setProperty("mail.smtp.user", "abc");
 		props.setProperty("mail.smtp.password", "xyz");
 		props.setProperty("mail.smtp.auth", "true"); 
-		
-		session = Session.getDefaultInstance (props,new javax.mail.Authenticator () {
-		protected PasswordAuthentication getPasswordAuthentication () {
-		return new PasswordAuthentication (userName,password);
-		}
+	//יצירת תישרות עם השרת	
+		Session	session = Session.getDefaultInstance (props,new javax.mail.Authenticator () {
+			protected PasswordAuthentication getPasswordAuthentication () {
+				return new PasswordAuthentication (userName,password);
+				}
 		});
 		
 			try {
+				//הגדרת מתובת השולח
 				Message message = new MimeMessage (session);
 				message.setFrom(new InternetAddress(mailFrom));
+				//הגדרת נמענים
 				InternetAddress [] addressTo = new InternetAddress[multi_addressee.length];
-				for (int i = 0 ; i < multi_addressee.length ; i ++)	{
-				message.addRecipient(Message.RecipientType.TO,new
-				InternetAddress (multi_addressee [i] ));
-				message.addRecipient(Message.RecipientType.CC, new InternetAddress (toCc));
-				message.setSubject(subject);
-				BodyPart messageBodyPart = new MimeBodyPart();
-				messageBodyPart.setText(BodyText);
-				Multipart multipart = new MimeMultipart();
-				multipart.addBodyPart(messageBodyPart);
-				messageBodyPart	= new MimeBodyPart();
-				DataSource source = new FileDataSource (file_path);
-				messageBodyPart.setDataHandler(new DataHandler (source));
-				messageBodyPart.setFileName(file_path);
-				multipart.addBodyPart(messageBodyPart);
-				message.setContent(multipart);
-				Transport.send(message);
-				System.out.println("message sent");
-				}
-			} catch (AddressException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (MessagingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				for (int i = 0 ; i < multi_addressee.length ; i ++)	
+				{
+					message.addRecipient(Message.RecipientType.TO,new
+							InternetAddress (multi_addressee [i] ));
+					//הגדרת שליחת עותק
+					message.addRecipient(Message.RecipientType.CC, new InternetAddress (toCc));
+					//הכנסת נושא+ גוף המייל
+					message.setSubject(subject);
+					BodyPart messageBodyPart = new MimeBodyPart();
+					messageBodyPart.setText(BodyText);
+					Multipart multipart = new MimeMultipart();
+					multipart.addBodyPart(messageBodyPart);
+					//הוספת קובץ
+					messageBodyPart	= new MimeBodyPart();
+					DataSource source = new FileDataSource (file_path);
+					messageBodyPart.setDataHandler(new DataHandler (source));
+					messageBodyPart.setFileName(file_path);
+					multipart.addBodyPart(messageBodyPart);
+					//סגירת המייל ושליחתו
+					message.setContent(multipart);
+					Transport.send(message);
+					System.out.println("message sent");
+					}
+				} catch (AddressException e) {
+					e.printStackTrace();
+					} catch (MessagingException e) {
+						e.printStackTrace();
+						System.err.println("message sent fail");
+						}
 			}
-		
-		
-		}
 
 	@Test
 	public void test001() throws InterruptedException {
@@ -157,7 +161,7 @@ public class Gmail {
 		ArrayList<String> tabs2= new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs2.get(1));
 		WebElement selenium143=driver.findElement(By.id("Header1_headerimg"));
-		fileWrite("The id of img is"+selenium143.getAttribute("id"));
+		fileWrite("The id of img is :"+selenium143.getAttribute("id"));
 	
 	}
 }
