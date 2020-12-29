@@ -2,7 +2,6 @@ package pof_pom_er;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 
 public class t7 {
 
@@ -18,11 +17,11 @@ public class t7 {
 		pom.user(driver).sendKeys("admin");
 		pom.pass(driver).sendKeys("123");
 		//קריאה ב-POF
-		poModel	pof = new poModel();
-		pof = PageFactory.initElements (driver, poModel. class);
-		pof.user.sendKeys ("חן");
-		pof.password.sendKeys ("sw");
-		pof.btn.click();
+	//	poModel	pof = new poModel();
+		//pof = PageFactory.initElements (driver, poModel. class);
+	//	pof.user.sendKeys ("חן");
+	//	pof.password.sendKeys ("sw");
+		//pof.btn.click();
 		
 		
 	}

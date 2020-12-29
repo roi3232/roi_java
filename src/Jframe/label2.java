@@ -10,13 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class label2 {
-	  static WebDriver driver;
+	static WebDriver driver;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
-		driver=new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.get("http://danielauto.net/practice/action/alert.html");
 
 	}
@@ -31,6 +31,6 @@ public class label2 {
 		driver.findElement(By.id("alert2")).click();
 		driver.switchTo().alert().dismiss();
 		JframeRunner.label2.setText(driver.findElement(By.id("demo")).getText());
-		}
+	}
 
 }

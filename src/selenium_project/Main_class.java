@@ -19,7 +19,7 @@ public class Main_class {
 		driver.manage().window().maximize();
 		Actions actions = new Actions(driver);
 		Robot robot = new Robot();
-	    supermarker.supermarker1(driver, actions, robot);
+		supermarker.supermarker1(driver, actions, robot);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Google_Translate.gt(driver, robot);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -30,14 +30,14 @@ public class Main_class {
 		driver.quit();
 		// close(driver);
 	}
-	
-	   @SuppressWarnings("resource") 
-	   public static void close(WebDriver driver) {
-	   Scanner cons=new Scanner(System.in);
-	   System.out.println("press enter to close"); 
-	   cons.nextLine();
-       driver.quit();
-	   }
-	
+
+	@SuppressWarnings("resource")
+	public static void close(WebDriver driver) {
+		Scanner cons = new Scanner(System.in);
+		System.out.println("press enter to close");
+		cons.nextLine();
+		driver.quit();
+	}
+
 	//
 }

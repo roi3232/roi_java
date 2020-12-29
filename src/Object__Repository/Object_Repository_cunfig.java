@@ -16,48 +16,47 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-
 public class Object_Repository_cunfig {
-	public  WebDriver driver;
-	
-	public Object_Repository_cunfig(WebDriver driver){
-    	this.driver=driver;
-    	}
-	
-	public String getData (String nodeName) throws ParserConfigurationException, SAXException, IOException 
-	{
-	File fXmlFile = new File("configurtion.xml");
-	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-	Document doc = dBuilder.parse(fXmlFile);
-	doc.getDocumentElement().normalize();
-	return doc.getElementsByTagName(nodeName).item(0).getTextContent();
+	public WebDriver driver;
+
+	public Object_Repository_cunfig(WebDriver driver) {
+		this.driver = driver;
 	}
-	public  WebDriver browser(WebDriver driver,String browser) {
-		
+
+	public String getData(String nodeName) throws ParserConfigurationException, SAXException, IOException {
+		File fXmlFile = new File("configurtion.xml");
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(fXmlFile);
+		doc.getDocumentElement().normalize();
+		return doc.getElementsByTagName(nodeName).item(0).getTextContent();
+	}
+
+	public WebDriver browser(WebDriver driver, String browser) {
+
 		if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\temp\\chromedriver.exe");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
-		    driver=new ChromeDriver();
+			driver = new ChromeDriver();
 
-		}if (browser.equals("ie")) {
-			InternetExplorerDriverService.Builder ieDriverService = new InternetExplorerDriverService.Builder().withSilent(true); 
+		}
+		if (browser.equals("ie")) {
+			InternetExplorerDriverService.Builder ieDriverService = new InternetExplorerDriverService.Builder()
+					.withSilent(true);
 			DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
-	        cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-			System.setProperty("webdriver.ie.driver","C:\\temp\\IEDriverServer.exe");
+			cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+			System.setProperty("webdriver.ie.driver", "C:\\temp\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver(ieDriverService.build());
-			
+
 		}
 		if (browser.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:\\temp\\geckodriver.exe");
-			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"null");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "null");
 			driver = new FirefoxDriver();
 		}
-		
+
 		return driver;
-		
+
 	}
 
 }
-
-

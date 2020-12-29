@@ -15,19 +15,19 @@ public class Object_Repository_t {
 	static String browserName;
 	static Capabilities cap;
 
-
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, InterruptedException  {
-		Object_Repository_cunfig or=new Object_Repository_cunfig(driver);
-		int bowserNum=1;
-		while (bowserNum<=3) {
-			int categoryNum=1;
-			driver=or.browser(driver, or.getData("brwser"+bowserNum));
+	public static void main(String[] args)
+			throws ParserConfigurationException, SAXException, IOException, InterruptedException {
+		Object_Repository_cunfig or = new Object_Repository_cunfig(driver);
+		int bowserNum = 1;
+		while (bowserNum <= 3) {
+			int categoryNum = 1;
+			driver = or.browser(driver, or.getData("brwser" + bowserNum));
 			driver.manage().window().maximize();
-			while (categoryNum<=3) {
+			while (categoryNum <= 3) {
 				driver.get("https://www.d.co.il/");
 				WebElement query = driver.findElement(By.id("query"));
-				query.sendKeys(or.getData("category"+categoryNum));
-				String queryString=query.getAttribute("value");
+				query.sendKeys(or.getData("category" + categoryNum));
+				String queryString = query.getAttribute("value");
 				driver.findElement(By.className("search_submit")).click();
 				if (queryString.equals("מוניות")) {
 					Thread.sleep(2000);
@@ -36,13 +36,13 @@ public class Object_Repository_t {
 					cap = ((RemoteWebDriver) driver).getCapabilities();
 					browserName = cap.getBrowserName().toLowerCase();
 					System.out.println(browserName);
-				}else {
+				} else {
 					Thread.sleep(2000);
 					System.out.println(driver.getTitle());
 					cap = ((RemoteWebDriver) driver).getCapabilities();
 					browserName = cap.getBrowserName().toLowerCase();
 					System.out.println(browserName);
-				}				
+				}
 				categoryNum++;
 			}
 			bowserNum++;

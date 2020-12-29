@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite  name="css test">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="css test">
 
-<test name="Ynet test">
-<classes>
-  <class name="CSS.css"/>
-</classes>
-</test>
-
+	<test name="Ynet test">
+		<classes>
+			<class name="CSS.css" />
+		</classes>
+	</test>
 
 
 </suite>

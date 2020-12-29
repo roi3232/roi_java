@@ -52,15 +52,15 @@ public class First_stage_func {
 	public static void listen(WebDriver driver, String lang) throws InterruptedException {
 		WebElement voiceBtn = driver.findElement(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/c-wiz[2]/div[5]/div/div[4]/div[1]/div[2]/div/span/button"));
 		Thread.sleep(1500);
-		try {			
+		try {
 			if (voiceBtn.isEnabled()) {
 				voiceBtn.click();
 				System.out.println("The " + lang + " played");
 				Thread.sleep(1000);
 			} else if (!voiceBtn.isEnabled()) {
 				System.out.println("The " + lang + " language can't be played");
-			} 		
-			} catch (Exception e) {
+			}
+		} catch (Exception e) {
 		}
 	}
 
@@ -86,7 +86,8 @@ public class First_stage_func {
 
 	public static void screenShot(Robot robot) throws IOException {
 		try {
-			BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+			BufferedImage screenShot = robot
+					.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 			ImageIO.write(screenShot, "JPG", new File("C:\\screen_project\\targil_1.jpg"));
 		} catch (HeadlessException e) {
 			e.printStackTrace();
@@ -97,7 +98,8 @@ public class First_stage_func {
 
 	public static void screenShot2(Robot robot) throws IOException {
 		try {
-			BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+			BufferedImage screenShot = robot
+					.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 			ImageIO.write(screenShot, "JPG", new File("C:\\screen_project\\targil_3.jpg"));
 		} catch (HeadlessException e) {
 			e.printStackTrace();
@@ -108,7 +110,8 @@ public class First_stage_func {
 
 	public static void screenShot3(Robot robot) throws IOException {
 		try {
-			BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+			BufferedImage screenShot = robot
+					.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 			ImageIO.write(screenShot, "JPG", new File("C:\\screen_project\\targil_4.jpg"));
 		} catch (HeadlessException e) {
 			e.printStackTrace();
@@ -119,7 +122,8 @@ public class First_stage_func {
 
 	public static void screenShot4(Robot robot) throws IOException {
 		try {
-			BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+			BufferedImage screenShot = robot
+					.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 			ImageIO.write(screenShot, "JPG", new File("C:\\screen_project\\targil_4.jpg"));
 		} catch (HeadlessException e) {
 			e.printStackTrace();
