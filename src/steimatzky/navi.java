@@ -44,6 +44,7 @@ public class navi {
 	public void AfterMethod() throws InterruptedException {
 		Thread.sleep(2000);
 	}
+	
 
 	@AfterClass
 	public void afterClass() {
