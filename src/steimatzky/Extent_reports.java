@@ -59,8 +59,8 @@ public class Extent_reports {
 
 	private static ExtentHtmlReporter getHtmlReporter() {
 		htmlReporter = new ExtentHtmlReporter(filePath);
-		htmlReporter.config().setDocumentTitle("targil");
-		htmlReporter.config().setReportName("test");
+		htmlReporter.config().setDocumentTitle("steimatzky- navi_linkes test");
+		htmlReporter.config().setReportName("navi_linkes test");
 		htmlReporter.config().setEncoding("windows-1255");
 		return htmlReporter;
 	}
@@ -71,37 +71,37 @@ public class Extent_reports {
 	}
 
 	public static ExtentTest createTest1(String name, String description) {
-		test1 = extent.createTest("books_subCategory", "link test");
+		test1 = extent.createTest("books and English_Books subCategory", "link test");
 		return test1;
 	}
 
 	public static ExtentTest createTest2(String name, String description) {
-		test2 = extent.createTest("subCategory", "link test");
+		test2 = extent.createTest("games,Gifts_and_leisure subCategory", "link test");
 		return test2;
 	}
 
 	public static ExtentTest createTest3(String name, String description) {
-		test3 = extent.createTest("Costumers_club_subCategory", "link test");
+		test3 = extent.createTest("music_subCategory", "link test");
 		return test3;
 	}
 
 	public static ExtentTest createTest4(String name, String description) {
-		test4 = extent.createTest("Costumers_club_subCategory", "link test");
+		test4 = extent.createTest("Smartphones and Appliances subCategory", "link test");
 		return test4;
 	}
 
 	public static ExtentTest createTest5(String name, String description) {
-		test5 = extent.createTest("Costumers_club_subCategory", "link test");
+		test5 = extent.createTest("Cosmetics_and_perfumes_subCategory", "link test");
 		return test5;
 	}
 
 	public static ExtentTest createTest6(String name, String description) {
-		test6 = extent.createTest("Costumers_club_subCategory", "link test");
+		test6 = extent.createTest("HOME_subCategory", "link test");
 		return test6;
 	}
 
 	public static ExtentTest createTest7(String name, String description) {
-		test7 = extent.createTest("Costumers_club_subCategory", "link test");
+		test7 = extent.createTest("camping_subCategory", "link test");
 		return test7;
 	}
 
@@ -118,8 +118,7 @@ public class Extent_reports {
 		String folderPath = ("C:\\test\\" + reportDate);
 		String imagePath = folderPath + "/pic" + time + ".jpg";
 		Robot robot = new Robot();
-		BufferedImage screenShot = robot
-				.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+		BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 		ImageIO.write(screenShot, "JPG", new File(imagePath));
 		return imagePath;
 	}

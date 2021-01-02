@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pof_pom_er.Extent_reports;
+
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.awt.AWTException;
 import java.io.IOException;
@@ -22,6 +22,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 
@@ -46,7 +47,7 @@ public class navi {
 	static ExtentTest test6;
 	static ExtentTest test7;
 	static ExtentTest test8;
-
+	static pofModle pof;
 
 	static Extent_reports exm = new Extent_reports(driver);
 
@@ -75,6 +76,13 @@ public class navi {
 	public void AfterMethod() throws InterruptedException {
 		Thread.sleep(2000);
 	}
+	
+	@BeforeMethod
+	public void BeforeMethod() {
+		pof = new pofModle();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		pof = PageFactory.initElements(driver, pofModle.class);
+	}
 
 	@AfterClass
 	public void afterClass() {
@@ -86,10 +94,9 @@ public class navi {
 	@Test(groups = "mCategory", priority = 1, enabled = true)
 	public void sales() throws IOException, AWTException {
 		test.info("--------sales link test --------");
-		WebElement sales = driver.findElement(By.xpath("//a[@class='sales']"));
 		// Get link text and click on the link
-		String saleString = sales.getText();
-		sales.click();
+		String saleString = pof.sales.getText();
+		pof.sales.click();
 		// Check if page title is equal to link text
 		if (saleString.equals(driver.findElement(By.className("pageTitle")).getText())
 				&& driver.getTitle().contains(saleString)) {
@@ -105,8 +112,7 @@ public class navi {
 		test.info("--------mCategorys links test --------");
 		int mCategoryNum = 1;
 		while (mCategoryNum < 13) {
-			WebElement topItem = driver
-					.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[" + mCategoryNum + "]/a"));
+			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[" + mCategoryNum + "]/a"));
 			// Get link text and click on the link
 			String topItemString = topItem.getText();
 			topItem.click();
@@ -128,10 +134,9 @@ public class navi {
 	@Test(groups = "mCategory", priority = 3, enabled = true)
 	public void club() throws IOException, AWTException {
 		test.info("--------club link test --------");
-		WebElement club = driver.findElement(By.xpath("//a[@class='club']"));
 		// Get link text and click on the link
 		String clubString = "חברות במועדון הקוראים של סטימצקי - הסיפור שלי";
-		club.click();
+		pof.club.click();
 		// Check if page title is equal to link text
 		if (clubString.contains(driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText())
 				&& driver.getTitle().contains(clubString)) {
@@ -140,7 +145,6 @@ public class navi {
 			test.fail("you not in " + clubString + " page",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-
 	}
 
 	@Test(groups = "subCategory", priority = 4, enabled = true)
@@ -152,12 +156,9 @@ public class navi {
 			while (subcatagoryNum < 15) {
 				// move to books category
 				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-				WebElement books = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[1]/a"));
-				actions.moveToElement(books).perform();
+				actions.moveToElement(pof.books).perform();
 				// click on sub-category
-				WebElement subcatagory = driver.findElement(
-						By.xpath("//div[@id='acc_categories_menu']/ul[@id='catMenu']/li[@id='menuCat-398']/div/ul/li["
-								+ clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
+				WebElement subcatagory = driver.findElement(By.xpath("//div[@id='acc_categories_menu']/ul[@id='catMenu']/li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
 				// Get link text and click on the link
 				String subcatagoryString = subcatagory.getText();
 				subcatagory.click();
@@ -177,7 +178,6 @@ public class navi {
 						driver.close();
 						driver.switchTo().window(tabs2.get(0));
 					}
-
 				} else {
 					// Check if the browser in right page
 					if (subcatagoryString.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())) {
@@ -188,8 +188,7 @@ public class navi {
 					}
 					// stop the loop in last sub-category
 					if (subcatagoryString.equals("משרדאות והנהלת חשבונות")) {
-						if (subcatagoryString
-								.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())
+						if (subcatagoryString.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())
 								&& driver.getTitle().contains(subcatagoryString)) {
 							test1.pass("you in " + subcatagoryString + " page");
 							break;
@@ -198,16 +197,12 @@ public class navi {
 									MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 							break;
 						}
-
 					}
-
 				}
-
 				subcatagoryNum++;
 			}
 			clumNum++;
 		}
-
 	}
 
 	@Test(groups = "subCategory", priority = 5, enabled = true)
@@ -215,10 +210,8 @@ public class navi {
 		test1.info("--------English_Books_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 7) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[2]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[2]/div/ul/li/ul/li[" + subCategorynum + "]"));
+			actions.moveToElement(pof.Ebooks).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[2]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -232,19 +225,15 @@ public class navi {
 			}
 			subCategorynum++;
 		}
-
 	}
 
 	@Test(groups = "subCategory", priority = 6, enabled = true)
 	public void games_subCategory() throws IOException, AWTException {
 		test2.info("--------games_subCategory links test --------");
-		WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[3]/a"));
-		actions.moveToElement(topItem).perform();
-		WebElement subCatergory = driver
-				.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[3]/div/ul/li/ul/li[1]"));
+		actions.moveToElement(pof.games).perform();
 		// Get link text and click on the link
-		String subCatergorysString = subCatergory.getText();
-		subCatergory.click();
+		String subCatergorysString = pof.Subgames.getText();
+		pof.Subgames.click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Check if page title is equal to link text
 		if (subCatergorysString.contains(driver.findElement(By.xpath("//h1")).getText())) {
@@ -260,10 +249,8 @@ public class navi {
 		test2.info("--------Gifts_and_leisure_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 8) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[6]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[6]/div/ul/li/ul/li[" + subCategorynum + "]"));
+			actions.moveToElement(pof.Gifts_and_leisure).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[6]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -277,7 +264,6 @@ public class navi {
 			}
 			subCategorynum++;
 		}
-
 	}
 
 	@Test(groups = "subCategory", priority = 8, enabled = true)
@@ -285,10 +271,8 @@ public class navi {
 		test3.info("--------music_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 8) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[7]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[7]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			actions.moveToElement(pof.music).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[7]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText().trim();
 			subCatergory.click();
@@ -301,43 +285,15 @@ public class navi {
 			}
 			subCategorynum++;
 		}
-
 	}
 
 	@Test(groups = "subCategory", priority = 9, enabled = true)
 	public void Appliances_subCategory() throws IOException, AWTException {
-		test2.info("--------Appliances_subCategory links test --------");
+		test4.info("--------Appliances_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 4) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[8]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[8]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
-			// Get link text and click on the link
-			String subCatergorysString = subCatergory.getText();
-			subCatergory.click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// Check if page title is equal to link text
-			if (subCatergorysString.contains(driver.findElement(By.xpath("//h1")).getText())) {
-				test2.pass("you in " + subCatergorysString + " page");
-			} else {
-				test2.fail("you not in " + subCatergorysString + " page",
-						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-			}
-			subCategorynum++;
-		}
-
-	}
-
-	@Test(groups = "subCategory", priority = 10, enabled = true)
-	public void Smartphones_subCategory() throws IOException, AWTException {
-		test4.info("--------Smartphones_subCategory links test --------");
-		int subCategorynum = 1;
-		while (subCategorynum <= 2) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[9]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[9]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			actions.moveToElement(pof.Appliances).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[8]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -351,7 +307,28 @@ public class navi {
 			}
 			subCategorynum++;
 		}
+	}
 
+	@Test(groups = "subCategory", priority = 10, enabled = true)
+	public void Smartphones_subCategory() throws IOException, AWTException {
+		test4.info("--------Smartphones_subCategory links test --------");
+		int subCategorynum = 1;
+		while (subCategorynum <= 2) {
+			actions.moveToElement(pof.Smartphones).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[9]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			// Get link text and click on the link
+			String subCatergorysString = subCatergory.getText();
+			subCatergory.click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			// Check if page title is equal to link text
+			if (subCatergorysString.contains(driver.findElement(By.xpath("//h1")).getText())) {
+				test4.pass("you in " + subCatergorysString + " page");
+			} else {
+				test4.fail("you not in " + subCatergorysString + " page",
+						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
+			}
+			subCategorynum++;
+		}
 	}
 
 	@Test(groups = "subCategory", priority = 11, enabled = true)
@@ -359,10 +336,8 @@ public class navi {
 		test5.info("--------Cosmetics_and_perfumes_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 3) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[10]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[10]/div/ul/li/ul/li[" + subCategorynum + "]"));
+			actions.moveToElement(pof.Cosmetics_and_perfumes).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[10]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -376,7 +351,6 @@ public class navi {
 			}
 			subCategorynum++;
 		}
-
 	}
 
 	@Test(groups = "subCategory", priority = 12, enabled = true)
@@ -384,10 +358,8 @@ public class navi {
 		test6.info("--------HOME_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 5) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[11]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[11]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			actions.moveToElement(pof.HOME).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[11]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -401,7 +373,6 @@ public class navi {
 			}
 			subCategorynum++;
 		}
-
 	}
 
 	@Test(groups = "subCategory", priority = 13, enabled = true)
@@ -409,10 +380,8 @@ public class navi {
 		test7.info("--------camping_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 2) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[12]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[12]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			actions.moveToElement(pof.camping).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[12]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -426,7 +395,6 @@ public class navi {
 			}
 			subCategorynum++;
 		}
-
 	}
 
 	@Test(groups = "subCategory", priority = 14, enabled = true)
@@ -434,10 +402,8 @@ public class navi {
 		test8.info("--------Costumers_club_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 4) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[13]/a"));
-			actions.moveToElement(topItem).perform();
-			WebElement subCatergory = driver.findElement(
-					By.xpath("//div[@id='site']//ul[@id='catMenu']/li[13]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			actions.moveToElement(pof.club).perform();
+			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[13]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
