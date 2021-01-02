@@ -8,8 +8,8 @@
           <include name="BeforeMethod"/>
           <include name="AfterMethod"/>
           <include name="beforeClass"/>
+          <include name="mCategorys"/>
           <include name="afterClass"/>
-          <include name="Cosmetics_and_perfumes_subCategory"/>
         </methods>
       </class> <!-- steimatzky.navi -->
     </classes>
