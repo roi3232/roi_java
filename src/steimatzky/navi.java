@@ -7,7 +7,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -76,7 +75,7 @@ public class navi {
 	public void AfterMethod() throws InterruptedException {
 		Thread.sleep(2000);
 	}
-	
+
 	@BeforeMethod
 	public void BeforeMethod() {
 		pof = new pofModle();
@@ -98,8 +97,7 @@ public class navi {
 		String saleString = pof.sales.getText();
 		pof.sales.click();
 		// Check if page title is equal to link text
-		if (saleString.equals(driver.findElement(By.className("pageTitle")).getText())
-				&& driver.getTitle().contains(saleString)) {
+		if (saleString.equals(driver.findElement(By.className("pageTitle")).getText())&& driver.getTitle().contains(saleString)) {
 			test.pass("you in " + saleString + " page");
 		} else {
 			test.fail("you not in " + saleString + " page",
@@ -112,16 +110,14 @@ public class navi {
 		test.info("--------mCategorys links test --------");
 		int mCategoryNum = 1;
 		while (mCategoryNum < 13) {
-			WebElement topItem = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[" + mCategoryNum + "]/a"));
+			WebElement topItem = driver.findElement(By.xpath("//ul[@id='catMenu']/li[" + mCategoryNum + "]/a"));
 			// Get link text and click on the link
 			String topItemString = topItem.getText();
 			topItem.click();
 			// Check if page title is equal to link text
-			if (topItemString.contains(driver.findElement(By.className("pageTitle")).getText())
-					&& driver.getTitle().contains(topItemString)) {
+			if (topItemString.contains(driver.findElement(By.className("pageTitle")).getText())&& driver.getTitle().contains(topItemString)) {
 				test.pass("you in " + topItemString + " page");
-			} else if (driver.findElement(By.className("pageTitle")).getText().contains(topItemString)
-					&& driver.getTitle().contains("בית")) {
+			} else if (driver.findElement(By.className("pageTitle")).getText().contains(topItemString)&& driver.getTitle().contains("בית")) {
 				test.pass("you in home page");
 			} else {
 				test.fail("you not in " + topItemString + " page",
@@ -138,8 +134,7 @@ public class navi {
 		String clubString = "חברות במועדון הקוראים של סטימצקי - הסיפור שלי";
 		pof.club.click();
 		// Check if page title is equal to link text
-		if (clubString.contains(driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText())
-				&& driver.getTitle().contains(clubString)) {
+		if (clubString.contains(driver.findElement(By.xpath("//div[@class='page-title']/h1")).getText())&& driver.getTitle().contains(clubString)) {
 			test.pass("you in " + clubString + " page");
 		} else {
 			test.fail("you not in " + clubString + " page",
@@ -158,7 +153,7 @@ public class navi {
 				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
 				actions.moveToElement(pof.books).perform();
 				// click on sub-category
-				WebElement subcatagory = driver.findElement(By.xpath("//div[@id='acc_categories_menu']/ul[@id='catMenu']/li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
+				WebElement subcatagory = driver.findElement(By.xpath("//li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
 				// Get link text and click on the link
 				String subcatagoryString = subcatagory.getText();
 				subcatagory.click();
@@ -188,8 +183,8 @@ public class navi {
 					}
 					// stop the loop in last sub-category
 					if (subcatagoryString.equals("משרדאות והנהלת חשבונות")) {
-						if (subcatagoryString.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())
-								&& driver.getTitle().contains(subcatagoryString)) {
+						if (subcatagoryString
+								.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())&& driver.getTitle().contains(subcatagoryString)) {
 							test1.pass("you in " + subcatagoryString + " page");
 							break;
 						} else {
@@ -211,7 +206,7 @@ public class navi {
 		int subCategorynum = 1;
 		while (subCategorynum <= 7) {
 			actions.moveToElement(pof.Ebooks).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[2]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[2]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -250,7 +245,7 @@ public class navi {
 		int subCategorynum = 1;
 		while (subCategorynum <= 8) {
 			actions.moveToElement(pof.Gifts_and_leisure).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[6]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[6]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -272,7 +267,7 @@ public class navi {
 		int subCategorynum = 1;
 		while (subCategorynum <= 8) {
 			actions.moveToElement(pof.music).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[7]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[7]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText().trim();
 			subCatergory.click();
@@ -289,20 +284,20 @@ public class navi {
 
 	@Test(groups = "subCategory", priority = 9, enabled = true)
 	public void Appliances_subCategory() throws IOException, AWTException {
-		test4.info("--------Appliances_subCategory links test --------");
+		test2.info("--------Appliances_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 4) {
 			actions.moveToElement(pof.Appliances).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[8]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[8]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (subCatergorysString.contains(driver.findElement(By.xpath("//h1")).getText())) {
-				test4.pass("you in " + subCatergorysString + " page");
+				test2.pass("you in " + subCatergorysString + " page");
 			} else {
-				test4.fail("you not in " + subCatergorysString + " page",
+				test2.fail("you not in " + subCatergorysString + " page",
 						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 			}
 			subCategorynum++;
@@ -315,7 +310,7 @@ public class navi {
 		int subCategorynum = 1;
 		while (subCategorynum <= 2) {
 			actions.moveToElement(pof.Smartphones).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[9]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[9]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -337,7 +332,7 @@ public class navi {
 		int subCategorynum = 1;
 		while (subCategorynum <= 3) {
 			actions.moveToElement(pof.Cosmetics_and_perfumes).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[10]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[10]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -359,7 +354,7 @@ public class navi {
 		int subCategorynum = 1;
 		while (subCategorynum <= 5) {
 			actions.moveToElement(pof.HOME).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[11]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[11]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -381,7 +376,7 @@ public class navi {
 		int subCategorynum = 1;
 		while (subCategorynum <= 2) {
 			actions.moveToElement(pof.camping).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[12]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[12]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
@@ -403,15 +398,14 @@ public class navi {
 		int subCategorynum = 1;
 		while (subCategorynum <= 4) {
 			actions.moveToElement(pof.club).perform();
-			WebElement subCatergory = driver.findElement(By.xpath("//div[@id='site']//ul[@id='catMenu']/li[13]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
+			WebElement subCatergory = driver.findElement(By.xpath("//ul[@id='catMenu']/li[13]/div/ul/li/ul/li[" + subCategorynum + "]/a"));
 			// Get link text and click on the link
 			String subCatergorysString = subCatergory.getText();
 			subCatergory.click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (subCatergorysString.equals("חברות במועדון")) {
-				if (driver.findElement(By.xpath("//div/h1")).getText()
-						.contains("חברות במועדון הקוראים של סטימצקי - הסיפור שלי")) {
+				if (driver.findElement(By.xpath("//div/h1")).getText().contains("חברות במועדון הקוראים של סטימצקי - הסיפור שלי")) {
 					test8.pass("you in " + subCatergorysString + " page");
 				} else {
 					test8.fail("you not in " + subCatergorysString + " page",

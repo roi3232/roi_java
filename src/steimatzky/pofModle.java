@@ -12,37 +12,37 @@ public class pofModle {
 	@FindBy(how = How.XPATH, using = "//a[@class='club']")
 	WebElement club;
 
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[1]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[1]/a")
 	WebElement books;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[2]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[2]/a")
 	WebElement Ebooks;
 
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[3]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[3]/a")
 	WebElement games;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[3]/div/ul/li/ul/li[1]")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[3]/div/ul/li/ul/li[1]")
 	WebElement Subgames;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[6]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[6]/a")
 	WebElement Gifts_and_leisure;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[7]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[7]/a")
 	WebElement music;
 
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[8]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[8]/a")
 	WebElement Appliances;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[9]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[9]/a")
 	WebElement Smartphones;
 	
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[10]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[10]/a")
 	WebElement Cosmetics_and_perfumes;
 
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[11]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[11]/a")
 	WebElement HOME;
 
-	@FindBy(how = How.XPATH, using = "//div[@id='site']//ul[@id='catMenu']/li[12]/a")
+	@FindBy(how = How.XPATH, using = "//ul[@id='catMenu']/li[12]/a")
 	WebElement camping;
 
 
