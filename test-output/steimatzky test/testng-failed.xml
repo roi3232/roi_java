@@ -5,10 +5,11 @@
     <classes>
       <class name="steimatzky.navi">
         <methods>
-          <include name="Costumers_club_subCategory"/>
+          <include name="BeforeMethod"/>
           <include name="AfterMethod"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
+          <include name="Cosmetics_and_perfumes_subCategory"/>
         </methods>
       </class> <!-- steimatzky.navi -->
     </classes>
