@@ -26,14 +26,7 @@ public class Extent_reports {
 
 	public static ExtentReports extent;
 	public static ExtentTest test;
-	public static ExtentTest test1;
-	public static ExtentTest test2;
-	public static ExtentTest test3;
-	public static ExtentTest test4;
-	public static ExtentTest test5;
-	public static ExtentTest test6;
-	public static ExtentTest test7;
-	public static ExtentTest test8;
+
 
 
 	public static ExtentHtmlReporter htmlReporter;
@@ -66,51 +59,9 @@ public class Extent_reports {
 	}
 
 	public static ExtentTest createTest(String name, String description) {
-		test = extent.createTest("mCategoey", "link test");
+		test = extent.createTest("Navigation bar", "link test");
 		return test;
 	}
-
-	public static ExtentTest createTest1(String name, String description) {
-		test1 = extent.createTest("books and English_Books subCategory", "link test");
-		return test1;
-	}
-
-	public static ExtentTest createTest2(String name, String description) {
-		test2 = extent.createTest("games,Gifts_and_leisure subCategory", "link test");
-		return test2;
-	}
-
-	public static ExtentTest createTest3(String name, String description) {
-		test3 = extent.createTest("music_subCategory", "link test");
-		return test3;
-	}
-
-	public static ExtentTest createTest4(String name, String description) {
-		test4 = extent.createTest("Smartphones and Appliances subCategory", "link test");
-		return test4;
-	}
-
-	public static ExtentTest createTest5(String name, String description) {
-		test5 = extent.createTest("Cosmetics_and_perfumes_subCategory", "link test");
-		return test5;
-	}
-
-	public static ExtentTest createTest6(String name, String description) {
-		test6 = extent.createTest("HOME_subCategory", "link test");
-		return test6;
-	}
-
-	public static ExtentTest createTest7(String name, String description) {
-		test7 = extent.createTest("camping_subCategory", "link test");
-		return test7;
-	}
-
-	public static ExtentTest createTest8(String name, String description) {
-		test8 = extent.createTest("Costumers_club_subCategory", "link test");
-		return test8;
-	}
-
-
 
 	public String CaptureScreen(WebDriver driver) throws AWTException, IOException {
 		LocalDateTime now = LocalDateTime.now();
