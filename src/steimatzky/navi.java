@@ -53,7 +53,6 @@ public class navi {
 	public void beforeClass() {
 		extent = Extent_reports.GetExtent();
 		test = Extent_reports.createTest("name", "desc");
-
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
@@ -127,13 +126,14 @@ public class navi {
 			int subcatagoryNum = 1;
 			while (subcatagoryNum < 15) {
 				// move to books category
-				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+				
 				actions.moveToElement(pof.books).perform();
 				// click on sub-category
 				subCatagory = driver.findElement(By.xpath("//li[@id='menuCat-398']/div/ul/li[" + clumNum + "]/ul/li[" + subcatagoryNum + "]/a"));
 				// Get link text and click on the link
 				subcatagoryString = subCatagory.getText();
 				subCatagory.click();
+				ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
 				Thread.sleep(3000);
 				// if open new tab
 				if (tabs2.size() == 2) {
@@ -150,7 +150,7 @@ public class navi {
 						driver.close();
 						driver.switchTo().window(tabs2.get(0));
 					}
-				} else {
+				} else if (tabs2.size() == 1) {
 					// Check if the browser in right page
 					if (subcatagoryString.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())) {
 						test.pass("you in " + subcatagoryString + " page");
@@ -160,8 +160,7 @@ public class navi {
 					}
 					// stop the loop in last sub-category
 					if (subcatagoryString.equals("משרדאות והנהלת חשבונות")) {
-						if (subcatagoryString
-								.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())&& driver.getTitle().contains(subcatagoryString)) {
+						if (subcatagoryString.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())&& driver.getTitle().contains(subcatagoryString)) {
 							test.pass("you in " + subcatagoryString + " page");
 							break;
 						} else {
@@ -359,9 +358,7 @@ public class navi {
 					test.fail("you not in " + subcatagoryString + " page",
 							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 				}
-			}
-
-			if (subcatagoryString.contains(driver.findElement(By.xpath("//div/h1")).getText())) {
+			}else if (subcatagoryString.contains(driver.findElement(By.xpath("//div/h1")).getText())) {
 				test.pass("you in " + subcatagoryString + " page");
 			} else {
 				test.fail("you not in " + subcatagoryString + " page",

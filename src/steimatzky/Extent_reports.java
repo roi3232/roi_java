@@ -26,9 +26,6 @@ public class Extent_reports {
 
 	public static ExtentReports extent;
 	public static ExtentTest test;
-
-
-
 	public static ExtentHtmlReporter htmlReporter;
 	public WebDriver driver;
 

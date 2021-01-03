@@ -1,32 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="13" total="14" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-03T10:15:31 IST" name="steimatzky test" finished-at="2021-01-03T10:15:50 IST" duration-ms="18382">
+  <suite started-at="2021-01-03T12:59:54 IST" name="steimatzky test" finished-at="2021-01-03T13:08:07 IST" duration-ms="493877">
     <groups>
       <group name="subCategory">
-        <method signature="navi.music_subCategory()[pri:8, instance:steimatzky.navi@3e84448c]" name="music_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.Appliances_subCategory()[pri:9, instance:steimatzky.navi@2eda072]" name="Appliances_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.Cosmetics_and_perfumes_subCategory()[pri:11, instance:steimatzky.navi@2eda072]" name="Cosmetics_and_perfumes_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.Costumers_club_subCategory()[pri:14, instance:steimatzky.navi@2eda072]" name="Costumers_club_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.English_Books_subCategory()[pri:5, instance:steimatzky.navi@2eda072]" name="English_Books_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.Gifts_and_leisure_subCategory()[pri:7, instance:steimatzky.navi@2eda072]" name="Gifts_and_leisure_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.HOME_subCategory()[pri:12, instance:steimatzky.navi@2eda072]" name="HOME_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.Smartphones_subCategory()[pri:10, instance:steimatzky.navi@2eda072]" name="Smartphones_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.books_subCategory()[pri:4, instance:steimatzky.navi@2eda072]" name="books_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.camping_subCategory()[pri:13, instance:steimatzky.navi@2eda072]" name="camping_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.games_subCategory()[pri:6, instance:steimatzky.navi@2eda072]" name="games_subCategory" class="steimatzky.navi"/>
+        <method signature="navi.music_subCategory()[pri:8, instance:steimatzky.navi@2eda072]" name="music_subCategory" class="steimatzky.navi"/>
       </group> <!-- subCategory -->
+      <group name="mCategorys">
+        <method signature="navi.mCategorys()[pri:2, instance:steimatzky.navi@2eda072]" name="mCategorys" class="steimatzky.navi"/>
+      </group> <!-- mCategorys -->
+      <group name="mCategory">
+        <method signature="navi.club()[pri:3, instance:steimatzky.navi@2eda072]" name="club" class="steimatzky.navi"/>
+        <method signature="navi.sales()[pri:1, instance:steimatzky.navi@2eda072]" name="sales" class="steimatzky.navi"/>
+      </group> <!-- mCategory -->
     </groups>
-    <test started-at="2021-01-03T10:15:31 IST" name="steimatzky test" finished-at="2021-01-03T10:15:50 IST" duration-ms="18382">
+    <test started-at="2021-01-03T12:59:54 IST" name="steimatzky test" finished-at="2021-01-03T13:08:07 IST" duration-ms="493877">
       <class name="steimatzky.navi">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:steimatzky.navi@3e84448c]" started-at="2021-01-03T10:15:31 IST" name="beforeClass" finished-at="2021-01-03T10:15:39 IST" duration-ms="8149" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T12:59:54 IST" name="beforeClass" finished-at="2021-01-03T13:00:30 IST" duration-ms="36102" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@3e84448c]" started-at="2021-01-03T10:15:39 IST" name="BeforeMethod" finished-at="2021-01-03T10:15:39 IST" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:00:30 IST" name="BeforeMethod" finished-at="2021-01-03T13:00:30 IST" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="music_subCategory()[pri:8, instance:steimatzky.navi@3e84448c]" started-at="2021-01-03T10:15:39 IST" name="music_subCategory" finished-at="2021-01-03T10:15:47 IST" duration-ms="8002" status="PASS">
+        <test-method signature="sales()[pri:1, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:00:30 IST" name="sales" finished-at="2021-01-03T13:01:18 IST" duration-ms="48777" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- music_subCategory -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@3e84448c]" started-at="2021-01-03T10:15:47 IST" name="AfterMethod" finished-at="2021-01-03T10:15:49 IST" duration-ms="2004" status="PASS">
+        </test-method> <!-- sales -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:18 IST" name="AfterMethod" finished-at="2021-01-03T13:01:20 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:steimatzky.navi@3e84448c]" started-at="2021-01-03T10:15:49 IST" name="afterClass" finished-at="2021-01-03T10:15:50 IST" duration-ms="194" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:20 IST" name="BeforeMethod" finished-at="2021-01-03T13:01:20 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="mCategorys()[pri:2, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:20 IST" name="mCategorys" finished-at="2021-01-03T13:01:45 IST" duration-ms="24289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mCategorys -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:45 IST" name="AfterMethod" finished-at="2021-01-03T13:01:47 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:47 IST" name="BeforeMethod" finished-at="2021-01-03T13:01:47 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="club()[pri:3, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:47 IST" name="club" finished-at="2021-01-03T13:01:48 IST" duration-ms="1020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- club -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:48 IST" name="AfterMethod" finished-at="2021-01-03T13:01:50 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:50 IST" name="BeforeMethod" finished-at="2021-01-03T13:01:50 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="books_subCategory()[pri:4, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:01:50 IST" name="books_subCategory" finished-at="2021-01-03T13:06:50 IST" duration-ms="299883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- books_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:06:50 IST" name="AfterMethod" finished-at="2021-01-03T13:06:52 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:06:52 IST" name="BeforeMethod" finished-at="2021-01-03T13:06:52 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="English_Books_subCategory()[pri:5, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:06:52 IST" name="English_Books_subCategory" finished-at="2021-01-03T13:07:02 IST" duration-ms="10516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- English_Books_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:02 IST" name="AfterMethod" finished-at="2021-01-03T13:07:04 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:04 IST" name="BeforeMethod" finished-at="2021-01-03T13:07:04 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="games_subCategory()[pri:6, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:04 IST" name="games_subCategory" finished-at="2021-01-03T13:07:06 IST" duration-ms="1538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- games_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:06 IST" name="AfterMethod" finished-at="2021-01-03T13:07:08 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:08 IST" name="BeforeMethod" finished-at="2021-01-03T13:07:08 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Gifts_and_leisure_subCategory()[pri:7, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:08 IST" name="Gifts_and_leisure_subCategory" finished-at="2021-01-03T13:07:16 IST" duration-ms="8590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Gifts_and_leisure_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:16 IST" name="AfterMethod" finished-at="2021-01-03T13:07:18 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:18 IST" name="BeforeMethod" finished-at="2021-01-03T13:07:18 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="music_subCategory()[pri:8, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:18 IST" name="music_subCategory" finished-at="2021-01-03T13:07:28 IST" duration-ms="9524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- music_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:28 IST" name="AfterMethod" finished-at="2021-01-03T13:07:30 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:30 IST" name="BeforeMethod" finished-at="2021-01-03T13:07:30 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Appliances_subCategory()[pri:9, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:30 IST" name="Appliances_subCategory" finished-at="2021-01-03T13:07:34 IST" duration-ms="4582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Appliances_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:34 IST" name="AfterMethod" finished-at="2021-01-03T13:07:36 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:36 IST" name="BeforeMethod" finished-at="2021-01-03T13:07:36 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Smartphones_subCategory()[pri:10, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:36 IST" name="Smartphones_subCategory" finished-at="2021-01-03T13:07:39 IST" duration-ms="2312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Smartphones_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:39 IST" name="AfterMethod" finished-at="2021-01-03T13:07:41 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:41 IST" name="BeforeMethod" finished-at="2021-01-03T13:07:41 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Cosmetics_and_perfumes_subCategory()[pri:11, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:41 IST" name="Cosmetics_and_perfumes_subCategory" finished-at="2021-01-03T13:07:45 IST" duration-ms="3933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cosmetics_and_perfumes_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:45 IST" name="AfterMethod" finished-at="2021-01-03T13:07:47 IST" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:47 IST" name="BeforeMethod" finished-at="2021-01-03T13:07:47 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="HOME_subCategory()[pri:12, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:47 IST" name="HOME_subCategory" finished-at="2021-01-03T13:07:53 IST" duration-ms="6486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HOME_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:53 IST" name="AfterMethod" finished-at="2021-01-03T13:07:55 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:55 IST" name="BeforeMethod" finished-at="2021-01-03T13:07:55 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="camping_subCategory()[pri:13, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:55 IST" name="camping_subCategory" finished-at="2021-01-03T13:07:58 IST" duration-ms="2411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- camping_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:07:58 IST" name="AfterMethod" finished-at="2021-01-03T13:08:00 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:08:00 IST" name="BeforeMethod" finished-at="2021-01-03T13:08:00 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Costumers_club_subCategory()[pri:14, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:08:00 IST" name="Costumers_club_subCategory" finished-at="2021-01-03T13:08:05 IST" duration-ms="5409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Costumers_club_subCategory -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:08:05 IST" name="AfterMethod" finished-at="2021-01-03T13:08:07 IST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:steimatzky.navi@2eda072]" started-at="2021-01-03T13:08:07 IST" name="afterClass" finished-at="2021-01-03T13:08:07 IST" duration-ms="285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
