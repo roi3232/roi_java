@@ -4,7 +4,7 @@
 
 	<test name="steimatzky test">
 		<classes>
-			<class name="steimatzky.navi" />
+			<class name="steimatzky_Navigation_bar.navi" />
 		</classes>
 	</test>
 

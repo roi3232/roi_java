@@ -1,4 +1,4 @@
-package steimatzky;
+package steimatzky_Navigation_bar;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

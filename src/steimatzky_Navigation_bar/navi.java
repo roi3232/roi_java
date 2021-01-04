@@ -1,4 +1,4 @@
-package steimatzky;
+package steimatzky_Navigation_bar;
 
 import org.testng.annotations.Test;
 
@@ -177,7 +177,7 @@ public class navi {
 	}
 
 	@Test(groups = "subCategory", priority = 5, enabled = true)
-	public void English_Books_subCategory() throws IOException, AWTException {
+	public void English_Books_subCategory() throws IOException, AWTException{
 		test.info("--------English_Books_subCategory links test --------");
 		int subCategorynum = 1;
 		while (subCategorynum <= 7) {

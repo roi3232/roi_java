@@ -1,4 +1,4 @@
-package steimatzky;
+package steimatzky_Navigation_bar;
 
 import java.awt.AWTException;
 import java.awt.Rectangle;
