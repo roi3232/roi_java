@@ -2,30 +2,54 @@ package steimatzky_search;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
+import steimatzky_Navigation_bar.Extent_reports;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
+import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 
 public class search {
-	static WebDriver driver;
+	public void resuleTest(String titleString, String value) throws IOException, AWTException {
+		if (titleString.contains(value)) {
+			test1.pass("the product " + value + " is found");
+		} else {
+			test1.fail("the product not " + value + " is found",
+					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
+		}
+	}
+
+	public static WebDriver driver;
 	static String value;
 	static String path = "search - test.xlsx";
 	static int rows;
+	static String titleString;
+	static pofModle pof;
+	static Extent_reports exm = new Extent_reports(driver);
+	static ExtentTest test1;
+	static ExtentReports extent;
 
 	@BeforeClass
 	public void beforeClass() {
+		extent = Extent_reports.GetExtent();
+		test1 = Extent_reports.createTest("name", "desc");
 		WebDriverManager.chromedriver().setup();
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		driver = new ChromeDriver();
@@ -33,15 +57,25 @@ public class search {
 		driver.get("https://www.steimatzky.co.il/");
 	}
 
+	@BeforeMethod
+	public void BeforeMethod() {
+		pof = new pofModle();
+		pof = PageFactory.initElements(driver, pofModle.class);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+
 	@AfterClass
 	public void afterClass() {
+		extent.flush();
 		driver.close();
 
 	}
 
 	@SuppressWarnings("resource")
 	@Test(priority = 1)
-	public void books() throws IOException, InterruptedException {
+	public void books() throws IOException, InterruptedException, AWTException {
+		test1.info("---------books search----------- ");
+		// read from excel file
 		FileInputStream fis3 = new FileInputStream(path);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
@@ -51,17 +85,14 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(0);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			WebElement search = driver.findElement(By.id("search"));
-			WebElement submit = driver.findElement(By.xpath("//form[@id='search_mini_form']/input[2]"));
-			search.clear();
-			search.sendKeys(value);
-			submit.click();
+			//search the product
+			pof.search.clear();
+			pof.search.sendKeys(value);
+			pof.submit.click();
 			Thread.sleep(1000);
-			if (driver.getTitle().contains(value)) {
-				System.out.println("the book " + value + " is found");
-			} else {
-				System.err.println("the book not " + value + " is found");
-			}
+			// test if product is found
+			titleString = driver.getTitle();
+			resuleTest(titleString, value);
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -69,7 +100,9 @@ public class search {
 
 	@SuppressWarnings("resource")
 	@Test(priority = 2)
-	public void ebooks() throws IOException, InterruptedException {
+	public void English_Books() throws IOException, InterruptedException, AWTException {
+		test1.info("---------English Books search----------- ");
+		// read from excel file
 		FileInputStream fis3 = new FileInputStream(path);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
@@ -79,17 +112,14 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(1);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			WebElement search = driver.findElement(By.id("search"));
-			WebElement submit = driver.findElement(By.xpath("//form[@id='search_mini_form']/input[2]"));
-			search.clear();
-			search.sendKeys(value);
-			submit.click();
+			//search the product
+			pof.search.clear();
+			pof.search.sendKeys(value);
+			pof.submit.click();
 			Thread.sleep(1000);
-			if (driver.getTitle().contains(value)) {
-				System.out.println("the book " + value + " is found");
-			} else {
-				System.err.println("the book not " + value + " is found");
-			}
+			// test if product is found
+			titleString = driver.getTitle();
+			resuleTest(titleString, value);
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -97,7 +127,9 @@ public class search {
 
 	@SuppressWarnings("resource")
 	@Test(priority = 3)
-	public void gift() throws IOException, InterruptedException {
+	public void Games_toys_and_puzzles() throws IOException, InterruptedException, AWTException {
+		test1.info("---------Games toys and puzzles search----------- ");
+		// read from excel file
 		FileInputStream fis3 = new FileInputStream(path);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
@@ -107,17 +139,14 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(2);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			WebElement search = driver.findElement(By.id("search"));
-			WebElement submit = driver.findElement(By.xpath("//form[@id='search_mini_form']/input[2]"));
-			search.clear();
-			search.sendKeys(value);
-			submit.click();
+			//search the product
+			pof.search.clear();
+			pof.search.sendKeys(value);
+			pof.submit.click();
 			Thread.sleep(1000);
-			if (driver.getTitle().contains(value)) {
-				System.out.println("the product " + value + " is found");
-			} else {
-				System.err.println("the product not " + value + " is found");
-			}
+			// test if product is found
+			titleString = driver.getTitle();
+			resuleTest(titleString, value);
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -125,7 +154,9 @@ public class search {
 
 	@SuppressWarnings("resource")
 	@Test(priority = 3)
-	public void games() throws IOException, InterruptedException {
+	public void Gifts_and_leisure() throws IOException, InterruptedException, AWTException {
+		test1.info("---------Gifts and leisure search----------- ");
+		// read from excel file
 		FileInputStream fis3 = new FileInputStream(path);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
@@ -135,17 +166,14 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(3);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			WebElement search = driver.findElement(By.id("search"));
-			WebElement submit = driver.findElement(By.xpath("//form[@id='search_mini_form']/input[2]"));
-			search.clear();
-			search.sendKeys(value);
-			submit.click();
+			//search the product
+			pof.search.clear();
+			pof.search.sendKeys(value);
+			pof.submit.click();
 			Thread.sleep(1000);
-			if (driver.getTitle().contains(value)) {
-				System.out.println("the product " + value + " is found");
-			} else {
-				System.err.println("the product not " + value + " is found");
-			}
+			// test if product is found
+			titleString = driver.getTitle();
+			resuleTest(titleString, value);
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -153,7 +181,9 @@ public class search {
 
 	@SuppressWarnings("resource")
 	@Test(priority = 4)
-	public void music() throws IOException, InterruptedException {
+	public void music() throws IOException, InterruptedException, AWTException {
+		test1.info("---------music search----------- ");
+		// read from excel file
 		FileInputStream fis3 = new FileInputStream(path);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
@@ -163,17 +193,14 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(4);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			WebElement search = driver.findElement(By.id("search"));
-			WebElement submit = driver.findElement(By.xpath("//form[@id='search_mini_form']/input[2]"));
-			search.clear();
-			search.sendKeys(value);
-			submit.click();
+			//search the product
+			pof.search.clear();
+			pof.search.sendKeys(value);
+			pof.submit.click();
 			Thread.sleep(1000);
-			if (driver.getTitle().contains(value)) {
-				System.out.println("the product " + value + " is found");
-			} else {
-				System.err.println("the product not " + value + " is found");
-			}
+			// test if product is found
+			titleString = driver.getTitle();
+			resuleTest(titleString, value);
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -181,7 +208,9 @@ public class search {
 
 	@SuppressWarnings("resource")
 	@Test(priority = 5)
-	public void ele() throws IOException, InterruptedException {
+	public void Appliances_and_smartphones() throws IOException, InterruptedException, AWTException {
+		test1.info("---------Appliances and smartphones search----------- ");
+		// read from excel file
 		FileInputStream fis3 = new FileInputStream(path);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
@@ -191,17 +220,14 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(5);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			WebElement search = driver.findElement(By.id("search"));
-			WebElement submit = driver.findElement(By.xpath("//form[@id='search_mini_form']/input[2]"));
-			search.clear();
-			search.sendKeys(value);
-			submit.click();
+			//search the product
+			pof.search.clear();
+			pof.search.sendKeys(value);
+			pof.submit.click();
 			Thread.sleep(1000);
-			if (driver.getTitle().contains(value)) {
-				System.out.println("the product " + value + " is found");
-			} else {
-				System.err.println("the product not " + value + " is found");
-			}
+			// test if product is found
+			titleString = driver.getTitle();
+			resuleTest(titleString, value);
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -209,7 +235,9 @@ public class search {
 
 	@SuppressWarnings("resource")
 	@Test(priority = 6)
-	public void cos() throws IOException, InterruptedException {
+	public void Cosmetics_and_perfumes() throws IOException, InterruptedException, AWTException {
+		test1.info("---------Cosmetics and perfumes search----------- ");
+		// read from excel file
 		FileInputStream fis3 = new FileInputStream(path);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
@@ -219,17 +247,14 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(6);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			WebElement search = driver.findElement(By.id("search"));
-			WebElement submit = driver.findElement(By.xpath("//form[@id='search_mini_form']/input[2]"));
-			search.clear();
-			search.sendKeys(value);
-			submit.click();
+			//search the product
+			pof.search.clear();
+			pof.search.sendKeys(value);
+			pof.submit.click();
 			Thread.sleep(1000);
-			if (driver.getTitle().contains(value)) {
-				System.out.println("the product " + value + " is found");
-			} else {
-				System.err.println("the product not " + value + " is found");
-			}
+			// test if product is found
+			titleString = driver.getTitle();
+			resuleTest(titleString, value);
 			Thread.sleep(1000);
 			rows++;
 		}
@@ -237,7 +262,9 @@ public class search {
 
 	@SuppressWarnings("resource")
 	@Test(priority = 7)
-	public void home() throws IOException, InterruptedException {
+	public void Home_and_camping() throws IOException, InterruptedException, AWTException {
+		test1.info("---------Home and camping----------- ");
+		// read from excel file
 		FileInputStream fis3 = new FileInputStream(path);
 		XSSFWorkbook wb = new XSSFWorkbook(fis3);
 		XSSFSheet sheet = wb.getSheet("Product_search");
@@ -247,17 +274,14 @@ public class search {
 			XSSFCell cell_r = row_r.getCell(7);
 			value = cell_r.getStringCellValue();
 			Thread.sleep(500);
-			WebElement search = driver.findElement(By.id("search"));
-			WebElement submit = driver.findElement(By.xpath("//form[@id='search_mini_form']/input[2]"));
-			search.clear();
-			search.sendKeys(value);
-			submit.click();
+			//search the product
+			pof.search.clear();
+			pof.search.sendKeys(value);
+			pof.submit.click();
 			Thread.sleep(1000);
-			if (driver.getTitle().contains(value)) {
-				System.out.println("the product " + value + " is found");
-			} else {
-				System.err.println("the product not " + value + " is found");
-			}
+			// test if product is found
+			titleString = driver.getTitle();
+			resuleTest(titleString, value);
 			Thread.sleep(1000);
 			rows++;
 		}

@@ -10,7 +10,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
+import steimatzky_search.search;
 import javax.imageio.ImageIO;
 
 import org.openqa.selenium.WebDriver;
@@ -22,15 +22,16 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Extent_reports {
+public class Extent_reports extends search {
 
 	public static ExtentReports extent;
 	public static ExtentTest test;
+	public static ExtentTest test1;
 	public static ExtentHtmlReporter htmlReporter;
 	public WebDriver driver;
 
 	public Extent_reports(WebDriver driver) {
-		this.driver = driver;
+		super.driver = driver;
 	}
 
 	static DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
@@ -58,6 +59,10 @@ public class Extent_reports {
 	public static ExtentTest createTest(String name, String description) {
 		test = extent.createTest("Navigation bar", "link test");
 		return test;
+	}
+	public static ExtentTest createTest1(String name, String description) {
+		test1 = extent.createTest("steimatzky search", "search test");
+		return test1;
 	}
 
 	public String CaptureScreen(WebDriver driver) throws AWTException, IOException {

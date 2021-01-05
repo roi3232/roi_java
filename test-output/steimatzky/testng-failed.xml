@@ -5,15 +5,16 @@
     <classes>
       <class name="steimatzky_search.search">
         <methods>
-          <include name="home"/>
-          <include name="games"/>
+          <include name="Appliances_and_smartphones"/>
+          <include name="Games_toys_and_puzzles"/>
+          <include name="English_Books"/>
+          <include name="Gifts_and_leisure"/>
+          <include name="BeforeMethod"/>
           <include name="afterClass"/>
-          <include name="ele"/>
           <include name="music"/>
-          <include name="cos"/>
-          <include name="gift"/>
+          <include name="Home_and_camping"/>
           <include name="books"/>
-          <include name="ebooks"/>
+          <include name="Cosmetics_and_perfumes"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- steimatzky_search.search -->
