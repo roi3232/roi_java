@@ -39,7 +39,7 @@ public class JframeRunner {
 		frame.add(btn2);
 		btn.addActionListener(new ActionListener() {
 
-			@Override
+			
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					JUnitCore junit = new JUnitCore();
@@ -54,7 +54,7 @@ public class JframeRunner {
 		});
 		btn1.addActionListener(new ActionListener() {
 
-			@Override
+			
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					JUnitCore junit = new JUnitCore();
@@ -69,7 +69,7 @@ public class JframeRunner {
 		});
 		btn2.addActionListener(new ActionListener() {
 
-			@Override
+			
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					label3.main(null);
