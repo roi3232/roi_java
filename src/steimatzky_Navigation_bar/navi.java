@@ -140,34 +140,16 @@ public class navi {
 					driver.switchTo().window(tabs2.get(1));
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					// Check if the browser in right page
-					if (driver.getTitle().contains("ספרים דיגיטליים בעברית להורדה")) {
-						test.pass("you in " + subcatagoryString + " page");
-						driver.close();
-						driver.switchTo().window(tabs2.get(0));
-					} else {
-						test.fail("you not in " + subcatagoryString + " page",
-								MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-						driver.close();
-						driver.switchTo().window(tabs2.get(0));
-					}
-				} else if (tabs2.size() == 1) {
+					pageTitleTest(driver.getTitle(),"ספרים דיגיטליים בעברית להורדה" );
+					driver.close();
+					driver.switchTo().window(tabs2.get(0));
+					} else if (tabs2.size() == 1) {
 					// Check if the browser in right page
-					if (subcatagoryString.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())) {
-						test.pass("you in " + subcatagoryString + " page");
-					} else {
-						test.fail("you not in " + subcatagoryString + " page",
-								MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-					}
+						pageTitleTest(subcatagoryString,driver.findElement(By.xpath("//div[@id='content']/h1")).getText() );
 					// stop the loop in last sub-category
 					if (subcatagoryString.equals("משרדאות והנהלת חשבונות")) {
-						if (subcatagoryString.contains(driver.findElement(By.xpath("//div[@id='content']/h1")).getText())&& driver.getTitle().contains(subcatagoryString)) {
-							test.pass("you in " + subcatagoryString + " page");
-							break;
-						} else {
-							test.fail("you not in " + subcatagoryString + " page",
-									MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-							break;
-						}
+						pageTitleTest(subcatagoryString,driver.findElement(By.xpath("//div[@id='content']/h1")).getText() );
+						break;
 					}
 				}
 				subcatagoryNum++;
@@ -345,25 +327,12 @@ public class navi {
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			// Check if page title is equal to link text
 			if (subcatagoryString.equals("חברות במועדון")) {
-				if (driver.findElement(By.xpath("//div/h1")).getText().contains("חברות במועדון הקוראים של סטימצקי - הסיפור שלי")) {
-					test.pass("you in " + subcatagoryString + " page");
-				} else {
-					test.fail("you not in " + subcatagoryString + " page",
-							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-				}
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"חברות במועדון הקוראים של סטימצקי - הסיפור שלי" );
 			} else if (subcatagoryString.equals("תקנון המועדון")) {
-				if (driver.findElement(By.xpath("//div/h1")).getText().contains("תקנון מועדון הקוראים של סטימצקי")) {
-					test.pass("you in " + subcatagoryString + " page");
-				} else {
-					test.fail("you not in " + subcatagoryString + " page",
-							MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-				}
-			}else if (subcatagoryString.contains(driver.findElement(By.xpath("//div/h1")).getText())) {
-				test.pass("you in " + subcatagoryString + " page");
-			} else {
-				test.fail("you not in " + subcatagoryString + " page",
-						MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
-			}
+				pageTitleTest(driver.findElement(By.xpath("//div/h1")).getText(),"תקנון מועדון הקוראים של סטימצקי" );
+			}else  {
+				pageTitleTest(subcatagoryString,driver.findElement(By.xpath("//div/h1")).getText() );
+			} 
 			subCategorynum++;
 		}
 	}

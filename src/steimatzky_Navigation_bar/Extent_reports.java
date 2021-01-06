@@ -31,7 +31,7 @@ public class Extent_reports extends search {
 	public WebDriver driver;
 
 	public Extent_reports(WebDriver driver) {
-		super.driver = driver;
+		this.driver = driver;
 	}
 
 	static DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");

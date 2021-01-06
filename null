@@ -1,22 +1,9 @@
-1609181410568	geckodriver	INFO	Listening on 127.0.0.1:29625
-1609181411050	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\royko\\AppData\\Local\\Temp\\rust_mozprofileRWrQZS"
+1609912356054	geckodriver	INFO	Listening on 127.0.0.1:13205
+1609912356507	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\royko\\AppData\\Local\\Temp\\rust_mozprofileiQMRyh"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1609181412993	Marionette	INFO	Listening on port 63873
-1609181413100	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript warning: https://www.d.co.il/Scripts/bundles/homepage-min.js?_gpiav_=321, line 5: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=321, line 6: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=321, line 62: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=321, line 62: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/homepage-min.js?_gpiav_=321, line 5: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=321, line 6: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=321, line 62: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=321, line 62: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/homepage-min.js?_gpiav_=321, line 5: unreachable code after return statement
-1609181434535	Marionette	INFO	Stopped listening on port 63873
-JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=321, line 6: unreachable code after return statement
-JavaScript warning: https://www.d.co.il/Scripts/bundles/search-results-min.js?_gpiav_=321, line 62: unreachable code after return statement
-
-###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
-
+1609912358570	Marionette	INFO	Listening on port 52856
+1609912358663	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.nisha.co.il/Areas/Admin/js/jquery.form.js, line 1: SyntaxError: nothing to repeat
+JavaScript error: https://www.nisha.co.il/%D7%98%D7%91%D7%9C%D7%90%D7%95%D7%AA-%D7%A9%D7%9B%D7%A8, line 367: TypeError: $(...).ajaxForm is not a function
