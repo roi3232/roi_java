@@ -84,6 +84,7 @@ public class Gmail {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(mailFrom));
 			// הגדרת נמענים
+			@SuppressWarnings("unused")
 			InternetAddress[] addressTo = new InternetAddress[multi_addressee.length];
 			for (int i = 0; i < multi_addressee.length; i++) {
 				message.addRecipient(Message.RecipientType.TO, new InternetAddress(multi_addressee[i]));

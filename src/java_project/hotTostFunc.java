@@ -28,29 +28,25 @@ public class hotTostFunc {
 	}
 
 	public static int Additions() {
-		int extension = 0;// משתנה שיסכום את התוצאה
+		int extension = 0;
 		int condition = 0;
 		String[] addinfraStructcher = { "olives", "mushrooms", "corn", "onions", "tomatoes", "bulgarian" };
-		String[] arryAdd;// מערך שיקבל את התוספות מחולקות לאברים
+		String[] arryAdd;
 		System.out.println("Please select toppings for toast Separate the toppings you are interested in using ,");
 		System.out.println("Possible toppings are olives, mushrooms, corn, onions, tomatoes, bulgarian");
 		System.out.println("If you do not want extras, type No");
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
-		String add = scan.nextLine().toLowerCase();// קבלת התוספות מהמשתמש
+		String add = scan.nextLine().toLowerCase();
 		while (condition == 0) {
-			arryAdd = add.split(",");// פיצול תשובת המשתמש לפי פסיקים לתוך המערך
-			for (int i = 0; i < arryAdd.length; i++) { // לולאה שרצה על המערך
-				String trimArray = arryAdd[i].trim();// מחיקת רווחים מיותרים במידה והמשתמש שם רווח בין הפסיקים
-				if (Arrays.asList(addinfraStructcher).contains(trimArray)) {// תנאי שבודק שהערך הוא אכן אחד מהרשימה
-																			// במידה ולא אז קאלס הוא יתבקש להזין רשימה
-																			// תקנית
-					// אם הערך הוא אחד מהתוספות האלו אז המונה יקבל 3 שקל
+			arryAdd = add.split(",");
+			for (int i = 0; i < arryAdd.length; i++) { 
+				String trimArray = arryAdd[i].trim();
+				if (Arrays.asList(addinfraStructcher).contains(trimArray)) {
 					if (trimArray.contains("olives") || trimArray.equals("corn") || trimArray.equals("mushrooms")) {
 						extension = extension + 3;
 						condition = 1;
 					}
-					// אם הערך הוא אחד מהתוספות האלו אז המונה יקבל 4 שקל
 					else if (trimArray.contains("onions") || trimArray.contains("tomatoes")
 							|| trimArray.contains("bulgarian")) {
 						extension = extension + 4;
@@ -62,7 +58,6 @@ public class hotTostFunc {
 						add = scan.nextLine().toLowerCase().toLowerCase();
 						if (add.equals("sure") || add.equals("yes")) {
 							System.out.println("Too bad, you're losing");
-							// על מנת לצאת מהלולאה מבלי לשנות
 							condition = 1;
 							break;
 						} else {

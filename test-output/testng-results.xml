@@ -1,105 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="8" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-06T07:52:34 IST" name="Parallel test suite" finished-at="2021-01-06T07:52:41 IST" duration-ms="6970">
+  <suite started-at="2021-01-08T12:41:22 IST" name="Default suite" finished-at="2021-01-08T12:42:56 IST" duration-ms="93721">
     <groups>
-      <group name="list">
-        <method signature="t1.test1()[pri:0, instance:testNG.t1@34f5090e]" name="test1" class="testNG.t1"/>
-        <method signature="t1.test1()[pri:0, instance:testNG.t1@4bb33f74]" name="test1" class="testNG.t1"/>
-      </group> <!-- list -->
     </groups>
-    <test started-at="2021-01-06T07:52:34 IST" name="Chrome test" finished-at="2021-01-06T07:52:40 IST" duration-ms="5994">
-      <class name="testNG.t1">
-        <test-method is-config="true" signature="BeforeTest(java.lang.String)[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-06T07:52:34 IST" name="BeforeTest" finished-at="2021-01-06T07:52:40 IST" duration-ms="5314" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2021-01-08T12:41:22 IST" name="Default test" finished-at="2021-01-08T12:42:56 IST" duration-ms="93721">
+      <class name="test.search">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:test.search@2accdbb5]" started-at="2021-01-08T12:41:22 IST" name="beforeClass" finished-at="2021-01-08T12:41:29 IST" duration-ms="6851" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeTest -->
-        <test-method signature="test1()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-06T07:52:40 IST" name="test1" finished-at="2021-01-06T07:52:40 IST" duration-ms="85" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method signature="clean_search_field()[pri:1, instance:test.search@2accdbb5]" started-at="2021-01-08T12:41:29 IST" name="clean_search_field" finished-at="2021-01-08T12:42:56 IST" duration-ms="86820" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-06T07:52:40 IST" name="AfterClass" finished-at="2021-01-06T07:52:40 IST" duration-ms="578" status="PASS">
+        </test-method> <!-- clean_search_field -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:test.search@2accdbb5]" started-at="2021-01-08T12:42:56 IST" name="afterClass" finished-at="2021-01-08T12:42:56 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- testNG.t1 -->
-    </test> <!-- Chrome test -->
-    <test started-at="2021-01-06T07:52:34 IST" name="firefox test" finished-at="2021-01-06T07:52:41 IST" duration-ms="6970">
-      <class name="testNG.t1">
-        <test-method is-config="true" signature="BeforeTest(java.lang.String)[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-06T07:52:34 IST" name="BeforeTest" finished-at="2021-01-06T07:52:41 IST" duration-ms="6962" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[FF]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeTest -->
-        <test-method signature="test1()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-06T07:52:41 IST" name="test1" finished-at="2021-01-06T07:52:41 IST" duration-ms="2" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'DESKTOP-CLI6E80', ip: '10.100.102.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'DESKTOP-CLI6E80', ip: '10.100.102.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)
-at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
-at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
-at testNG.t1.test1(t1.java:64)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-at java.base/java.lang.Thread.run(Thread.java:832)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-06T07:52:41 IST" name="AfterClass" finished-at="2021-01-06T07:52:41 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- testNG.t1 -->
-    </test> <!-- firefox test -->
-  </suite> <!-- Parallel test suite -->
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.search -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
