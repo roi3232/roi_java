@@ -3,6 +3,7 @@ package pof_pom_er;
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -31,8 +32,6 @@ public class t7_3 {
 	static ExtentTest test8;
 	static Extent_reports exm = new Extent_reports(driver);
 	static Actions actions;
-	static WebElement menu;
-	static List<WebElement> submenu;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -62,120 +61,120 @@ public class t7_3 {
 
 	@Test
 	public void test001() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/a"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[2]/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(3000);
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/ul/li/div/ul/li"));
+		Thread.sleep(1000);
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(0)).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		if (driver.getTitle().equals("אוכלוסיות ייחודיות")) {
 			test.pass("gurden - link 1");
 		} else {
 			test.fail("gurden - link 1",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@Test
 	public void test002() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/a"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[2]/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(3000);
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/ul/li/div/ul/li"));
+		Thread.sleep(1000);
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(1)).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		if (driver.getTitle().equals("הורות - הורים וילדים")) {
 			test1.pass("gurden - link 2");
 		} else {
 			test1.fail("gurden - link 2",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 
 	}
 
 	@Test
 	public void test003() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/a"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[2]/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(2000);
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/ul/li/div/ul/li"));
+		Thread.sleep(1000);
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(2)).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		if (driver.getTitle().equals("יוזמות חינוכיות ורפורמות")) {
 			test2.pass("gurden - link 3");
 		} else {
 			test2.fail("gurden - link 3",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@Test
 	public void test004() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/a"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[2]/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(3000);
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/ul/li/div/ul/li"));
+		Thread.sleep(1000);
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(3)).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		if (driver.getTitle().equals("מחוץ לגן")) {
 			test3.pass("gurden - link 4");
 		} else {
 			test3.fail("gurden - link 4",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@Test
 	public void test005() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/a"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[2]/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(3000);
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/ul/li/div/ul/li"));
+		Thread.sleep(1000);
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(4)).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		if (driver.getTitle().equals("מקצועות ותחומי לימוד")) {
 			test4.pass("gurden - link 5");
 		} else {
 			test4.fail("gurden - link 5",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@Test
 	public void test006() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/a"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[2]/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(3000);
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[2]/ul/li/div/ul/li"));
+		Thread.sleep(1000);
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(5)).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		if (driver.getTitle().equals("תקנות ומינהלות")) {
 			test5.pass("gurden - link 6");
 		} else {
 			test5.fail("gurden - link 6",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@Test
 	public void test007() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[7]/a"));
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[7]/ul/li/a"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[7]/a"));
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[7]/ul/li/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		actions.moveToElement(submenu.get(0)).click().perform();
 		if (driver.getTitle().equals("צפייה בציוני בחינות הבגרות")) {
 			test6.pass("service - link 1");
@@ -183,44 +182,44 @@ public class t7_3 {
 			test6.fail("service - link 1",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@Test
 	public void test008() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.navigate().back();
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[7]/a"));
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[7]/ul/li/a"));
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[7]/a"));
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[7]/ul/li/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		actions.moveToElement(submenu.get(1)).click().perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		if (driver.getTitle().equals("תיק תוכניות לימודים לעובדי הוראה")) {
 			test7.pass("service - link 2");
 		} else {
 			test7.fail("service - link 2",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@Test
 	public void test009() throws InterruptedException, IOException, AWTException {
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		driver.navigate().back();
-		menu = driver.findElement(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[7]/a"));
-		submenu = driver.findElements(By.xpath("//form/div[9]/div[1]/span/header/div/div[2]/ul/li[7]/ul/li/a"));
+		WebElement menu = driver.findElement(By.xpath("//div[@id='navbar']/ul/li[7]/a"));
+		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[7]/ul/li/a"));
 		actions.moveToElement(menu).perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		actions.moveToElement(submenu.get(2)).click().perform();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		if (driver.getTitle().equals("פניות ותלונות הציבור")) {
 			test8.pass("service - link 3");
 		} else {
 			test8.fail("service - link 3",
 					MediaEntityBuilder.createScreenCaptureFromPath(exm.CaptureScreen(driver)).build());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 }

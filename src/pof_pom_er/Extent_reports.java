@@ -17,6 +17,7 @@ import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -60,6 +61,7 @@ public class Extent_reports {
 		htmlReporter.config().setDocumentTitle("targil");
 		htmlReporter.config().setReportName("test");
 		htmlReporter.config().setEncoding("windows-1255");
+		htmlReporter.config().setTheme(Theme.DARK);
 		return htmlReporter;
 	}
 
