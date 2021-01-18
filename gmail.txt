@@ -10,3 +10,9 @@ Error Password or Username
 Click cancel deleted  values in text fields 
 Testing username SeleniumByArun and password Test143$ . received message: 'selenium143'
 The id of img is :Header1_headerimg
+Testing username '333' and password '333' received message 'Error Password or Username'
+In fieldes Username and Password writen '333'
+Error Password or Username
+Click cancel deleted  values in text fields 
+Testing username SeleniumByArun and password Test143$ . received message: 'selenium143'
+The id of img is :Header1_headerimg

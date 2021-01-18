@@ -107,11 +107,9 @@ public class Gmail {
 				Transport.send(message);
 				System.out.println("message sent");
 			}
-		} catch (AddressException e) {
-			e.printStackTrace();
-		} catch (MessagingException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
 			System.err.println("message sent fail");
+			e.printStackTrace();
 		}
 	}
 
