@@ -29,7 +29,7 @@ public class Object_Repository_t {
 				query.sendKeys(or.getData("category" + categoryNum));
 				String queryString = query.getAttribute("value");
 				driver.findElement(By.className("search_submit")).click();
-				if (queryString.equals("ξεπιεϊ")) {
+				if (queryString.equals("ΧΧ•Χ Χ™Χ•Χª")) {
 					Thread.sleep(2000);
 					driver.findElement(By.className("skip")).click();
 					System.out.println(driver.getTitle());

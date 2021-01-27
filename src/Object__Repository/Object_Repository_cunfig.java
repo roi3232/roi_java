@@ -41,8 +41,7 @@ public class Object_Repository_cunfig {
 
 		}
 		if (browser.equals("ie")) {
-			InternetExplorerDriverService.Builder ieDriverService = new InternetExplorerDriverService.Builder()
-					.withSilent(true);
+			InternetExplorerDriverService.Builder ieDriverService = new InternetExplorerDriverService.Builder().withSilent(true);
 			DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
 			cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			System.setProperty("webdriver.ie.driver", "C:\\temp\\IEDriverServer.exe");

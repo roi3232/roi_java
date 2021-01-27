@@ -68,7 +68,7 @@ public class t7_3 {
 		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(0)).perform();
 		Thread.sleep(1000);
-		if (driver.getTitle().equals("ΰελμεριεϊ ιιηεγιεϊ")) {
+		if (driver.getTitle().equals("ΧΧ•Χ›ΧΧ•Χ΅Χ™Χ•Χª Χ™Χ™Χ—Χ•Χ“Χ™Χ•Χª")) {
 			test.pass("gurden - link 1");
 		} else {
 			test.fail("gurden - link 1",
@@ -86,7 +86,7 @@ public class t7_3 {
 		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(1)).perform();
 		Thread.sleep(1000);
-		if (driver.getTitle().equals("δεψεϊ - δεψιν ειμγιν")) {
+		if (driver.getTitle().equals("Χ”Χ•Χ¨Χ•Χª - Χ”Χ•Χ¨Χ™Χ Χ•Χ™ΧΧ“Χ™Χ")) {
 			test1.pass("gurden - link 2");
 		} else {
 			test1.fail("gurden - link 2",
@@ -105,7 +105,7 @@ public class t7_3 {
 		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(2)).perform();
 		Thread.sleep(1000);
-		if (driver.getTitle().equals("ιεζξεϊ ηιπελιεϊ εψτεψξεϊ")) {
+		if (driver.getTitle().equals("Χ™Χ•Χ–ΧΧ•Χª Χ—Χ™Χ Χ•Χ›Χ™Χ•Χª Χ•Χ¨Χ¤Χ•Χ¨ΧΧ•Χª")) {
 			test2.pass("gurden - link 3");
 		} else {
 			test2.fail("gurden - link 3",
@@ -123,7 +123,7 @@ public class t7_3 {
 		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(3)).perform();
 		Thread.sleep(1000);
-		if (driver.getTitle().equals("ξηευ μβο")) {
+		if (driver.getTitle().equals("ΧΧ—Χ•Χ¥ ΧΧ’Χ")) {
 			test3.pass("gurden - link 4");
 		} else {
 			test3.fail("gurden - link 4",
@@ -141,7 +141,7 @@ public class t7_3 {
 		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(4)).perform();
 		Thread.sleep(1000);
-		if (driver.getTitle().equals("ξχφεςεϊ εϊηεξι μιξεγ")) {
+		if (driver.getTitle().equals("ΧΧ§Χ¦Χ•ΧΆΧ•Χª Χ•ΧªΧ—Χ•ΧΧ™ ΧΧ™ΧΧ•Χ“")) {
 			test4.pass("gurden - link 5");
 		} else {
 			test4.fail("gurden - link 5",
@@ -159,7 +159,7 @@ public class t7_3 {
 		List<WebElement> submenu = driver.findElements(By.xpath("//div[@id='navbar']/ul/li[2]/ul/li/div/ul/li/a"));
 		actions.click(submenu.get(5)).perform();
 		Thread.sleep(1000);
-		if (driver.getTitle().equals("ϊχπεϊ εξιπδμεϊ")) {
+		if (driver.getTitle().equals("ΧªΧ§Χ Χ•Χª Χ•ΧΧ™Χ Χ”ΧΧ•Χª")) {
 			test5.pass("gurden - link 6");
 		} else {
 			test5.fail("gurden - link 6",
@@ -176,7 +176,7 @@ public class t7_3 {
 		actions.moveToElement(menu).perform();
 		Thread.sleep(1000);
 		actions.moveToElement(submenu.get(0)).click().perform();
-		if (driver.getTitle().equals("φτιιδ αφιεπι αηιπεϊ δαβψεϊ")) {
+		if (driver.getTitle().equals("Χ¦Χ¤Χ™Χ™Χ” Χ‘Χ¦Χ™Χ•Χ Χ™ Χ‘Χ—Χ™Χ Χ•Χª Χ”Χ‘Χ’Χ¨Χ•Χª")) {
 			test6.pass("service - link 1");
 		} else {
 			test6.fail("service - link 1",
@@ -195,7 +195,7 @@ public class t7_3 {
 		Thread.sleep(1000);
 		actions.moveToElement(submenu.get(1)).click().perform();
 		Thread.sleep(1000);
-		if (driver.getTitle().equals("ϊιχ ϊελπιεϊ μιξεγιν μςεαγι δεψΰδ")) {
+		if (driver.getTitle().equals("ΧªΧ™Χ§ ΧªΧ•Χ›Χ Χ™Χ•Χª ΧΧ™ΧΧ•Χ“Χ™Χ ΧΧΆΧ•Χ‘Χ“Χ™ Χ”Χ•Χ¨ΧΧ”")) {
 			test7.pass("service - link 2");
 		} else {
 			test7.fail("service - link 2",
@@ -214,7 +214,7 @@ public class t7_3 {
 		Thread.sleep(1000);
 		actions.moveToElement(submenu.get(2)).click().perform();
 		Thread.sleep(1000);
-		if (driver.getTitle().equals("τπιεϊ εϊμεπεϊ δφιαεψ")) {
+		if (driver.getTitle().equals("Χ¤Χ Χ™Χ•Χª Χ•ΧªΧΧ•Χ Χ•Χª Χ”Χ¦Χ™Χ‘Χ•Χ¨")) {
 			test8.pass("service - link 3");
 		} else {
 			test8.fail("service - link 3",

@@ -1,0 +1,593 @@
+firefox firefox:Software
+firefox firefox:Hardware
+firefox firefox:QA
+firefox firefox:Support, System and IT
+firefox firefox:Information Systems
+firefox firefox:Students / Graduates
+firefox:הייטק
+firefox:ביומד
+firefox:שוק ההון
+firefox:מטה ופיננסים
+firefox:קלינטק בינוי ותעשייה
+firefox:קמעונאות
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox18
+firefox18
+firefox18
+firefox15
+firefox20
+firefox19
+firefox18
+firefox25
+firefox22
+firefox20
+firefox20
+firefox20
+firefox22
+firefox22
+firefox18
+firefox23
+firefox22
+firefox20
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefox20
+firefox10
+firefox15
+firefox22
+firefox20
+firefox17
+firefox18
+firefox15
+firefox18
+firefox15
+firefoxThe avg of salarey: 14
+firefox firefox:Software
+firefox firefox:Software
+firefox firefox:Hardware
+firefox firefox:Hardware
+firefox firefox:QA
+firefox firefox:QA
+firefox firefox:Support, System and IT
+firefox firefox:Support, System and IT
+firefox firefox:Information Systems
+firefox firefox:Information Systems
+firefox firefox:Students / Graduates
+firefox firefox:Students / Graduates
+firefox:הייטק
+firefox:הייטק
+firefox:ביומד
+firefox:ביומד
+firefox:שוק ההון
+firefox:שוק ההון
+firefox:מטה ופיננסים
+firefox:מטה ופיננסים
+firefox:קלינטק בינוי ותעשייה
+firefox:קלינטק בינוי ותעשייה
+firefox:קמעונאות
+firefox:קמעונאות
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox15
+firefox15
+firefox20
+firefox20
+firefox19
+firefox19
+firefox18
+firefox18
+firefox25
+firefox25
+firefox22
+firefox22
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox22
+firefox22
+firefox22
+firefox22
+firefox18
+firefox18
+firefox23
+firefox23
+firefox22
+firefox22
+firefox20
+firefox20
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefox20
+firefox20
+firefox10
+firefox10
+firefox15
+firefox15
+firefox22
+firefox22
+firefox20
+firefox20
+firefox17
+firefox17
+firefox18
+firefox18
+firefox15
+firefox15
+firefox18
+firefox18
+firefox15
+firefox15
+firefoxThe avg of salarey: 14
+firefoxThe avg of salarey: 14
+firefox firefox:Software
+firefox firefox:Software
+firefox firefox:Hardware
+firefox firefox:Hardware
+firefox firefox:QA
+firefox firefox:QA
+firefox firefox:Support, System and IT
+firefox firefox:Support, System and IT
+firefox firefox:Information Systems
+firefox firefox:Information Systems
+firefox firefox:Students / Graduates
+firefox firefox:Students / Graduates
+firefox:הייטק
+firefox:הייטק
+firefox:ביומד
+firefox:ביומד
+firefox:שוק ההון
+firefox:שוק ההון
+firefox:מטה ופיננסים
+firefox:מטה ופיננסים
+firefox:קלינטק בינוי ותעשייה
+firefox:קלינטק בינוי ותעשייה
+firefox:קמעונאות
+firefox:קמעונאות
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox15
+firefox15
+firefox20
+firefox20
+firefox19
+firefox19
+firefox18
+firefox18
+firefox25
+firefox25
+firefox22
+firefox22
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox22
+firefox22
+firefox22
+firefox22
+firefox18
+firefox18
+firefox23
+firefox23
+firefox22
+firefox22
+firefox20
+firefox20
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefox20
+firefox20
+firefox10
+firefox10
+firefox15
+firefox15
+firefox22
+firefox22
+firefox20
+firefox20
+firefox17
+firefox17
+firefox18
+firefox18
+firefox15
+firefox15
+firefox18
+firefox18
+firefox15
+firefox15
+firefoxThe avg of salarey: 14
+firefoxThe avg of salarey: 14
+firefox firefox:Software
+firefox firefox:Software
+firefox firefox:Hardware
+firefox firefox:Hardware
+firefox firefox:QA
+firefox firefox:QA
+firefox firefox:Support, System and IT
+firefox firefox:Support, System and IT
+firefox firefox:Information Systems
+firefox firefox:Information Systems
+firefox firefox:Students / Graduates
+firefox firefox:Students / Graduates
+firefox:הייטק
+firefox:הייטק
+firefox:ביומד
+firefox:ביומד
+firefox:שוק ההון
+firefox:שוק ההון
+firefox:מטה ופיננסים
+firefox:מטה ופיננסים
+firefox:קלינטק בינוי ותעשייה
+firefox:קלינטק בינוי ותעשייה
+firefox:קמעונאות
+firefox:קמעונאות
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox15
+firefox15
+firefox20
+firefox20
+firefox19
+firefox19
+firefox18
+firefox18
+firefox25
+firefox25
+firefox22
+firefox22
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox22
+firefox22
+firefox22
+firefox22
+firefox18
+firefox18
+firefox23
+firefox23
+firefox22
+firefox22
+firefox20
+firefox20
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefox20
+firefox20
+firefox10
+firefox10
+firefox15
+firefox15
+firefox22
+firefox22
+firefox20
+firefox20
+firefox17
+firefox17
+firefox18
+firefox18
+firefox15
+firefox15
+firefox18
+firefox18
+firefox15
+firefox15
+firefoxThe avg of salarey: 14
+firefoxThe avg of salarey: 14
+firefox----salary of Software and Hardware----
+firefox----salary of Software and Hardware----
+firefox----salary of QA and Support, System and IT----
+firefox----salary of QA and Support, System and IT----
+firefox----salary of Software and Hardware----
+firefox----salary of Software and Hardware----
+firefox----salary of QA and Support, System and IT----
+firefox----salary of QA and Support, System and IT----
+firefox firefox:Software
+firefox firefox:Software
+firefox firefox:Hardware
+firefox firefox:Hardware
+firefox firefox:QA
+firefox firefox:QA
+firefox firefox:Support, System and IT
+firefox firefox:Support, System and IT
+firefox firefox:Information Systems
+firefox firefox:Information Systems
+firefox firefox:Students / Graduates
+firefox firefox:Students / Graduates
+firefox:הייטק
+firefox:הייטק
+firefox:ביומד
+firefox:ביומד
+firefox:שוק ההון
+firefox:שוק ההון
+firefox:מטה ופיננסים
+firefox:מטה ופיננסים
+firefox:קלינטק בינוי ותעשייה
+firefox:קלינטק בינוי ותעשייה
+firefox:קמעונאות
+firefox:קמעונאות
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox15
+firefox15
+firefox20
+firefox20
+firefox19
+firefox19
+firefox18
+firefox18
+firefox25
+firefox25
+firefox22
+firefox22
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox22
+firefox22
+firefox22
+firefox22
+firefox18
+firefox18
+firefox23
+firefox23
+firefox22
+firefox22
+firefox20
+firefox20
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefox20
+firefox20
+firefox10
+firefox10
+firefox15
+firefox15
+firefox22
+firefox22
+firefox20
+firefox20
+firefox17
+firefox17
+firefox18
+firefox18
+firefox15
+firefox15
+firefox18
+firefox18
+firefox15
+firefox15
+firefoxThe avg of salarey: 14
+firefoxThe avg of salarey: 14
+firefox firefox:Software
+firefox firefox:Software
+firefox firefox:Hardware
+firefox firefox:Hardware
+firefox firefox:QA
+firefox firefox:QA
+firefox firefox:Support, System and IT
+firefox firefox:Support, System and IT
+firefox firefox:Information Systems
+firefox firefox:Information Systems
+firefox firefox:Students / Graduates
+firefox firefox:Students / Graduates
+firefox:הייטק
+firefox:הייטק
+firefox:ביומד
+firefox:ביומד
+firefox:שוק ההון
+firefox:שוק ההון
+firefox:מטה ופיננסים
+firefox:מטה ופיננסים
+firefox:קלינטק בינוי ותעשייה
+firefox:קלינטק בינוי ותעשייה
+firefox:קמעונאות
+firefox:קמעונאות
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox15
+firefox15
+firefox20
+firefox20
+firefox19
+firefox19
+firefox18
+firefox18
+firefox25
+firefox25
+firefox22
+firefox22
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox22
+firefox22
+firefox22
+firefox22
+firefox18
+firefox18
+firefox23
+firefox23
+firefox22
+firefox22
+firefox20
+firefox20
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefox20
+firefox20
+firefox10
+firefox10
+firefox15
+firefox15
+firefox22
+firefox22
+firefox20
+firefox20
+firefox17
+firefox17
+firefox18
+firefox18
+firefox15
+firefox15
+firefox18
+firefox18
+firefox15
+firefox15
+firefoxThe avg of salarey: 14
+firefoxThe avg of salarey: 14
+firefox firefox:Software
+firefox firefox:Software
+firefox firefox:Hardware
+firefox firefox:Hardware
+firefox firefox:QA
+firefox firefox:QA
+firefox firefox:Support, System and IT
+firefox firefox:Support, System and IT
+firefox firefox:Information Systems
+firefox firefox:Information Systems
+firefox firefox:Students / Graduates
+firefox firefox:Students / Graduates
+firefox:הייטק
+firefox:הייטק
+firefox:ביומד
+firefox:ביומד
+firefox:שוק ההון
+firefox:שוק ההון
+firefox:מטה ופיננסים
+firefox:מטה ופיננסים
+firefox:קלינטק בינוי ותעשייה
+firefox:קלינטק בינוי ותעשייה
+firefox:קמעונאות
+firefox:קמעונאות
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox:בכירים
+firefox----salary of Software and Hardware----
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox18
+firefox15
+firefox15
+firefox20
+firefox20
+firefox19
+firefox19
+firefox18
+firefox18
+firefox25
+firefox25
+firefox22
+firefox22
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox20
+firefox22
+firefox22
+firefox22
+firefox22
+firefox18
+firefox18
+firefox23
+firefox23
+firefox22
+firefox22
+firefox20
+firefox20
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefoxThe avg of salarey: 19
+firefox----salary of QA and Support, System and IT----
+firefox20
+firefox20
+firefox10
+firefox10
+firefox15
+firefox15
+firefox22
+firefox22
+firefox20
+firefox20
+firefox17
+firefox17
+firefox18
+firefox18
+firefox15
+firefox15
+firefox18
+firefox18
+firefox15
+firefox15
+firefoxThe avg of salarey: 14
+firefoxThe avg of salarey: 14

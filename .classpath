@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/temp/files/jar/selenium-java-3.141.59+ssh/libs/byte-buddy-1.8.15.jar"/>
 	<classpathentry kind="lib" path="C:/temp/files/jar/selenium-java-3.141.59+ssh/libs/client-combined-3.141.59.jar"/>
@@ -57,19 +61,19 @@
 	<classpathentry kind="lib" path="C:/temp/files/jar/gmail/mailapi.jar"/>
 	<classpathentry kind="lib" path="C:/temp/files/jar/gmail/pop3.jar"/>
 	<classpathentry kind="lib" path="C:/temp/files/jar/gmail/smtp.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-codec-1.10.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-compress-1.18.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-io-2.6.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-lang3-3.8.1.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/gson-2.8.5.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/httpclient-4.5.6.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/httpcore-4.4.10.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/jarchivelib-1.0.0.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/jsoup-1.11.3.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/slf4j-api-1.7.25.jar"/>
-	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/webdrivermanager-3.6.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/jarchivelib-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/jsoup-1.13.1.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/slf4j-api-1.7.30.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/webdrivermanager-4.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-codec-1.13.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-compress-1.20.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-io-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/commons-lang3-3.11.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/httpclient5-5.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/httpcore5-5.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/temp/files/jar/webdriver maneger/httpcore5-h2-5.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

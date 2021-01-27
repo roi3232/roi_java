@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="8" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-11T22:42:26 IST" name="Parallel test suite" finished-at="2021-01-11T22:42:33 IST" duration-ms="7226">
+  <suite started-at="2021-01-21T08:59:24 IST" name="Parallel test suite" finished-at="2021-01-21T08:59:30 IST" duration-ms="6420">
     <groups>
+      <group name="average">
+        <method signature="t1.test3()[pri:0, instance:testNG.t1@34f5090e]" name="test3" class="testNG.t1"/>
+        <method signature="t1.test4()[pri:0, instance:testNG.t1@34f5090e]" name="test4" class="testNG.t1"/>
+        <method signature="t1.test3()[pri:0, instance:testNG.t1@4bb33f74]" name="test3" class="testNG.t1"/>
+        <method signature="t1.test4()[pri:0, instance:testNG.t1@4bb33f74]" name="test4" class="testNG.t1"/>
+      </group> <!-- average -->
       <group name="list">
         <method signature="t1.test1()[pri:0, instance:testNG.t1@34f5090e]" name="test1" class="testNG.t1"/>
+        <method signature="t1.test2()[pri:0, instance:testNG.t1@34f5090e]" name="test2" class="testNG.t1"/>
         <method signature="t1.test1()[pri:0, instance:testNG.t1@4bb33f74]" name="test1" class="testNG.t1"/>
+        <method signature="t1.test2()[pri:0, instance:testNG.t1@4bb33f74]" name="test2" class="testNG.t1"/>
       </group> <!-- list -->
     </groups>
-    <test started-at="2021-01-11T22:42:26 IST" name="Chrome test" finished-at="2021-01-11T22:42:33 IST" duration-ms="7226">
+    <test started-at="2021-01-21T08:59:24 IST" name="Chrome test" finished-at="2021-01-21T08:59:30 IST" duration-ms="6417">
       <class name="testNG.t1">
-        <test-method is-config="true" signature="BeforeTest(java.lang.String)[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-11T22:42:26 IST" name="BeforeTest" finished-at="2021-01-11T22:42:32 IST" duration-ms="6545" status="PASS">
+        <test-method is-config="true" signature="BeforeTest(java.lang.String)[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-21T08:59:24 IST" name="BeforeTest" finished-at="2021-01-21T08:59:28 IST" duration-ms="4577" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,19 +30,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method signature="test1()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-11T22:42:32 IST" name="test1" finished-at="2021-01-11T22:42:33 IST" duration-ms="84" status="PASS">
+        <test-method signature="test1()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-21T08:59:28 IST" name="test1" finished-at="2021-01-21T08:59:29 IST" duration-ms="1009" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-11T22:42:33 IST" name="AfterClass" finished-at="2021-01-11T22:42:33 IST" duration-ms="590" status="PASS">
+        <test-method signature="test2()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-21T08:59:29 IST" name="test2" finished-at="2021-01-21T08:59:29 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test3()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-21T08:59:29 IST" name="test3" finished-at="2021-01-21T08:59:29 IST" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method signature="test4()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-21T08:59:29 IST" name="test4" finished-at="2021-01-21T08:59:30 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:testNG.t1@34f5090e]" started-at="2021-01-21T08:59:30 IST" name="AfterClass" finished-at="2021-01-21T08:59:30 IST" duration-ms="518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
       </class> <!-- testNG.t1 -->
     </test> <!-- Chrome test -->
-    <test started-at="2021-01-11T22:42:26 IST" name="firefox test" finished-at="2021-01-11T22:42:33 IST" duration-ms="7226">
+    <test started-at="2021-01-21T08:59:24 IST" name="firefox test" finished-at="2021-01-21T08:59:30 IST" duration-ms="6420">
       <class name="testNG.t1">
-        <test-method is-config="true" signature="BeforeTest(java.lang.String)[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-11T22:42:26 IST" name="BeforeTest" finished-at="2021-01-11T22:42:32 IST" duration-ms="6135" status="PASS">
+        <test-method is-config="true" signature="BeforeTest(java.lang.String)[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-21T08:59:24 IST" name="BeforeTest" finished-at="2021-01-21T08:59:29 IST" duration-ms="5524" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,11 +65,75 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method signature="test1()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-11T22:42:32 IST" name="test1" finished-at="2021-01-11T22:42:33 IST" duration-ms="488" status="PASS">
+        <test-method signature="test1()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-21T08:59:29 IST" name="test1" finished-at="2021-01-21T08:59:29 IST" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-11T22:42:33 IST" name="AfterClass" finished-at="2021-01-11T22:42:33 IST" duration-ms="588" status="PASS">
+        <test-method signature="test2()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-21T08:59:29 IST" name="test2" finished-at="2021-01-21T08:59:29 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test3()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-21T08:59:29 IST" name="test3" finished-at="2021-01-21T08:59:29 IST" duration-ms="164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method signature="test4()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-21T08:59:29 IST" name="test4" finished-at="2021-01-21T08:59:30 IST" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:testNG.t1@4bb33f74]" started-at="2021-01-21T08:59:30 IST" name="AfterClass" finished-at="2021-01-21T08:59:30 IST" duration-ms="519" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DESKTOP-CLI6E80', ip: '10.100.102.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201211215739, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 18096, moz:profile: C:\Users\royko\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DESKTOP-CLI6E80', ip: '10.100.102.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201211215739, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 18096, moz:profile: C:\Users\royko\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
+at testNG.t1.AfterClass(t1.java:56)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->

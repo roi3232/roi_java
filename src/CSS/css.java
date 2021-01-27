@@ -43,7 +43,8 @@ public class css {
 
 	@Test(groups = "headline")
 	public void test1() {
-		List<WebElement> headline = driver.findElements(By.xpath("//div[@class='layoutContainer'][6]//div[@class='layoutItem multi-article'][1]//div[@class='slotList']//div[@class='slotTitle']"));
+		List<WebElement> headline = driver.findElements(By.xpath(
+				"//div[@class='layoutContainer'][6]//div[@class='layoutItem multi-article'][1]//div[@class='slotList']//div[@class='slotTitle']"));
 		for (int i = 0; i < headline.size(); i++) {
 			if (headline.get(i).getCssValue("font-size").equals("14px")
 					&& headline.get(i).getCssValue("color").equals("rgba(0, 0, 0, 1)")
@@ -62,7 +63,8 @@ public class css {
 
 	@Test(groups = "credit")
 	public void test2() {
-		List<WebElement> credit = driver.findElements(By.xpath("//div[@class='layoutContainer'][6]//div[@class='layoutItem multi-article'][1]//div[@class='moreDetails']"));
+		List<WebElement> credit = driver.findElements(By.xpath(
+				"//div[@class='layoutContainer'][6]//div[@class='layoutItem multi-article'][1]//div[@class='moreDetails']"));
 		for (int i = 0; i < credit.size(); i++) {
 			fileWrite("----------- Credits of articles: " + i + " -----------");
 			if (credit.get(i).getCssValue("color").equals("rgba(153, 153, 153, 1)")
@@ -81,10 +83,11 @@ public class css {
 
 	@Test(groups = "img")
 	public void test3() {
-		WebElement img = driver.findElement(By.xpath("//div[@class='layoutContainer'][6]//div[@class='layoutItem multi-article'][1]//img"));
+		WebElement img = driver.findElement(
+				By.xpath("//div[@class='layoutContainer'][6]//div[@class='layoutItem multi-article'][1]//img"));
 		int w = img.getSize().getWidth();
 		int h = img.getSize().getHeight();
-		if (h == 90 && w == 150) {
+		if (h == 90 && w == 150 || h == 84 && w == 150) {
 			fileWrite("----------- Size of img -----------");
 			fileWrite("the width of big img ok");
 			fileWrite("the Height of big img ok");

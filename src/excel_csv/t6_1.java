@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class t6_1 {
 	public static List<String> readCsv(int num) throws IOException {
 		List<String> lines = new ArrayList<String>();
-		File file = new File("C:\\Users\\royko\\Documents\\ΰεθεξφιδ\\csv.csv");
+		File file = new File("C:\\Users\\royko\\Documents\\ΧΧ•ΧΧ•ΧΧ¦Χ™Χ”\\csv.csv");
 		lines = FileUtils.readLines(file, "windows-1255");
 		return lines;
 	}
@@ -33,17 +33,17 @@ public class t6_1 {
 			if (split[2].equals("fals")) {
 				try {
 					driver.findElement(By.id("err")).getText();
-					System.out.println(" δαγιχδ " + i + " δφμιηδ");
+					System.out.println(" Χ”Χ‘Χ“Χ™Χ§Χ”  " + i + " Χ”Χ¦ΧΧ™Χ—Χ”");
 				} catch (Exception e) {
-					System.err.println(" δαγιχδ " + i + " μΰ δφμιηδ");
+					System.err.println(" Χ”Χ‘Χ“Χ™Χ§Χ”  " + i + "ΧΧ Χ”Χ¦ΧΧ™Χ—Χ”");
 				}
 
 			} else {
 				try {
 					driver.findElement(By.tagName("h1")).getText();
-					System.out.println(" δαγιχδ " + i + " δφμιηδ");
+					System.out.println(" Χ”Χ‘Χ“Χ™Χ§Χ”  " + i + " Χ”Χ¦ΧΧ™Χ—Χ”");
 				} catch (Exception e) {
-					System.err.println(" δαγιχδ " + i + " μΰ δφμιηδ");
+					System.err.println(" Χ”Χ‘Χ“Χ™Χ§Χ”  " + i + " ΧΧ Χ”Χ¦ΧΧ™Χ—Χ”");
 				}
 			}
 		}

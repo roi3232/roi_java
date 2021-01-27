@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Parallel test suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="firefox test(failed)">
+<suite configfailurepolicy="continue" thread-count="2" parallel="tests" name="Failed suite [Parallel test suite]" guice-stage="DEVELOPMENT" verbose="2">
+  <test thread-count="2" parallel="tests" name="Chrome test(failed)" verbose="2">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testNG.t1">
+        <methods>
+          <include name="test2"/>
+          <include name="test1"/>
+          <include name="test4"/>
+          <include name="test3"/>
+          <include name="BeforeTest"/>
+          <include name="AfterClass"/>
+        </methods>
+      </class> <!-- testNG.t1 -->
+    </classes>
+  </test> <!-- Chrome test(failed) -->
+  <test thread-count="2" parallel="tests" name="firefox test(failed)" verbose="2">
     <parameter name="browser" value="FF"/>
     <classes>
       <class name="testNG.t1">
         <methods>
+          <include name="test2"/>
           <include name="test1"/>
+          <include name="test4"/>
+          <include name="test3"/>
           <include name="BeforeTest"/>
           <include name="AfterClass"/>
         </methods>

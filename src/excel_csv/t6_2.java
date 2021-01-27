@@ -47,9 +47,9 @@ public class t6_2 {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-//úøâéì 1
+//ï¿½ï¿½ï¿½ï¿½ï¿½ 1
 		try {
-			String path = "C:\\Users\\royko\\Documents\\àåèåîöéä\\excel_test.xlsx";
+			String path = "C:\\Users\\royko\\Documents\\××•×˜×•××¦×™×”\\excel_test.xlsx";
 			String value;
 			String titlegoogle = null;
 			FileInputStream fis3 = new FileInputStream(path);
@@ -75,7 +75,7 @@ public class t6_2 {
 					Thread.sleep(2000);
 					titlegoogle = driver.findElements(By.xpath("//div[@class='g'][1]//h3[1]")).get(0).getText();
 				} catch (Exception e) {
-					System.err.println("ä÷øéàä ğëùìä");
+					System.err.println("×”×§×¨×™××” × ×›×©×œ×”");
 				}
 				excelPrint(path, titlegoogle, rows, 1);
 				rows++;
@@ -83,10 +83,10 @@ public class t6_2 {
 			driver.close();
 		} catch (Exception e) {
 		}
-//úøâéì 2
+//ï¿½ï¿½ï¿½ï¿½ï¿½ 2
 		try {
 			int clom = 2;
-			String path = "C:\\Users\\royko\\Documents\\àåèåîöéä\\excel_test2.xlsx";
+			String path = "C:\\Users\\royko\\Documents\\××•×˜×•××¦×™×”\\excel_test2.xlsx";
 			System.setProperty("webdriver.chrome.driver", "C:\\temp\\chromedriver.exe");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			driver = new ChromeDriver();
@@ -102,10 +102,10 @@ public class t6_2 {
 				button.click();
 
 				if (err.getText().equals("You have entered incorrect details")) {
-					excelPrint(path, "òáø", 1, clom);
+					excelPrint(path, "×¢×‘×¨", 1, clom);
 
 				} else {
-					excelPrint(path, "ìà òáø", 1, clom);
+					excelPrint(path, "ï¿½ï¿½ ï¿½ï¿½ï¿½", 1, clom);
 				}
 			} catch (Exception e) {
 			}
@@ -115,9 +115,9 @@ public class t6_2 {
 				button.click();
 
 				if (err.getText().equals("You have entered incorrect details")) {
-					excelPrint(path, "òáø", 2, clom);
+					excelPrint(path, "×¢×‘×¨", 2, clom);
 				} else {
-					excelPrint(path, "ìà òáø", 2, clom);
+					excelPrint(path, "×œ× ×¢×‘×¨", 2, clom);
 				}
 			} catch (Exception e) {
 			}
@@ -133,12 +133,12 @@ public class t6_2 {
 				button.click();
 
 				if (err.getText().equals("You have entered incorrect details")) {
-					excelPrint(path, "òáø", 3, clom);
+					excelPrint(path, "×¢×‘×¨", 3, clom);
 				} else {
-					excelPrint(path, "ìà òáø", 3, clom);
+					excelPrint(path, "×œ× ×¢×‘×¨", 3, clom);
 				}
 			} catch (Exception e) {
-				excelPrint(path, "ìà òáø", 3, clom);
+				excelPrint(path, "×œ× ×¢×‘×¨", 3, clom);
 			}
 			try {
 				driver.get("http://danielauto.net/practice/loginPage/loginpageTest.html");
@@ -150,19 +150,19 @@ public class t6_2 {
 				password.sendKeys("admin");
 				button.click();
 				if (driver.findElement(By.tagName("h1")).getText().equals("You've logged in successfully")) {
-					excelPrint(path, "òáø", 4, clom);
+					excelPrint(path, "×¢×‘×¨", 4, clom);
 				} else {
-					excelPrint(path, "ìà òáø", 4, clom);
+					excelPrint(path, "×œ× ×¢×‘×¨", 4, clom);
 				}
 			} catch (Exception e) {
-				excelPrint(path, "ìà òáø", 4, clom);
+				excelPrint(path, "×œ× ×¢×‘×¨", 4, clom);
 			}
 			driver.close();
 		} catch (Exception e) {
 		}
-//úøâéì 3
+//ï¿½ï¿½ï¿½ï¿½ï¿½ 3
 		try {
-			String path = "C:\\Users\\royko\\Documents\\àåèåîöéä\\excel_test3.xlsx";
+			String path = "C:\\Users\\royko\\Documents\\××•×˜×•××¦×™×”\\excel_test3.xlsx";
 			System.setProperty("webdriver.chrome.driver", "C:\\temp\\chromedriver.exe");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			driver = new ChromeDriver();

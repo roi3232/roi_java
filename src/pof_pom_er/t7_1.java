@@ -40,11 +40,11 @@ public class t7_1 {
 
 	@Test
 	public void test001() throws InterruptedException {
-		pof.searchTxt.sendKeys("μην");
+		pof.searchTxt.sendKeys("ΧΧ—Χ");
 		pof.Button1.click();
 		Thread.sleep(1000);
 		String resultString = pof.result.get(0).getText();
-		if (resultString.contains("μην")) {
+		if (resultString.contains("ΧΧ—Χ")) {
 			System.out.println("test1 pass");
 		} else {
 			throw new RuntimeException();
@@ -58,7 +58,7 @@ public class t7_1 {
 		pof.Button1.click();
 		Thread.sleep(2000);
 		String resultString = pof.result.get(0).getText();
-		if (resultString.contains("μΰ πξφΰε ξζεπεϊ, πρδ ωπιϊ.")) {
+		if (resultString.contains("ΧΧ Χ ΧΧ¦ΧΧ• ΧΧ–Χ•Χ Χ•Χª, Χ Χ΅Χ” Χ©Χ Χ™Χª.")) {
 			System.out.println("test2 pass");
 		} else {
 			throw new RuntimeException();
@@ -68,7 +68,7 @@ public class t7_1 {
 	@Test
 	public void test003() throws InterruptedException {
 		pof.searchTxt.clear();
-		pof.searchTxt.sendKeys("μην");
+		pof.searchTxt.sendKeys("ΧΧ—Χ");
 		pof.Button1.click();
 		Thread.sleep(1000);
 		pof.result.get(3).click();
@@ -76,7 +76,7 @@ public class t7_1 {
 		Alert alert = driver.switchTo().alert();
 		String alartString = alert.getText();
 		Thread.sleep(1000);
-		if (alartString.contains("ιω μαηεψ  ιηιγϊ ξιγδ ελξεϊ")) {
+		if (alartString.contains("Χ™Χ© ΧΧ‘Χ—Χ•Χ¨  Χ™Χ—Χ™Χ“Χª ΧΧ™Χ“Χ” Χ•Χ›ΧΧ•Χª")) {
 			System.out.println(alartString);
 			System.out.println("test3 pass");
 		} else {
@@ -107,7 +107,7 @@ public class t7_1 {
 		Thread.sleep(1000);
 		Alert alert = driver.switchTo().alert();
 		String alartString = alert.getText();
-		if (alartString.contains("χεγ: 3001")) {
+		if (alartString.contains("Χ§Χ•Χ“: 3001")) {
 			System.out.println(alartString);
 			System.out.println("test5 pass");
 		} else {
@@ -137,7 +137,7 @@ public class t7_1 {
 
 		pof.searchTxt.clear();
 		pof.quantity.clear();
-		pof.searchTxt.sendKeys("μην");
+		pof.searchTxt.sendKeys("ΧΧ—Χ");
 		pof.Button1.click();
 		Thread.sleep(1000);
 		pof.result.get(0).click();
@@ -171,7 +171,7 @@ public class t7_1 {
 
 		pof.searchTxt.clear();
 		pof.quantity.clear();
-		pof.searchTxt.sendKeys("μην");
+		pof.searchTxt.sendKeys("ΧΧ—Χ");
 		pof.Button1.click();
 		Thread.sleep(1000);
 		pof.result.get(5).click();
@@ -194,10 +194,10 @@ public class t7_1 {
 		String secand = pof.caloris.get(1).getText();
 		int secand1 = Integer.parseInt(secand);
 		int sum = first1 + secand1;
-		String sumCaloris = pof.sumCaloris.getText().replace(" χμεψιεϊ", "");
+		String sumCaloris = pof.sumCaloris.getText().replace(" Χ§ΧΧ•Χ¨Χ™Χ•Χª", "");
 		int sumCaloris1 = Integer.parseInt(sumCaloris);
 		if (sumCaloris1 == sum) {
-			System.out.println("δχμψιεϊ ωεεϊ");
+			System.out.println("Χ”Χ§ΧΧ¨Χ™Χ•Χª Χ©Χ•Χ•Χª");
 			System.out.println("test10 pass");
 		} else {
 			throw new RuntimeException();
@@ -211,10 +211,10 @@ public class t7_1 {
 		String secand = pof.Carbo2.getText();
 		int secand1 = Integer.parseInt(secand);
 		int sum = first1 + secand1;
-		String sumCarbo = pof.sumCarbo.getText().replace(" βψν", "");
+		String sumCarbo = pof.sumCarbo.getText().replace(" Χ’Χ¨Χ", "");
 		int sumCarbo1 = Integer.parseInt(sumCarbo);
 		if (sumCarbo1 == sum) {
-			System.out.println("δτηξιξεϊ ωεεϊ");
+			System.out.println("Χ”Χ¤Χ—ΧΧ™ΧΧ•Χª Χ©Χ•Χ•Χª");
 			System.out.println("test11 pass");
 		} else {
 			throw new RuntimeException();
