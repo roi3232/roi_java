@@ -43,7 +43,7 @@ public class Gmail {
 	static WebDriver driver;
 	static String[] multi_addressee = { "roy.koro51@gmail.com" };
 	static String toCc = "roy.koro51@gmail.com";
-	// δξιιμ ωιεφΰ ωωεμη επιϊο μψωεν ξιιμ μΰ ΰξιϊι
+	//ΧΧ™Χ™Χ Χ©Χ™Χ¨ΧΧ” ΧΧΧ™ Χ™Χ©ΧΧ—
 	static String mailFrom = "roi32.qa@gmail.com";
 	static String subject = "Login test";
 	static String file_path = "gmail.txt";
@@ -63,7 +63,7 @@ public class Gmail {
 	@AfterClass
 	public static void tearDownAfterClass() throws AddressException, MessagingException {
 		driver.quit();
-		// ξΰτιιπιν μιφιψϊ χωψ ςν δωψϊ
+		// Χ”Χ’Χ“Χ¨Χª ΧΧΧ¤Χ™Χ™Χ Χ™ ΧªΧ™Χ§Χ©Χ•Χ¨Χª Χ©Χ Χ”Χ©Χ¨Χª
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "smtp.gmail.com");
 		props.put("mail.smtp.socketFactory.port", "465");
@@ -72,7 +72,7 @@ public class Gmail {
 		props.setProperty("mail.smtp.user", "abc");
 		props.setProperty("mail.smtp.password", "xyz");
 		props.setProperty("mail.smtp.auth", "true");
-		// ιφιψϊ ϊιωψεϊ ςν δωψϊ
+		// Χ™Χ¦Χ™Χ¨Χª ΧªΧ™Χ§Χ©Χ•Χ¨Χª ΧΆΧ Χ”Χ©Χ¨Χª
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
 				return new PasswordAuthentication(userName, password);
@@ -80,29 +80,29 @@ public class Gmail {
 		});
 
 		try {
-			// δβγψϊ ξϊεαϊ δωεμη
+			// Χ”Χ’Χ“Χ¨Χª Χ›ΧªΧ•Χ‘Χª Χ”Χ©Χ•ΧΧ—
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(mailFrom));
-			// δβγψϊ πξςπιν
+			// Χ”Χ’Χ“Χ¨Χª Χ ΧΧΆΧ Χ™Χ
 			@SuppressWarnings("unused")
 			InternetAddress[] addressTo = new InternetAddress[multi_addressee.length];
 			for (int i = 0; i < multi_addressee.length; i++) {
 				message.addRecipient(Message.RecipientType.TO, new InternetAddress(multi_addressee[i]));
-				// δβγψϊ ωμιηϊ ςεϊχ
+				// Χ‘ΧΧ™Χ“Χ” Χ•Χ¨Χ•Χ¦Χ™Χ ΧΧ©ΧΧ•Χ— ΧΆΧ•ΧªΧ§
 				message.addRecipient(Message.RecipientType.CC, new InternetAddress(toCc));
-				// δλπρϊ πεωΰ+ βεσ δξιιμ
+				// Χ”Χ›Χ Χ΅Χª Χ›Χ•ΧªΧ¨Χª Χ•Χ’Χ•Χ£ Χ”ΧΧ™Χ™Χ
 				message.setSubject(subject);
 				BodyPart messageBodyPart = new MimeBodyPart();
 				messageBodyPart.setText(BodyText);
 				Multipart multipart = new MimeMultipart();
 				multipart.addBodyPart(messageBodyPart);
-				// δερτϊ χεαυ
+				// Χ”Χ›Χ Χ΅Χª Χ”Χ§Χ•Χ‘Χ¥
 				messageBodyPart = new MimeBodyPart();
 				DataSource source = new FileDataSource(file_path);
 				messageBodyPart.setDataHandler(new DataHandler(source));
 				messageBodyPart.setFileName(file_path);
 				multipart.addBodyPart(messageBodyPart);
-				// ρβιψϊ δξιιμ εωμιηϊε
+				// Χ΅Χ’Χ™Χ¨Χª ΧΧ™Χ™Χ
 				message.setContent(multipart);
 				Transport.send(message);
 				System.out.println("message sent");
