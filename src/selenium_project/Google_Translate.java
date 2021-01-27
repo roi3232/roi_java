@@ -14,8 +14,8 @@ public class Google_Translate {
 		try {
 			driver.get("https://translate.google.com/");
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			// δζπϊ θχρθ αθχρθ μδζπδ μϊψβεν
-			driver.findElement(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/c-wiz[1]/span/span/div/textarea")).sendKeys("ωμεν ωξι ψεςι");
+			//Χ”Χ–Χ Χª ΧΧ§Χ΅Χ Χ‘ΧΧ§Χ΅Χ ΧΧ”Χ–Χ Χ” ΧΧªΧ¨Χ’Χ•Χ
+			driver.findElement(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/c-wiz[1]/span/span/div/textarea")).sendKeys("οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½");
 			driver.findElement(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[5]/button")).click();
 			List<WebElement> list = driver.findElements(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[3]/c-wiz/div[2]/div/div[3]/div/div[2]/div/div[2]"));
 			for (int i = 102; i < list.size(); i++) {
@@ -29,9 +29,9 @@ public class Google_Translate {
 						.click();
 			}
 			First_stage_func.screenShot4(robot);
-			System.out.println("ϊψβιμ 2 ςαψ αδφμηδ");
+			System.out.println("ΧªΧ¨Χ’Χ™Χ 2 ΧΆΧ‘Χ¨ Χ‘Χ”Χ¦ΧΧ—Χ”");
 		} catch (Exception e) {
-			System.err.println("ϊψβιμ 2 πλωμ");
+			System.err.println("ΧªΧ¨Χ’Χ™Χ 2 Χ Χ›Χ©Χ");
 		}
 		//
 	}

@@ -14,19 +14,19 @@ public class weekend {
 			driver.get("https://my.weekend.co.il/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%97%D7%9F/");
 			double value = 0.0;
 			List<WebElement> rating = driver.findElements(By.cssSelector("div[class='gradesshort']"));
-			// δγτρϊ φιεπιν
+			//Χ”Χ“Χ¤Χ΅Χª Χ¦Χ™Χ•Χ Χ™Χ
 			System.out.println("Rating are:");
 			for (int i = 0; i < rating.size(); i++) {
-				System.out.println(rating.get(i).getText().replace("ξϊεκ 5", ""));
-				value += Double.parseDouble(rating.get(i).getText().replace("ξϊεκ 5", ""));
+				System.out.println(rating.get(i).getText().replace("οΏ½οΏ½οΏ½οΏ½ 5", ""));
+				value += Double.parseDouble(rating.get(i).getText().replace("οΏ½οΏ½οΏ½οΏ½ 5", ""));
 			}
-			// ηιωεα ξξεφΰ ωμ δςψλιν ωμ δφιεπιν
+			//Χ—Χ™Χ©Χ•Χ‘ ΧΧΧ•Χ¦Χ Χ©Χ Χ”ΧΆΧ¨Χ›Χ™Χ Χ©Χ Χ”Χ¦Χ™Χ•Χ Χ™Χ
 			First_stage_func.avgValues(value, rating);
 			First_stage_func.screenShot3(robot);
-			System.out.println("ϊψβιμ 4 δφμιη");
+			System.out.println("ΧªΧ¨Χ’Χ™Χ 4 Χ”Χ¦ΧΧ™Χ—");
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
-			System.err.println("ϊψβιμ 4 πλωμ");
+			System.err.println("ΧªΧ¨Χ’Χ™Χ 4 Χ Χ›Χ©Χ");
 		}
 		//
 	}

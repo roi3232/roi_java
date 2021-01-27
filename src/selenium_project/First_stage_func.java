@@ -19,20 +19,20 @@ import org.openqa.selenium.WebElement;
 public class First_stage_func {
 	public static void isSelected(WebDriver driver, WebElement month) {
 		if (month.isSelected()) {
-			System.out.println("ηωα μτι:" + "isslected");
+			System.out.println("Χ—Χ©Χ‘ ΧΧ¤Χ™:"+"isslected");
 		}
 	}
 
 	public static void error(WebDriver driver, WebElement mailerror, WebElement phonnum, WebElement condiElement) {
 		try {
 			if (mailerror.isDisplayed()) {
-				System.err.println("ιω μδζιο λϊεαϊ ξιιμ");
+				System.err.println("Χ™Χ© ΧΧ”Χ–Χ™Χ Χ›ΧªΧ•Χ‘Χª ΧΧ™Χ™Χ");
 			}
 			if (phonnum.isDisplayed()) {
-				System.err.println("ιω μδζιο ξρτψ θμτεο");
+				System.err.println("Χ™Χ© ΧΧ”Χ–Χ™Χ ΧΧ΅Χ¤Χ¨ ΧΧΧ¤Χ•Χ");
 			}
 			if (condiElement.isDisplayed()) {
-				System.err.println("ιω μΰωψ ΰϊ ϊπΰι δωιξεω");
+				System.err.println("Χ™Χ© ΧΧΧ©Χ¨ ΧΧª ΧªΧ ΧΧ™ Χ”Χ©Χ™ΧΧ•Χ©");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

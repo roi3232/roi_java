@@ -9,28 +9,28 @@ public class t2 {
 	public static void main(String[] args) {
 		
 		
-		// תרגיל 1
+		// ן¿½ן¿½ן¿½ן¿½ן¿½ 1
 		try {
 			Scanner cons = new Scanner(System.in);
-			System.out.println("בחר יום");
+			System.out.println("Input number:");
 			int day = cons.nextInt();
 			String stringday;
-			switch(day) {
-			case 1:stringday = "יום ראשון";
+			switch (day) {
+			case 1:stringday = "Monday";
 			break;
-			case 2:stringday = "יום שני";
+			case 2:stringday = "Tuesday";
 			break;
-			case 3: stringday = "יום שלישי";
+			case 3: stringday = "Wednesday";
 			break;
-			case 4: stringday = "יום רביעי";
+			case 4: stringday = "Thursday";
 			break;
-			case 5: stringday = "יום חמישי";
+			case 5: stringday = "Friday";
 			break;
-			case 6: stringday = "יום שישי";
+			case 6: stringday = "Saturday";
 			break;
-			case 7: stringday = "יום שבת";
+			case 7: stringday = "Sunday";
 			break;
-			default: stringday = "מספר לא בטווח";
+			default: stringday = "Invalid day range";
 			break;
 			}
 			System.out.print(stringday);
@@ -42,7 +42,7 @@ public class t2 {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		// תרגיל 2
+		// ן¿½ן¿½ן¿½ן¿½ן¿½ 2
 		try {
 			Scanner input = new Scanner(System.in);
 
@@ -114,7 +114,7 @@ public class t2 {
 			e1.printStackTrace();
 		}
 
-		//  תרגיל 3
+		//  ן¿½ן¿½ן¿½ן¿½ן¿½ 3
 		try {
 			Scanner input1 = new Scanner(System.in);
 			double grade_a  , grade_b, grade_c;
@@ -136,7 +136,7 @@ public class t2 {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-	// תרגיל 4
+	// ן¿½ן¿½ן¿½ן¿½ן¿½ 4
 		try {
 			int numProduct;
 			int priceProduct;
@@ -164,7 +164,7 @@ public class t2 {
 			e1.printStackTrace();
 		}
 		
-	//תרגיל 5
+	//ן¿½ן¿½ן¿½ן¿½ן¿½ 5
 		try {	Scanner cons2 = new Scanner(System.in);
 		System.out.println("enter num of month");
 		int month1 = cons2.nextInt();
@@ -214,7 +214,7 @@ public class t2 {
 		} catch (Exception e) {
 			System.out.println("There is a problem in the program");
 		}
-//	תרגיל 6
+//	ן¿½ן¿½ן¿½ן¿½ן¿½ 6
 		try {
 			Scanner cons3 = new Scanner(System.in);
 			System.out.println("enter number of x");
@@ -241,7 +241,7 @@ public class t2 {
 		}
 		
 		
-		// תרגיל 7
+		// ן¿½ן¿½ן¿½ן¿½ן¿½ 7
 		try {
 			int age = 61, high =180, weight =100, experience = 5;
 			if (age<50 && age >= (1423%2)) {

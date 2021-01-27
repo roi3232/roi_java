@@ -15,43 +15,43 @@ public class supermarker {
     public static void supermarker1(WebDriver driver, Actions actions, Robot robot) {
         try {
             driver.get("https://www.supermarker.themarker.com/");
-        	//ηιτεω ξηωαεο ξωλπϊΰ
-            driver.findElement(By.id("txtSearch")).sendKeys("ξηωαεο");
+        	//Χ—Χ™Χ¤Χ•Χ© ΧΧ—Χ©Χ‘Χ•Χ ΧΧ©Χ›Χ ΧªΧ
+            driver.findElement(By.id("txtSearch")).sendKeys("ΧΧ—Χ©Χ‘Χ•Χ");
             Thread.sleep(2000);
             WebElement autoElements = driver.findElement(By.id("ui-id-1"));
             List<WebElement> list = autoElements.findElements(By.tagName("li"));
             list.get(1).click();
-            //αγιχδ ωπαηψ "ηωα μτι"
+            //Χ‘Χ“Χ™Χ§Χ” Χ©Χ Χ‘Χ—Χ¨ "Χ—Χ©Χ‘ ΧΧ¤Χ™"
             WebElement month = driver.findElement(By.xpath("//table[@id='mortgageCalculatorType']//input[@id='rblSelectCalcType_0']"));
             First_stage_func.isSelected(driver, month);
-            //ωμιτϊ θχρθ ξημεο  ωτεις αριξο ωΰμδ
+            //Χ©ΧΧ™Χ¤Χª ΧΧ§Χ΅Χ ΧΧ—ΧΧ•Χ  Χ©Χ¤Χ•Χ™ΧΆ Χ‘Χ΅Χ™ΧΧ Χ©ΧΧΧ”
             WebElement qmark = driver.findElement(By.xpath("//table[@id='mortgageCalculatorType']//img"));
             actions.moveToElement(qmark).perform();
     		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             WebElement winElement = driver.findElement(By.cssSelector("img[class='titleImg']"));
             String titleText = winElement.getAttribute("alt");
             System.out.println(titleText);
-            // αηιψϊ χψο ωεεδ
+            // Χ‘Χ—Χ™Χ¨Χª Χ§Χ¨Χ Χ©Χ•Χ•Χ”
             WebElement kElement = driver.findElement(By.xpath("//form/div[@id='main']/div[@id='mainContainer']/div[@class='main']/div[1]/div[2]/table[1]/tbody/tr[3]/td[@id='tbKeren']/span/label[@class='ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left']/span"));
             actions.moveToElement(kElement).click().perform();
-            // δζπϊ ρλεν ξωλπϊΰ
+            // Χ‘Χ—Χ™Χ¨Χª ΧΧΧ Χ”Χ¦ΧΧ“Χ”
             WebElement noElement = driver.findElement(By.xpath("//form/div[@id='main']/div[@id='mainContainer']/div[2]/div[1]/div[2]/table[1]/tbody/tr[4]/td[2]/span/label[1]/span"));
             actions.moveToElement(noElement).click().perform();
-            // αηιψϊ ϊχετϊ δξωλπϊΰ
+            // Χ”Χ–Χ Χª Χ΅Χ›Χ•Χ ΧΧ©Χ›Χ ΧªΧ
             WebElement amounElement = driver.findElement(By.id("txtLoanAmount"));
             amounElement.clear();
             amounElement.sendKeys("500000");
-            //δχμγϊ ωγδ ψιαιϊ
+            // Χ‘Χ—Χ™Χ¨Χª ΧªΧ§Χ•Χ¤Χª Χ”ΧΧ©Χ›Χ ΧªΧ
             WebElement dragElement = driver.findElement(By.xpath("//form/div[@id='main']/div[@id='mainContainer']/div[2]/div[1]/div[2]/table[2]/tbody/tr[3]/td[3]/div/div/span"));
             actions.dragAndDropBy(dragElement, 35, 0).perform();
-            // δςϊχδ ρλεν δμεεΰδ
+            //Χ”Χ§ΧΧ“Χª Χ©Χ“Χ” Χ¨Χ™Χ‘Χ™Χª
             WebElement rivElement = driver.findElement(By.id("txtInterest"));
             rivElement.clear();
             rivElement.sendKeys("3.75");
-            //δγαχϊ ρλεν αωγδ δξιιμ
+            // ΧΧ—Χ™Χ¦Χ” ΧΆΧ Χ—Χ©Χ‘
             driver.findElement(By.id("ibCalc")).click();
             Thread.sleep(1000);
-            // αγιχδ ςν ξρεξο δφ'χαεχρ  εςν μΰ μεηϊ ςμιε 
+            // Χ”ΧΆΧªΧ§Χ” Χ΅Χ›Χ•Χ Χ”ΧΧ•Χ•ΧΧ”
             WebElement sumElement = driver.findElement(By.xpath("//form/div[5]/div[4]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]"));
             actions.click(sumElement).click().perform();
             robot.keyPress(KeyEvent.VK_CONTROL);
@@ -60,26 +60,26 @@ public class supermarker {
             robot.keyRelease(KeyEvent.VK_C);
             WebElement pastElement = driver.findElement(By.id("txtEmail"));
             pastElement.click();
-            //δγαχϊ ρλεν αωγδ δξιιμ
+            //Χ”Χ“Χ‘Χ§Χª Χ΅Χ›Χ•Χ Χ‘Χ©Χ“Χ” Χ”ΧΧ™Χ™Χ
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_CONTROL);
             robot.keyRelease(KeyEvent.VK_V);
-            driver.findElement(By.id("txtShemPrati")).sendKeys("ψεςι ιφηχ");
+            driver.findElement(By.id("txtShemPrati")).sendKeys("οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½");
             WebElement chakedElement = driver.findElement(By.id("3136"));
-            // αγιχδ ωξτεις δεγςεϊ ωβιΰδ
+            // Χ‘Χ“Χ™Χ§Χ” ΧΆΧ ΧΧ΅Χ•ΧΧ Χ”Χ¦'Χ§Χ‘Χ•Χ§Χ΅  Χ•ΧΆΧ ΧΧ ΧΧ•Χ—Χª ΧΆΧΧ™Χ• 
             First_stage_func.chakedElement(chakedElement);
             driver.findElement(By.id("btnSendLid")).click();
     		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            // αγιχδ ωξτεις δεγςεϊ ωβιΰδ
+            // Χ‘Χ“Χ™Χ§Χ” Χ©ΧΧ¤Χ•Χ™ΧΆ Χ”Χ•Χ“ΧΆΧ•Χª Χ©Χ’Χ™ΧΧ”
             WebElement mailerror = driver.findElement(By.xpath("//form/div[@id='main']//div[@class='topLeft']//div[@id='getOffer']/table//tbody/tr[2]//label[@class='error']"));
             WebElement phonnum = driver.findElement(By.xpath("//form/div[@id='main']//div[@class='topLeft']//div[@id='getOffer']/table//tbody/tr[3]//label[@class='error']"));
             WebElement condiElement = driver.findElement(By.xpath("//form/div[@id='main']//div[@class='topLeft']//div[@id='getOffer']/table//tbody/tr[7]//label"));
             First_stage_func.error(driver, mailerror, phonnum, condiElement);
             First_stage_func.screenShot(robot);
-            System.out.println("ϊψβιμ 1 ςαψ αδφμηδ");
+            System.out.println("ΧªΧ¨Χ’Χ™Χ 1 ΧΆΧ‘Χ¨ Χ‘Χ”Χ¦ΧΧ—Χ”");
         } catch (Exception e) {
-            System.err.println("ϊψβιμ 1 πλωμ");
+            System.err.println("ΧªΧ¨Χ’Χ™Χ 1 Χ Χ›Χ©Χ");
         }
     }
     //

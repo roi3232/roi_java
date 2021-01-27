@@ -12,25 +12,25 @@ public class vila4u {
 	public static void v4(WebDriver driver, Actions actions, Robot robot) {
 		try {
 			driver.get("https://www.vila4u.com/%D7%9B%D7%AA%D7%91%D7%95%D7%AA/%D7%97%D7%95%D7%A4%D7%A9%D7%94_%D7%9C%D7%A4%D7%99_%D7%AA%D7%A7%D7%A6%D7%99%D7%91");
-			//αηιψϊ ΰιζεψ ψιωεν
-			driver.findElement(By.id("siteSearch")).sendKeys("ειμεϊ αφτεο");
+			//Χ‘Χ—Χ™Χ¨Χª ΧΧ™Χ–Χ•Χ¨ Χ¨Χ™Χ©Χ•Χ
+			driver.findElement(By.id("siteSearch")).sendKeys("Χ•Χ™ΧΧ•Χª Χ‘Χ¦Χ¤Χ•Χ");
 			List<WebElement> vila = driver.findElements(By.xpath("//div//div//div//div/div[@class='autoComplete']/span"));
 			Thread.sleep(3000);
 			vila.get(0).click();
 			Thread.sleep(3000);
-			//αηιψϊ ειμϊ ζεβεϊ
+			//Χ‘Χ—Χ™Χ¨Χª Χ•Χ™ΧΧª Χ–Χ•Χ’Χ•Χª
 			driver.findElement(By.xpath("//div[1]/section[1]/div//div/form/div[2]/select[1]")).click();
 			Thread.sleep(3000);
 			List<WebElement> vilaList = driver.findElements(By.xpath("//div[1]/section[1]/div//div/form/div[2]/select[1]/option"));
 			vilaList.get(6).click();
-			//αηιψϊ ΰιαζεψ
+			//Χ‘Χ—Χ™Χ¨Χª ΧΧ™Χ‘Χ–Χ•Χ¨
 			driver.findElement(By.xpath("//div[1]/section[1]/div//div/form/div[2]/div[3]/span")).click();
 			Thread.sleep(3000);
 			List<WebElement> divElement = driver.findElements(By.xpath("//div[1]/section[1]/div//div/form/div[2]/div[3]/div//div"));
 			Thread.sleep(3000);
 			actions.keyDown(Keys.CONTROL).click(divElement.get(3)).click(divElement.get(5)).keyUp(Keys.CONTROL).build().perform();
 			driver.findElement(By.xpath("//div[1]/section[1]/div//div/form/div[2]/div[3]/div/div[@class='ok']")).click();
-			//αηιψϊ θεεη ξηιψιν
+			//Χ‘Χ—Χ™Χ¨Χª ΧΧ•Χ•Χ— ΧΧ—Χ™Χ¨Χ™Χ
 			WebElement minElement = driver.findElement(By.xpath("//div[1]/section[1]/div//div[@class='searchBoxWrap']/form/div[@class='allInputs']/div[@class='priceBoxSearch']/div[2]/a[1]"));
 			WebElement maxElement = driver.findElement(By.xpath("//div[1]/section[1]/div//div[@class='searchBoxWrap']/form/div[@class='allInputs']/div[@class='priceBoxSearch']/div[2]/a[2]"));
 			actions.dragAndDropBy(minElement, 0, 10).perform();
@@ -41,14 +41,14 @@ public class vila4u {
 			Thread.sleep(3000);
 			driver.findElement(By.cssSelector("a[class='submitSearch']")).click();
 			Thread.sleep(3000);
-			// δγτρϊ  ωξεϊ δεειμεϊ αϊεφΰεϊ
+			// Χ”Χ“Χ¤Χ΅Χª  Χ©ΧΧ•Χª Χ”Χ•Χ•Χ™ΧΧ•Χª Χ‘ΧªΧ•Χ¦ΧΧ•Χª
 			List<WebElement> result = driver.findElements(By.xpath("//div[1]/section[4]/div//div[2]/div//a[@class='vilaName']"));
 			First_stage_func.vilaNames(driver, result);
 			First_stage_func.screenShot2(robot);
-			System.out.println("ϊψβιμ 3 ςαψ αδφμηδ");
+			System.out.println("ΧªΧ¨Χ’Χ™Χ 3 ΧΆΧ‘Χ¨ Χ‘Χ”Χ¦ΧΧ—Χ”");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.err.println("ϊψβιμ 3 πλωμ");
+			System.err.println("ΧªΧ¨Χ’Χ™Χ 3 Χ Χ›Χ©Χ");
 		}
 	}
 }
