@@ -17,8 +17,8 @@ public class weekend {
 			//הדפסת ציונים
 			System.out.println("Rating are:");
 			for (int i = 0; i < rating.size(); i++) {
-				System.out.println(rating.get(i).getText().replace("���� 5", ""));
-				value += Double.parseDouble(rating.get(i).getText().replace("���� 5", ""));
+				System.out.println(rating.get(i).getText().replace("מתוך 5", ""));
+				value += Double.parseDouble(rating.get(i).getText().replace("מתוך 5", ""));
 			}
 			//חישוב ממוצא של הערכים של הציונים
 			First_stage_func.avgValues(value, rating);

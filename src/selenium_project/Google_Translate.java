@@ -15,7 +15,7 @@ public class Google_Translate {
 			driver.get("https://translate.google.com/");
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			//הזנת טקסט בטקסט להזנה לתרגום
-			driver.findElement(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/c-wiz[1]/span/span/div/textarea")).sendKeys("���� ��� ����");
+			driver.findElement(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[2]/div[2]/c-wiz[1]/span/span/div/textarea")).sendKeys("שלום שמי רועי");
 			driver.findElement(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[5]/button")).click();
 			List<WebElement> list = driver.findElements(By.xpath("//c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[3]/c-wiz/div[2]/div/div[3]/div/div[2]/div/div[2]"));
 			for (int i = 102; i < list.size(); i++) {
