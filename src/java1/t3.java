@@ -1,4 +1,4 @@
-package java;
+package java1;
 
 
 import java.util.Scanner;
@@ -65,7 +65,7 @@ public static  void string_number (String some_string) {
 			x=cons1.nextInt();
 		}
 		
-		/* úøâéì 1
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ 1
 		int x=1;
 		while (x<=10) {
 			if (x!=4) {
@@ -74,7 +74,7 @@ public static  void string_number (String some_string) {
 			x++;
 		}
 		*/
-		/* úøâéì 2
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ 2
 int x=1;
 while (x<=100) {
 	if (x%3==0 && x%7==0) {
@@ -82,7 +82,7 @@ while (x<=100) {
 	}
 	x++;	
 }
-        úøâéì 3
+        ï¿½ï¿½ï¿½ï¿½ï¿½ 3
 		int num = 20, sum = 0;
 
         for(int i = 1; i <= num; ++i)
@@ -99,7 +99,7 @@ while (x<=100) {
 	bigger(6,6);
 	  System.out.println(bigger(7,6));
 		*/
-		/* úøâéì 4
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ 4
 		int x = 0;
 		int sum = 0;
 		int i=0;
@@ -111,7 +111,7 @@ while (x<=100) {
 			i++;
 			}
 			System.out.println(sum);
- úøâéì 5
+ ï¿½ï¿½ï¿½ï¿½ï¿½ 5
 		int count = 0;
 		int sum = 0;
 		int y = -1;
@@ -128,10 +128,10 @@ while (x<=100) {
 			sum=sum+y;
 		}
 
-		System.out.println("ä÷ùú " + count + " îñôøéí");
-		System.out.println("ñëåí äîñôøéí äåà " + sum);
-		System.out.println("îîåöò äîñôøéí äåà " + sum/count);
-úøâéì 6
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ " + count + " ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ " + sum);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ " + sum/count);
+ï¿½ï¿½ï¿½ï¿½ï¿½ 6
 		int x =1;
 		int y = 1;
 
@@ -143,7 +143,7 @@ while (x<=100) {
 			}
 			y++;
 			System.out.println();}
-			úøâéì 7
+			ï¿½ï¿½ï¿½ï¿½ï¿½ 7
 		int x = 1;
 		int y = 1;
 
@@ -159,7 +159,7 @@ while (x<=100) {
 			}
 			y++;
 			System.out.println();}
-			úøâéì 8
+			ï¿½ï¿½ï¿½ï¿½ï¿½ 8
 		int x =  (int) (Math.random()*12)+1; 
 		Scanner scanner = new Scanner(System.in);
 
@@ -191,14 +191,14 @@ while (x<=100) {
 		if (z==false){
 			System.out.println("you lose");
 		}
- úøâéì 9
+ ï¿½ï¿½ï¿½ï¿½ï¿½ 9
 		int numbers[] = {951 , 402 , 984 , 651 , 360 , 69 , 408 , 319 , 601 , 485 , 980 , 507 , 725 , 547 , 544 ,615 , 83 , 165 , 141 , 501 , 263 , 617 , 865 , 575 , 219 , 390 , 984 , 592 , 236 , 051 , 942 ,941 ,386 , 462 , 47 , 418 , 907 , 344 , 236 , 375 , 823 , 566 , 597 , 978 , 328 , 615 , 953 , 345 ,	399 , 162 , 758 , 219 , 918 , 237 , 412 , 566 , 826 , 248 , 866 , 950 , 626 , 949 , 687 , 217 ,815 , 67 , 104 , 58 , 512 , 24 , 892 , 894 , 767 , 553 , 81 , 379 , 438 , 831 , 445 , 742 , 717 ,958 , 609 , 842 , 451 , 688 , 753 , 854 , 685 , 93 , 857 , 440 , 380 , 126 , 721 , 328 , 753 ,470 ,743	};
 		for (int e: numbers) {
             if (e<=237) {
                 System.out.print(e+" , ");
             }
 		}
-		úøâéì 10
+		ï¿½ï¿½ï¿½ï¿½ï¿½ 10
 Scanner console = new Scanner(System.in);
         
         int number,          
@@ -227,7 +227,7 @@ Scanner console = new Scanner(System.in);
         System.out.println("Positive numbers: " + countPositive);
         System.out.println("Negative numbers: " + countNegative);
         System.out.println("Zero numbers: " + countZero);
-        úøâéì 11
+        ï¿½ï¿½ï¿½ï¿½ï¿½ 11
 		Scanner console = new Scanner(System.in);
 	     
         int base;
@@ -247,8 +247,8 @@ Scanner console = new Scanner(System.in);
 
         System.out.println("Result: "+ result);
 */
-		//ôåğ÷öéåú
-		/* úøâéì 1
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		/* ï¿½ï¿½ï¿½ï¿½ï¿½ 1
 
 		System.out.println("helo world");
 			
@@ -259,7 +259,7 @@ Scanner console = new Scanner(System.in);
 		print();
 		*/
 		
-// úøâéì 2
+// ï¿½ï¿½ï¿½ï¿½ï¿½ 2
 		/*
         Scanner scan = new Scanner(System.in);
 		System.out.println("enter first name");

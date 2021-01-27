@@ -1,4 +1,4 @@
-package java;
+package java1;
 
 public class t5 {
 	public static void main(String[] args) {

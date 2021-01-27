@@ -35,7 +35,7 @@ public class t6_1 {
 					driver.findElement(By.id("err")).getText();
 					System.out.println(" הבדיקה  " + i + " הצליחה");
 				} catch (Exception e) {
-					System.err.println(" הבדיקה  " + i + "לא הצליחה");
+					System.err.println(" הבדיקה  " + i + " לא הצליחה");
 				}
 
 			} else {
