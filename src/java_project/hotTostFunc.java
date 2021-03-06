@@ -40,14 +40,13 @@ public class hotTostFunc {
 		String add = scan.nextLine().toLowerCase();
 		while (condition == 0) {
 			arryAdd = add.split(",");
-			for (int i = 0; i < arryAdd.length; i++) { 
+			for (int i = 0; i < arryAdd.length; i++) {
 				String trimArray = arryAdd[i].trim();
 				if (Arrays.asList(addinfraStructcher).contains(trimArray)) {
 					if (trimArray.contains("olives") || trimArray.equals("corn") || trimArray.equals("mushrooms")) {
 						extension = extension + 3;
 						condition = 1;
-					}
-					else if (trimArray.contains("onions") || trimArray.contains("tomatoes")
+					} else if (trimArray.contains("onions") || trimArray.contains("tomatoes")
 							|| trimArray.contains("bulgarian")) {
 						extension = extension + 4;
 						condition = 1;
@@ -79,7 +78,6 @@ public class hotTostFunc {
 		return extension;
 	}
 
-	// שתיה
 	public static int drink() {
 		int extension_drink = 0;
 		int breaker = 0;
@@ -89,7 +87,7 @@ public class hotTostFunc {
 		Scanner scan = new Scanner(System.in);
 		String add = scan.nextLine().toLowerCase();
 		while (breaker == 0) {
-			if (add.equals("orange juice") || add.equals("cola") || add.equals("Orange Juice") || add.equals("Cola")) {
+			if (add.equals("orange juice") || add.equals("cola")) {
 				extension_drink = 8;
 				breaker = 1;
 			} else if (add.equals("orange juice") && add.equals("cola")) {
